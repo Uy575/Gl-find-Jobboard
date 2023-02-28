@@ -1,0 +1,22 @@
+.subscribeFormInput{
+    height: 2.5rem;
+    width: 14rem;
+    margin-right: 1rem;
+    margin-top: 1rem;
+    border-radius: 3px;
+    border: 0.5px solid black;
+}
+
+.subscribeFormInput::placeholder{
+    padding-left: 1rem;
+    font-family: 'Baloo Bhai 2', cursive;
+}
+
+.subscribeFormButton{
+    border-radius: 3px;
+    height: 2.5rem;
+    width: 15rem;
+    color: white;
+    background-color: rgb(41, 38, 38);
+    border: none;
+}
