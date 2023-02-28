@@ -1,12 +1,12 @@
 import React from "react";
-import retail from "../../assets/icons/icon-retail.svg";
-import coporate from "../../assets/icons/icon-corporate.svg";
-import bar from "../../assets/icons/icon-barclub.svg";
-import event from "../../assets/icons/icon-event.svg";
-import mobile from "../../assets/icons/icon-mobile.svg";
+import retail from "../../Assets/Icons/icon-retail.svg";
+import coporate from "../../Assets/Icons/icon-corporate.svg";
+import bar from "../../Assets/Icons/icon-barclub.svg";
+import event from "../../Assets/Icons/icon-event.svg";
+import mobile from "../../Assets/Icons/icon-mobile.svg";
 import "./desired_venue.css";
 
-const Desired_venue = () => {
+const DesiredVenue = () => {
   return (
     <div className="dv-container">
       <div className="dv-col">
@@ -46,4 +46,4 @@ const Desired_venue = () => {
   );
 };
 
-export default Desired_venue;
+export default DesiredVenue;

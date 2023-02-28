@@ -1,8 +1,8 @@
 import React from "react";
-import cardIcon1 from "../../assets/logos/event-security.webp";
+import cardIcon1 from "../../Assets/Logo/event-security.webp";
 import "./latest_sec.css";
 
-const Latest_security = () => {
+const LatestSecurity = () => {
   return (
     <div className="ls_container">
       <h1 className="main-heading">Latest Security Vacancies</h1>
@@ -45,4 +45,4 @@ const Latest_security = () => {
   );
 };
 
-export default Latest_security;
+export default LatestSecurity;

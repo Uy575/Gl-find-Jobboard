@@ -1,7 +1,7 @@
 import React from "react";
-import logo from "../../assets/logos/get-licensed-logo-white.png";
-import darklogo from "../../assets/logos/getworking-dark-logo.svg";
-import protectedlogo from "../../assets/logos/protected-graphic-logo.svg";
+import logo from "../../Assets/Logo/get-licensed-logo-white.png";
+import darklogo from "../../Assets/Logo/getworking-dark-logo.svg";
+import protectedlogo from "../../Assets/Logo/protected-graphic-logo.svg";
 
 import "./footer.css";
 
