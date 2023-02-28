@@ -35,7 +35,7 @@ const LatestSecurity = () => {
             {/* card li 3 */}
 
             <div className="card-li3">
-              <a href="">Read more</a>
+              <a href="#">Read more</a>
             </div>
           </div>
         </div>
