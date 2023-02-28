@@ -1,0 +1,81 @@
+.footer {
+  background-color: #242429;
+}
+
+.ft-container {
+  padding: 3rem 7rem 3rem 7rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%rem;
+}
+
+.ft-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 4rem 0 4rem 0;
+  background-color: #242429;
+}
+
+.ft-logo {
+  width: 180px;
+}
+
+ul {
+  list-style: none;
+}
+
+ul > li {
+  font-family: Oswald, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -.27px;
+  color: #fff;
+  padding: 1px 0;
+  /* display: inline-block; */
+  text-decoration: none;
+}
+
+ul > * + * {
+  margin-top: 2rem;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+
+ul > li:first-child {
+  color: white;
+  font-weight: 700;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.ft-logo-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 4rem 0 4rem 0;
+  background-color: #242429;
+}
+
+.end-ft-container {
+  background-color: #000000;
+  padding: 4rem;
+}
+
+.end-ft-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.end-ft-row > p {
+  color: white;
+  padding: 2rem;
+  font-weight: 700;
+  font-size: 1.6rem;
+  font-family: Oswald, sans-serif;
+}
