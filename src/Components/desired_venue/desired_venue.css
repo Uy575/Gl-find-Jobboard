@@ -1,10 +1,12 @@
-.dv-col {
+/* .dv-col {
   padding: 0 4rem 0 4rem;
-}
+} */
 .row {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  /* gap: 0.8rem; */
+ 
 }
 .dv-container {
   padding: 4rem;
