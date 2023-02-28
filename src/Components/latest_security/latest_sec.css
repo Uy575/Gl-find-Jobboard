@@ -34,12 +34,13 @@
 }
 .card-li1-headings > :nth-child(2) {
   margin-top: 0.6rem;
+  font-weight: 500;
   font-size: 1rem;
 }
 .card-li1-headings > :nth-child(3) {
   margin-top: 0.5rem;
-  font-weight: 500;
-  font-size: 1rem;
+  font-weight: lighter;
+  font-size: 1rem; 
 }
 
 .card-li2 {
@@ -47,7 +48,10 @@
   text-align: center;
 }
 .card-li2-h {
-  font-weight: 100;
+  font-size: 1.2rem;
+  letter-spacing: 0.05rem;
+  color: #242429;
+font-weight: lighter;
 }
 
 .card-li2-h > span {
@@ -63,8 +67,8 @@
 .card-li3 > a {
   text-decoration: none;
   color: yellowgreen;
-  font-size: 1.2rem;
-  font-weight: 700;
+  font-size: 1.1rem;
+  font-weight: 800;
   font-family: Oswald, sans-serif;
 }
 
@@ -76,8 +80,7 @@
   font-weight: 700;
   letter-spacing: 0.5px;
   border-radius: 0.4rem;
-  filter: brightness(100%);
   cursor: pointer;
-  width: 20rem;
-  font-size: 1.5rem;
+  width: 15rem;
+  font-size: 1.1rem;
 }

@@ -12,9 +12,9 @@ const LatestSecurity = () => {
           <div className="card">
             <div className="card-li1">
               <div className="card-li1-headings">
-                <h2>Event Security PCSSL03</h2>
-                <h4>PRIDE CLASS SECURITY SOLUTIONS LTD</h4>
-                <h3>London, UK</h3>
+                <h3>Event Security PCSSL03</h3>
+                <h6>PRIDE CLASS SECURITY SOLUTIONS LTD</h6>
+                <span>London, UK</span>
               </div>
               <div className="card-li1-icon">
                 <img src={cardIcon1} alt="" />
@@ -25,9 +25,11 @@ const LatestSecurity = () => {
             {/* card li 2 */}
 
             <div className="card-li2">
-              <h2 className="card-li2-h">
-                Paid Fortnightly <span>&#163;12</span> /Per Hour
-              </h2>
+              <span className="card-li2-h">
+                <sup> Paid Fortnightly </sup>
+                <span>&#163;12</span>
+                <sub> /Per Hour</sub>
+              </span>
             </div>
 
             <hr />
