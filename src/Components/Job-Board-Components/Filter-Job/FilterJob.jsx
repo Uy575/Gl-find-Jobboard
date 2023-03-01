@@ -1,8 +1,13 @@
 import React from 'react'
+import FilterJobForm from '../FilterJobForm/FilterJobForm'
 
 function FilterJob() {
   return (
-    <div>FilterJob</div>
+     <>
+        <aside>
+         <FilterJobForm/>
+        </aside>
+     </>
   )
 }
 
