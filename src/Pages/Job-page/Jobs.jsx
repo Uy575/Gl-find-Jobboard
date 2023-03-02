@@ -4,6 +4,7 @@ import Form from '../../Components/Find-Job-Form/Form'
 import Header from '../../Components/Header/Header'
 import FilterJob from '../../Components/Job-Board-Components/Filter-Job/FilterJob'
 import CardJobBoard from '../../Components/Job-Board-Components/Card-Job-Board/CardJobBoard'
+<<<<<<< Updated upstream
 function Jobs() {
   return (
     <>
@@ -14,6 +15,19 @@ function Jobs() {
    <CardJobBoard/>
    </div>
     
+=======
+import AsideJobBoard from '../../Components/Job-Board-Components/Aside-Job-Board/AsideJobBoard'
+
+
+function Jobs() {
+  return (
+    <>
+   {/* <Header/> */}
+   {/* <Form/> */}
+   {/* <FilterJob/> */}
+   {/* <CardJobBoard /> */}
+<AsideJobBoard />
+>>>>>>> Stashed changes
     </>
 
   )
