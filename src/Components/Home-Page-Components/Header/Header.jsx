@@ -1,7 +1,7 @@
 import React from 'react'
 import './Header.css'
-import headerlogo from '../../Assets/Logo/gl-logo.png';
-import briefcase from '../../Assets/Icons/briefcase.svg'
+import headerlogo from '../../../Assets/Logo/gl-logo.png';
+import briefcase from '../../../Assets/Icons/briefcase.svg'
 function Header() {
   return (
    <div className='header bottom'>

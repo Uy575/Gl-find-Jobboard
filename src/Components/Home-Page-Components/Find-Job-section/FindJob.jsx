@@ -1,5 +1,5 @@
 import React from "react";
-import Form from "../Find-Job-Form/Form";
+import Form from "../Home-Page-Components/Find-Job-Form/Form";
 import play from "../../Assets/Icons/play.svg"
 import "./FindJob.css";
 import joblander from "../../Assets/Images/lander-career.png"

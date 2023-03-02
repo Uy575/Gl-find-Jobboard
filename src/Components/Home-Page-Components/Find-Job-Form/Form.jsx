@@ -1,6 +1,6 @@
 import React from 'react'
 import "./Form.css"
-import arrow from "../../Assets/Icons/arrow-right.svg"
+import arrow from "../../../Assets/Icons/arrow-right.svg"
 import { useNavigate } from 'react-router-dom'
 
 function Form() {

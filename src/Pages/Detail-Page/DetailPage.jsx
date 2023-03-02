@@ -6,13 +6,14 @@ import requirementIcon from '../../Assets/Detail-Page-Assets/Icons/licence-img.s
 import jobTypeIcon from '../../Assets/Detail-Page-Assets/Icons/employment-img.svg'
 import storeDiscountsIcon from '../../Assets/Detail-Page-Assets/Icons/storediscounts.svg'
 import DetailDescription from '../../Components/Detail-Page-Components/Detail-Description/DetailDescription'
+import AsideJobBoard from '../../Components/Job-Board-Components/Aside-Job-Board/AsideJobBoard'
 
 function DetailPage() {
   return (
    <>
    <div className='detailCard'>
-   <CardJobBoard/>
    <div className='detailContent'>
+   <CardJobBoard/>
    {/* <hr/> */}
    <ShortDetail heading='Requirement' Image = {requirementIcon}  title= 'Door Supervisor Licence required'/>
    <hr/>
@@ -21,6 +22,9 @@ function DetailPage() {
    <ShortDetail heading='Benefits' Image={storeDiscountsIcon} title= 'Store discounts'/>
    <hr/>
    <DetailDescription/>
+   </div>
+   <div className='detailAside'>
+   <AsideJobBoard/>
    </div>
    </div>
    </>

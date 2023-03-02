@@ -1,9 +1,9 @@
 import React from "react";
-import retail from "../../Assets/Icons/icon-retail.svg";
-import coporate from "../../Assets/Icons/icon-corporate.svg";
-import bar from "../../Assets/Icons/icon-barclub.svg";
-import event from "../../Assets/Icons/icon-event.svg";
-import mobile from "../../Assets/Icons/icon-mobile.svg";
+import retail from "../../../Assets/Icons/icon-retail.svg";
+import coporate from "../../../Assets/Icons/icon-corporate.svg";
+import bar from "../../../Assets/Icons/icon-barclub.svg";
+import event from "../../../Assets/Icons/icon-event.svg";
+import mobile from "../../../Assets/Icons/icon-mobile.svg";
 import "./desired_venue.css";
 
 const DesiredVenue = () => {

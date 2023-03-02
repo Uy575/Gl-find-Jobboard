@@ -1,10 +1,10 @@
 import React from "react";
-import london from "../../Assets/Images/london-img.jpg";
-import machester from "../../Assets/Images/machester-img.jpg";
-import birmingham from "../../Assets/Images/birmingham-img.jpg";
-import leeds from "../../Assets/Images/leeds-img.jpg";
-import bristol from "../../Assets/Images/bristol-img.jpg";
-import cardiff from "../../Assets/Images/cardiff-img.jpg";
+import london from "../../../Assets/Images/london-img.jpg";
+import machester from "../../../Assets/Images/machester-img.jpg";
+import birmingham from "../../../Assets/Images/birmingham-img.jpg";
+import leeds from "../../../Assets/Images/leeds-img.jpg";
+import bristol from "../../../Assets/Images/bristol-img.jpg";
+import cardiff from "../../../Assets/Images/cardiff-img.jpg";
 import "./location.css";
 
 const Location = () => {

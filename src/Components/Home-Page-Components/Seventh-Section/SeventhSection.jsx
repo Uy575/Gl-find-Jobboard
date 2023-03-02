@@ -1,8 +1,8 @@
 import React from 'react'
 import './SeventhSection.css'
-import mobilemockup from "../../Assets/Images/smartphone-mockup.webp"
-import appleicon from "../../Assets/Icons/apple-icn.svg";
-import androidicon from "../../Assets/Icons/android-icn.svg";
+import mobilemockup from "../../../Assets/Images/smartphone-mockup.webp"
+import appleicon from "../../../Assets/Icons/apple-icn.svg";
+import androidicon from "../../../Assets/Icons/android-icn.svg";
 function SeventhSection() {
   return (
     <div className='SeventhSectionMainContainer'>
