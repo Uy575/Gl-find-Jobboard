@@ -20,7 +20,7 @@ const AsideJobBoard = () => {
         </div>
 
         <div className="jb-aside-top-end">
-          <form className=".jb-aside-form" >
+          <form action="#" className="jb-aside-form">
             <div className="form-sec">
               <span id="flag">
                 <img src={flag} alt="" />
