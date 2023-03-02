@@ -4,7 +4,9 @@ import arrow from "../../../../Assets/Icons/arrow-right.svg";
 import apple from "../../../../Assets/Job-Board-Assets/Logos/android-logo.webp";
 import google from "../../../../Assets/Job-Board-Assets/Logos/google-play-logo.webp";
 import './asidetop.css'
+
 const AsideTop = ({classname , btnid , asidetext,btntext , formsec ,downloadh}) => {
+  console.log(classname,btnid)
   return (
     <div className={classname}>
       <div className={asidetext}>
