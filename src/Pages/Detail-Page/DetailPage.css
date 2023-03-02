@@ -1,10 +1,15 @@
 .detail-container {
   display: flex;
   gap: 1rem;
+  margin-top: 5rem;
+
 }
 .detailCard {
   width: 60rem;
   margin-left: 3rem;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  border-radius: .5rem;
+  /* padding: 2rem; */
 }
 .detailContent {
   margin-top: 1rem;

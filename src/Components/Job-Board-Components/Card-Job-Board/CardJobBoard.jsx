@@ -4,8 +4,8 @@ import orgLogo from "../../../Assets/Job-Board-Assets/Logos/gent-security.webp";
 import retailImg from "../../../Assets/Icons/icon-retail.svg";
 import "./cardjobboard.css";
 
-const CardJobBoard = ({classname}) => {
-  console.log(classname)
+const CardJobBoard = ({ classname, buttonTitle }) => {
+  console.log(classname);
   const share = `https://www.get-licensed.co.uk/jobs/_next/image?url=%2Fjobs%2Fimages%2Ficon-share.svg&w=96&q=75`;
   return (
     <section>
@@ -39,7 +39,7 @@ const CardJobBoard = ({classname}) => {
               </div>
               {/* org-left-split */}
               <div className="org-left">
-                <button id="jb-button">View Job Details</button>
+                <button id="jb-button">{buttonTitle}</button>
               </div>
             </div>
           </div>
