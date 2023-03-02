@@ -12,7 +12,7 @@ function Jobs() {
    <Form/>
    <div className='jobBoardPageMainContainer'>
    <FilterJob/>
-   <CardJobBoard/>
+   <CardJobBoard buttonTitle="View Job Details"/>
    <AsideJobBoard />
    </div>
     

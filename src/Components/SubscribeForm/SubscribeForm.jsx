@@ -2,7 +2,7 @@ import React from 'react'
 import "./SubscribeForm.css"
 function SubscribeForm() {
   return (
-   <form >
+   <form>
     
      <input className='subscribeFormInput' type='text' placeholder='Your Name'></input>
       

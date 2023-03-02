@@ -1,13 +1,19 @@
 import React from 'react'
 import "./Form.css"
 import arrow from "../../Assets/Icons/arrow-right.svg"
-
+import { useNavigate } from 'react-router-dom'
 
 function Form() {
   
+ const navigate = useNavigate();
+  const handleSubmit = e =>{
+     e.preventDefault();
+     navigate('/jobs');
+  }
+  
   return (
     
-    <form>
+    <form onSubmit={handleSubmit}>
        <div className='formFields'>
       <div className='formCard'>  
       <div className='jobTitleInputField'>
@@ -20,7 +26,7 @@ function Form() {
       </div>
       </div>
       <div>
-      <input className='findJobButton' type="submit" value="Find Jobs"/> <img className='findJobArrow' src={arrow} alt='arrow'/>
+      <input className='findJobButton' type="submit" value="Find Jobs" /> <img className='findJobArrow' src={arrow} alt='arrow'/>
       </div>
       </div>
     </form>
