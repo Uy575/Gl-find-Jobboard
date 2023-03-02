@@ -10,7 +10,15 @@ function FindJob() {
       <span className="second-section-heading">
         Find a security job <strong>you love</strong>
       </span>
-      <Form />
+      <Form 
+       formFields = "homeFormFields"
+       formCard = "homeFormCard" 
+       jobTitleInputField = "homeJobTitleInputField" 
+       formInputs =  "homeFormInputs"
+       locationInputField = "homeLocationInputField"
+       findJobButton =  "homeFindJobButton"
+       findJobArrow = "homeFindJobArrow" 
+      />
       <h3>The UK’s #1 Security Job Board</h3>
       <p>Over 2,000 businesses come here to hire qualified security talent!</p>
       </div>
