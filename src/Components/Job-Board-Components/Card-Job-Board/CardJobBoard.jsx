@@ -4,11 +4,11 @@ import orgLogo from "../../../Assets/Job-Board-Assets/Logos/gent-security.webp";
 import retailImg from "../../../Assets/Icons/icon-retail.svg";
 import "./cardjobboard.css";
 
-const CardJobBoard = () => {
+const CardJobBoard = ({classname}) => {
   const share = `https://www.get-licensed.co.uk/jobs/_next/image?url=%2Fjobs%2Fimages%2Ficon-share.svg&w=96&q=75`;
   return (
     <section>
-      <div className="card-body">
+      <div className={classname}>
         <div className="jb-card">
           <div className="jb-row">
             <div className="time-span-badge">

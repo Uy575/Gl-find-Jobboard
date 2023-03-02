@@ -1,22 +1,96 @@
-.detailCard{
-    /* width: 50%; */
-    margin-left: 3rem;
-    display: flex;
+.detail-container {
+  display: flex;
+  gap: 1rem;
+}
+.detailCard {
+  width: 60rem;
+  margin-left: 3rem;
+}
+.detailContent {
+  margin-top: 1rem;
+  /* width: 30rem; */
+  /* box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; */
+  box-shadow: 0px 10px 10px 0px rgb(0 0 0 / 13%);
+  margin-top: -0.09rem;
+}
+.detailContent * + * {
+  margin-bottom: 2rem;
+}
 
- 
+
+
+
+
+
+
+/*////////////////////////////////// style components for detail page ////////////////////////////*/
+
+/* detail card */
+.det-card {
+  width: 100%;
+  margin: 0;
 }
-.detailContent{
-    margin-left: 2.5rem;
-    margin-top: 1rem;
-    width: 50%;
-    /* box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; */
-    box-shadow: 0px 10px 10px 0px rgb(0 0 0 / 13%);
-    margin-top: -0.09rem;
-    
+
+/* detail aside */
+
+.detail-aside {
+  width: 38rem;
 }
-.detailContent *+*{
-    margin-bottom: 2rem;
+
+.dt-aside-top-section {
+  background: #3bd55a url(/src/Assets/Detail-Page-Assets/Images/mobile-bg.webp)
+    no-repeat;
+  border-radius: 6px;
+  background-position: 100% 100%;
+  background-size: cover;
+  padding: 40px 32px 83px;
 }
-.detailAside{
-    width: 50%;
+
+#dt-aside-top-btn {
+  border-radius: 4px;
+  width: 5rem;
+  background-color: #58db73;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border: none;
+  cursor: pointer;
+}
+
+.dt-aside-top-text > p {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.63;
+  letter-spacing: -0.1px;
+  padding-top: 1rem;
+  text-align: left;
+  padding-bottom: 1rem;
+  width: 17rem;
+}
+.dt-aside-top-text > h4 {
+  font-family: "Oswald", sans-serif;
+  line-height: normal;
+  letter-spacing: -0.27px;
+  font-size: 31px;
+}
+.dt-form-sec {
+  display: flex;
+  background-color: white;
+  padding: 0.5rem;
+  width: 16rem;
+}
+.dt-form-sec > input {
+  width: 100%;
+  border-radius: 4px;
+  padding: 0.5rem;
+  border: none;
+  outline: none;
+}
+
+.dt-aside-download-h {
+  font-size: 1.5rem;
+  padding-top: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+  line-height: 1.2;
 }
