@@ -30,7 +30,7 @@ function FilterJobForm() {
         }}
       />{" "}
       <br />
-      <hr />
+      <hr className="hr" />
       <span className="payRangeHeading">Pay range</span>
       <br />
       <input
@@ -47,7 +47,7 @@ function FilterJobForm() {
         {" "}
         <span> &pound;{payRange}.00 </span> <span> &pound;50.00 </span>
       </div>
-      <hr />
+      <hr  className="hr"/>
       <div className="venue">
         <span>Venue</span>
         <div>
@@ -79,7 +79,7 @@ function FilterJobForm() {
           <img src={Mobile} alt="Mobile" height="20px" /> <span> Mobile </span>
         </div>
       </div>
-      <hr />
+      <hr className="hr" />
       <div className="buttonDiv">
         <input
           className="resetFilter"

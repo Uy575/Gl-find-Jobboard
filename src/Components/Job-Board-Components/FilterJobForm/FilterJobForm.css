@@ -75,7 +75,7 @@
   margin-left: 0.5rem;
 }
 
-hr {
+.hr {
   width: 14rem;
   margin-top: 1rem;
   align-self: center;
@@ -85,6 +85,13 @@ hr {
 input[type="range"] {
   width: 15rem;
   align-self: center;
+  accent-color: skyblue;
+  cursor: grab;
+}
+
+input[type="checkbox"]{
+    accent-color: green;
+    
 }
 
 .payRangeHeading {

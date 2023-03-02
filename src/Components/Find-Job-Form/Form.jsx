@@ -1,7 +1,10 @@
 import React from 'react'
 import "./Form.css"
 import arrow from "../../Assets/Icons/arrow-right.svg"
+
+
 function Form() {
+  
   return (
     
     <form>
