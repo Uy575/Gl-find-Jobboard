@@ -7,9 +7,11 @@ import jobTypeIcon from "../../Assets/Detail-Page-Assets/Icons/employment-img.sv
 import storeDiscountsIcon from "../../Assets/Detail-Page-Assets/Icons/storediscounts.svg";
 import DetailDescription from "../../Components/Detail-Page-Components/Detail-Description/DetailDescription";
 import AsideTop from "../../Components/Custom-Components/Aside/Aside top/AsideTop";
+import Header from "../../Components/Home-Page-Components/Header/Header";
 function DetailPage() {
   return (
     <>
+        <Header/>
       <div className="detail-container">
         <div className="detailCard">
           <CardJobBoard classname="det-card" />
