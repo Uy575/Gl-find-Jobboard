@@ -7,7 +7,6 @@ import jobTypeIcon from "../../Assets/Detail-Page-Assets/Icons/employment-img.sv
 import storeDiscountsIcon from "../../Assets/Detail-Page-Assets/Icons/storediscounts.svg";
 import DetailDescription from "../../Components/Detail-Page-Components/Detail-Description/DetailDescription";
 import AsideTop from "../../Components/Custom-Components/Aside/Aside top/AsideTop";
-
 function DetailPage() {
   return (
     <>

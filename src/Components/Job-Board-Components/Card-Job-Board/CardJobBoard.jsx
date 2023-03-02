@@ -5,6 +5,7 @@ import retailImg from "../../../Assets/Icons/icon-retail.svg";
 import "./cardjobboard.css";
 
 const CardJobBoard = ({classname}) => {
+  console.log(classname)
   const share = `https://www.get-licensed.co.uk/jobs/_next/image?url=%2Fjobs%2Fimages%2Ficon-share.svg&w=96&q=75`;
   return (
     <section>
