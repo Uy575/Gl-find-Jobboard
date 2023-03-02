@@ -1,10 +1,10 @@
 import React from "react";
 import "./SectionEight.css"
-import SubscribeForm from "../Home-Page-Components/SubscribeForm/SubscribeForm";
-import twittericon from "../../Assets/Icons/twitter-img.svg";
-import facebook from "../../Assets/Icons/logo-fb-simple.svg";
-import youtube from "../../Assets/Icons/yt-img.svg";
-import instagram from "../../Assets/Icons/ig-img.svg";
+import SubscribeForm from "../../Home-Page-Components/SubscribeForm/SubscribeForm";
+import twittericon from "../../../Assets/Icons/twitter-img.svg"
+import facebook from "../../../Assets/Icons/logo-fb-simple.svg";
+import youtube from "../../../Assets/Icons/yt-img.svg";
+import instagram from "../../../Assets/Icons/ig-img.svg";
 
 function SectionEight() {
   return (
