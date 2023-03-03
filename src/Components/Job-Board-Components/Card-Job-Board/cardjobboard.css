@@ -80,6 +80,27 @@
   font-family: "Roboto", sans-serif;
 }
 
+#rm-button{
+  width: 8rem;
+  background: none;
+  border: none;
+}
+.cancel{
+display: flex;
+}
+.cancel > *{
+padding-right: .5rem;
+}
+
+.cancel > p{
+font-size: 1rem;
+font-weight: 500;
+font-family: "Roboto",sans-serif;
+cursor: pointer;
+}
+
+
+
 #jb-button {
   min-width: 157px;
   font-weight: 700;

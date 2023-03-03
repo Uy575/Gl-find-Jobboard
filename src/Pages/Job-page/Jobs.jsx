@@ -25,7 +25,7 @@ function Jobs() {
       <div className="jobBoardPageMainContainer">
         <BackHome backArrowDescription="Home" navigating= "/" />
         <FilterJob />
-        <CardJobBoard buttonTitle="View Job Details" classname="card-body" />
+        <CardJobBoard buttonTitle="View Job Details" classname="card-body" showform='false' />
         <AsideJobBoard
           classname="jb-aside-top-section"
           btnid="jb-aside-top-btn"

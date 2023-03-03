@@ -1,5 +1,4 @@
-import React from "react";
-import "./DetailPage.css";
+import React,{useState} from "react";
 import ShortDetail from "../../Components/Detail-Page-Components/Short-Detail/ShortDetail";
 import CardJobBoard from "../../Components/Job-Board-Components/Card-Job-Board/CardJobBoard";
 import requirementIcon from "../../Assets/Detail-Page-Assets/Icons/licence-img.svg";
@@ -9,15 +8,21 @@ import DetailDescription from "../../Components/Detail-Page-Components/Detail-De
 import AsideTop from "../../Components/Custom-Components/Aside/Aside top/AsideTop";
 import Header from "../../Components/Home-Page-Components/Header/Header";
 import SimilarJobs from "../../Components/Detail-Page-Components/Similar-Jobs/SimilarJobs";
+<<<<<<< Updated upstream
 import BackHome from "../../Components/Job-Board-Components/Back-To-Home/BackHome";
+=======
+import DetailForm from "../../Components/Detail-Page-Components/Form-Submit/DetailForm";
+import "./DetailPage.css";
+>>>>>>> Stashed changes
 function DetailPage() {
+
   return (
     <>
       <Header />
       <div className="detail-container">
         <BackHome backArrowDescription="back to results" navigating= "/jobs"/>
         <div className="detailCard">
-          <CardJobBoard classname="det-card" buttonTitle="Apply Now" />
+          <CardJobBoard classname="det-card" buttonTitle="Apply Now" detailForm = {<DetailForm />} showform='true' />
           <div className="detailContent">
             <hr/>
             <ShortDetail

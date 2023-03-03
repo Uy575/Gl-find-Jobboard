@@ -1,12 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
+import remove from "../../../Assets/Detail-Page-Assets/Icons/icon-remove.svg";
 import thunder from "../../../Assets/Job-Board-Assets/Icons/thunder-icon.svg";
 import orgLogo from "../../../Assets/Job-Board-Assets/Logos/gent-security.webp";
 import retailImg from "../../../Assets/Icons/icon-retail.svg";
 import "./cardjobboard.css";
 import { useNavigate } from "react-router-dom";
 
-const CardJobBoard = ({ classname, buttonTitle }) => {
-  console.log(classname);
+const CardJobBoard = ({ classname, buttonTitle, detailForm, showform }) => {
+  let [showForm, setShowForm] = useState(false);
+
   const navigate = useNavigate();
   const share = `https://www.get-licensed.co.uk/jobs/_next/image?url=%2Fjobs%2Fimages%2Ficon-share.svg&w=96&q=75`;
   return (
@@ -41,11 +43,37 @@ const CardJobBoard = ({ classname, buttonTitle }) => {
               </div>
               {/* org-left-split */}
               <div className="org-left">
-                <button id="jb-button" onClick={()=>{
-                  navigate('/jobs/detail')
-                }}>{buttonTitle}</button>
+                
+                  {showForm ? (
+                    <>
+                  <div className="cancel"  onClick={()=>{
+                  console.log("as")
+                  setShowForm(false)
+                  }}>
+                    <img src={remove} alt="" />
+                    <p> cancel</p>
+                  </div>
+              
+                    </>
+                  ) : (
+                    <button
+                    id={!showForm ? "jb-button":"rm-button"}
+                    onClick={() => {
+                      navigate("/jobs/detail");
+                      setShowForm(showform);
+                      console.log(showform);
+                    }}
+                  >{buttonTitle}</button>     
+                    
+                    
+                  )}
+                <>
+                    </>
               </div>
             </div>
+
+            {/* detail form component using props get if needed*/}
+            {showForm && <div className="det-form">{detailForm}</div>}
           </div>
         </div>
         <hr className="divider" />
