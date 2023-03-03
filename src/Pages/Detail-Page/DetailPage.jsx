@@ -8,12 +8,9 @@ import DetailDescription from "../../Components/Detail-Page-Components/Detail-De
 import AsideTop from "../../Components/Custom-Components/Aside/Aside top/AsideTop";
 import Header from "../../Components/Home-Page-Components/Header/Header";
 import SimilarJobs from "../../Components/Detail-Page-Components/Similar-Jobs/SimilarJobs";
-<<<<<<< Updated upstream
 import BackHome from "../../Components/Job-Board-Components/Back-To-Home/BackHome";
-=======
 import DetailForm from "../../Components/Detail-Page-Components/Form-Submit/DetailForm";
 import "./DetailPage.css";
->>>>>>> Stashed changes
 function DetailPage() {
 
   return (
