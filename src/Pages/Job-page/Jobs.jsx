@@ -1,3 +1,4 @@
+
 import React from "react";
 import "./Jobs.css";
 import Form from "../../Components/Home-Page-Components/Find-Job-Form/Form";
@@ -30,8 +31,9 @@ function Jobs() {
           downloadh="jb-aside-download-h"
         />
       </div>
+
     </>
-  );
+)
 }
 
 export default Jobs;

@@ -17,7 +17,7 @@ function DetailPage() {
         <div className="detailCard">
           <CardJobBoard classname="det-card" buttonTitle="Apply Now" />
           <div className="detailContent">
-            {/* <hr/> */}
+            <hr/>
             <ShortDetail
               heading="Requirement"
               Image={requirementIcon}

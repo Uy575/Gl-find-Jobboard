@@ -3,9 +3,11 @@ import thunder from "../../../Assets/Job-Board-Assets/Icons/thunder-icon.svg";
 import orgLogo from "../../../Assets/Job-Board-Assets/Logos/gent-security.webp";
 import retailImg from "../../../Assets/Icons/icon-retail.svg";
 import "./cardjobboard.css";
+import { useNavigate } from "react-router-dom";
 
 const CardJobBoard = ({ classname, buttonTitle }) => {
   console.log(classname);
+  const navigate = useNavigate();
   const share = `https://www.get-licensed.co.uk/jobs/_next/image?url=%2Fjobs%2Fimages%2Ficon-share.svg&w=96&q=75`;
   return (
     <section>
@@ -39,7 +41,9 @@ const CardJobBoard = ({ classname, buttonTitle }) => {
               </div>
               {/* org-left-split */}
               <div className="org-left">
-                <button id="jb-button">{buttonTitle}</button>
+                <button id="jb-button" onClick={()=>{
+                  navigate('/jobs/detail')
+                }}>{buttonTitle}</button>
               </div>
             </div>
           </div>
