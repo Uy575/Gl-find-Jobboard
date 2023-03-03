@@ -6,7 +6,6 @@ import google from "../../../../Assets/Job-Board-Assets/Logos/google-play-logo.w
 import './asidetop.css'
 
 const AsideTop = ({classname , btnid , asidetext,btntext , formsec ,downloadh}) => {
-  console.log(classname,btnid)
   return (
     <div className={classname}>
       <div className={asidetext}>

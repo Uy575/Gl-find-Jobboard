@@ -43,32 +43,30 @@ const CardJobBoard = ({ classname, buttonTitle, detailForm, showform }) => {
               </div>
               {/* org-left-split */}
               <div className="org-left">
-                
-                  {showForm ? (
-                    <>
-                  <div className="cancel"  onClick={()=>{
-                  console.log("as")
-                  setShowForm(false)
-                  }}>
-                    <img src={remove} alt="" />
-                    <p> cancel</p>
-                  </div>
-              
-                    </>
-                  ) : (
-                    <button
-                    id={!showForm ? "jb-button":"rm-button"}
+                {showForm ? (
+                  <>
+                    <div
+                      className="cancel"
+                      onClick={() => {
+                        setShowForm(false);
+                      }}
+                    >
+                      <img src={remove} alt="" />
+                      <p> cancel</p>
+                    </div>
+                  </>
+                ) : (
+                  <button
+                    id={!showForm ? "jb-button" : "rm-button"}
                     onClick={() => {
                       navigate("/jobs/detail");
                       setShowForm(showform);
-                      console.log(showform);
                     }}
-                  >{buttonTitle}</button>     
-                    
-                    
-                  )}
-                <>
-                    </>
+                  >
+                    {buttonTitle}
+                  </button>
+                )}
+                <></>
               </div>
             </div>
 
