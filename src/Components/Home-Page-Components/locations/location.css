@@ -1,3 +1,9 @@
+@font-face {
+  font-family: hackneyvector;
+  src: url(../../../Assets//Fonts/HackneyPersonalUseOnly.ttf);
+}
+
+
 .lct-container {
   text-align: center;
   padding: 4rem;
@@ -70,12 +76,12 @@
   width: 100%;
 }
 
-.img-box1-headings > h2,
-.img-box2-headings > h2,
-.img-box3-headings > h2,
-.img-box4-headings > h2,
-.img-box5-headings > h2,
-.img-box6-headings > h2 {
+.img-box1-headings > h1,
+.img-box2-headings > h1,
+.img-box3-headings > h1,
+.img-box4-headings > h1,
+.img-box5-headings > h1,
+.img-box6-headings > h1 {
   font-family: hackneyvector;
   font-size: 3rem;
   color: white;

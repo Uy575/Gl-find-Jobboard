@@ -1,3 +1,10 @@
+.mainSubscriberFormContainer{
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center;
+    align-items: center; */
+}
+
 .subscribeFormInput{
     height: 2.5rem;
     width: 14rem;
@@ -5,10 +12,12 @@
     margin-top: 1rem;
     border-radius: 3px;
     border: 0.5px solid black;
+    outline: none;
+    padding-left: 1rem;
 }
 
 .subscribeFormInput::placeholder{
-    padding-left: 1rem;
+
     font-family: 'Baloo Bhai 2', cursive;
 }
 
@@ -19,4 +28,11 @@
     color: white;
     background-color: rgb(41, 38, 38);
     border: none;
+    margin-top: 1rem;
+
+}
+
+.field{
+    display: flex;
+    flex-direction: column;
 }

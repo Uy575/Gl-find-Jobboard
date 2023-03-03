@@ -9,13 +9,15 @@ import DesiredVenue from "../../Components/Home-Page-Components/desired_venue/De
 import LatestSecurity from "../../Components/Home-Page-Components/latest_security/LatestSecurity";
 import Location from "../../Components/Home-Page-Components/locations/Location";
 import Footer from "../../Components/Home-Page-Components/footer/Footer";
+import TopJobs from "../../Components/Home-Page-Components/latest_security/TopJobs";
 function HomePage() {
   return (
     <>
       <Header/>
     <FindJob/>
     <ThirdSection/>
-    <LatestSecurity/>
+    <TopJobs/>
+    {/* <LatestSecurity/> */}
     <DesiredVenue/>
     <Location/>
     <SeventhSection/>

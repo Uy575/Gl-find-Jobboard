@@ -9,11 +9,13 @@ import DetailDescription from "../../Components/Detail-Page-Components/Detail-De
 import AsideTop from "../../Components/Custom-Components/Aside/Aside top/AsideTop";
 import Header from "../../Components/Home-Page-Components/Header/Header";
 import SimilarJobs from "../../Components/Detail-Page-Components/Similar-Jobs/SimilarJobs";
+import BackHome from "../../Components/Job-Board-Components/Back-To-Home/BackHome";
 function DetailPage() {
   return (
     <>
       <Header />
       <div className="detail-container">
+        <BackHome backArrowDescription="back to results" navigating= "/jobs"/>
         <div className="detailCard">
           <CardJobBoard classname="det-card" buttonTitle="Apply Now" />
           <div className="detailContent">

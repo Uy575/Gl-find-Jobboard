@@ -7,6 +7,8 @@ import bristol from "../../../Assets/Images/bristol-img.jpg";
 import cardiff from "../../../Assets/Images/cardiff-img.jpg";
 import "./location.css";
 
+
+
 const Location = () => {
   return (
     <div className="lct-container">
@@ -17,7 +19,7 @@ const Location = () => {
           <div className="img-box1">
             <img src={london} alt="" className="london-img" />
             <div className="img-box1-headings">
-              <h2>LONDON</h2>
+              <h1>LONDON</h1>
               <h3>Find security jobs in London</h3>
             </div>
           </div>
@@ -27,7 +29,7 @@ const Location = () => {
           <div className="img-box2">
             <img src={machester} alt="" className="machester-img" />
             <div className="img-box2-headings">
-              <h2>MACHESTER</h2>
+              <h1>MACHESTER</h1>
               <h3>Find security jobs in Machester</h3>
             </div>
           </div>
@@ -36,7 +38,7 @@ const Location = () => {
           <div className="img-box3">
             <img src={birmingham} alt="" className="birmingham-img" />
             <div className="img-box3-headings">
-              <h2>BIRMINGHAM</h2>
+              <h1>BIRMINGHAM</h1>
               <h3>Find security jobs in Birmingham</h3>
             </div>
           </div>
@@ -45,7 +47,7 @@ const Location = () => {
           <div className="img-box4">
             <img src={leeds} alt="" className="leeds-img" />
             <div className="img-box4-headings">
-              <h2>LEEDS</h2>
+              <h1>LEEDS</h1>
               <h3>Find security jobs in Leeds</h3>
             </div>
           </div>
@@ -54,7 +56,7 @@ const Location = () => {
           <div className="img-box5">
             <img src={bristol} alt="" className="bristol-img" />
             <div className="img-box5-headings">
-              <h2>BRISTOL</h2>
+              <h1>BRISTOL</h1>
               <h3>Find security jobs in Bristol</h3>
             </div>
           </div>
@@ -64,7 +66,7 @@ const Location = () => {
           <div className="img-box6">
             <img src={cardiff} alt="" className="cardiff-img" />
             <div className="img-box6-headings">
-              <h2>CARDIFF</h2>
+              <h1>CARDIFF</h1>
               <h3>Find security jobs in Cardiff</h3>
             </div>
           </div>
