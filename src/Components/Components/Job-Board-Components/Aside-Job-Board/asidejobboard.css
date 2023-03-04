@@ -3,6 +3,7 @@
   margin-right: 3rem;
   float: right;
   margin-top: 3rem;
+
 }
 
 .jb-aside-top-section {
@@ -12,9 +13,6 @@
   border-radius: 6px;
   background-position: 100% 100%;
   padding: 26px 14px;
-  position: sticky;
-  z-index: 1;
-  top: 0;
 
 }
 
@@ -37,13 +35,13 @@
 .jb-aside-top-end {
   margin-top: 1rem;
 }
-.jb-form-sec {
+.form-sec {
   display: flex;
   background-color: white;
   padding: 0.5rem;
 }
 
-.jb-form-sec > input {
+.form-sec > input {
   border-radius: 4px;
   padding: 0.5rem;
   border: none;
@@ -83,4 +81,42 @@
 
 .google {
   margin-top: 2rem;
+}
+
+.jb-aside-bottom-section {
+  background: #3bd55a url(/src/Assets/Job-Board-Assets/Images/bg-box-2.png)
+    no-repeat;
+  background-size: 180px;
+  background-position: 100% 0;
+  padding: 20px 15px 25px;
+  margin-top: 2rem;
+  border-radius: 5px;
+}
+
+.bottom-text > h4 {
+  font-family: "Oswald", sans-serif;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.27px;
+  font-size: 22px;
+}
+.bottom-text > p {
+  width: 12rem;
+  font-size: 1.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  line-height: normal;
+  letter-spacing: -0.1px;
+  font-weight: 400;
+}
+
+.jb-bottom-btn > button {
+  min-width: 157px;
+  font-weight: 700;
+  padding: 8px 20px 6px;
+  letter-spacing: -0.27px;
+  background-color: #1f1f23;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
 }

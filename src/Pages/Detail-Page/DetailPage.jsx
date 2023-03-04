@@ -1,4 +1,7 @@
-import React,{useState} from "react";
+import React, { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { JobDetail } from "../../Redux/JobReducer";
 import ShortDetail from "../../Components/Detail-Page-Components/Short-Detail/ShortDetail";
 import CardJobBoard from "../../Components/Job-Board-Components/Card-Job-Board/CardJobBoard";
 import requirementIcon from "../../Assets/Detail-Page-Assets/Icons/licence-img.svg";
@@ -12,16 +15,34 @@ import BackHome from "../../Components/Job-Board-Components/Back-To-Home/BackHom
 import DetailForm from "../../Components/Detail-Page-Components/Form-Submit/DetailForm";
 import "./DetailPage.css";
 function DetailPage() {
+  const JobsState = useSelector((state) => state.JobReducer);
+  const { id } = useParams();
+  const disptach = useDispatch();
+  const DETAIL_API = `https://staging.get-licensed.co.uk/guardpass/api/public/${id}/detail`;
+
+  const { jobDetail } = JobsState;
+  console.log(jobDetail);
+
+  useEffect(() => {
+    disptach(JobDetail(DETAIL_API));
+  },[]);
 
   return (
     <>
       <Header />
       <div className="detail-container">
-        <BackHome backArrowDescription="back to results" navigating= "/jobs"/>
+        <BackHome backArrowDescription="back to results" navigating="/jobs" />
         <div className="detailCard">
-          <CardJobBoard classname="det-card" buttonTitle="Apply Now" detailForm = {<DetailForm />} showform='true' />
+          <CardJobBoard
+            classname="det-card"
+            buttonTitle="Apply Now"
+            detailForm={<DetailForm />}
+            showform="true"
+            only="detailpage"
+          jobdetail = {jobDetail}
+          />
           <div className="detailContent">
-            <hr/>
+            <hr />
             <ShortDetail
               heading="Requirement"
               Image={requirementIcon}

@@ -1,0 +1,72 @@
+.homeFormFields{
+   
+    display: flex;
+    margin-top: 1rem;
+    z-index: 100;
+    position: relative;
+    justify-content: space-between;
+    width: 100%;
+
+}
+
+.homeFormInputs{
+     border: none;
+     outline: none;
+   
+}
+
+.homeFormCard{
+    display: flex;
+    height: 5rem;
+    width: 40rem;
+    margin-right: -8rem;
+    padding: 1rem;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    background-color: #fff;
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
+   
+
+}
+
+
+.homeFindJobButton{
+    width: 13rem;
+    height: 5rem;
+    background-color: #51d462;
+    margin-left: -8rem;
+    position: absolute;
+    left: 47rem;
+    outline: none;
+    border: none;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    font-size: 1rem;
+    font-weight: bold;
+    padding-right: 3rem;
+  
+
+
+}
+
+.homeFindJobArrow{
+    position: absolute;
+    left: 47rem;
+    top: 1.55rem;
+    height: 2rem;
+}
+
+.homeJobTitleInputField{
+    margin-left: 1rem;
+    border-right: 1px solid rgba(127, 127, 127,0.3);
+    width: 50%;
+    height: 100%;
+    font-family: 'Baloo Bhai 2', cursive;
+}
+
+
+.homeLocationInputField{
+  margin-left: 2rem;
+  width: 50%;
+  font-family: 'Baloo Bhai 2', cursive;
+}

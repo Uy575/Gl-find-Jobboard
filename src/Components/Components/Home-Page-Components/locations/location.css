@@ -1,0 +1,103 @@
+@font-face {
+  font-family: hackneyvector;
+  src: url(../../../Assets//Fonts/HackneyPersonalUseOnly.ttf);
+}
+
+
+.lct-container {
+  text-align: center;
+  padding: 4rem;
+}
+
+.lct-heading {
+  font-family: Oswald, sans-serif;
+  font-size: 36px;
+  letter-spacing: -0.3px;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.london-img,
+.machester-img,
+.birmingham-img,
+.cardiff-img,
+.bristol-img,
+.leeds-img {
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s ease-in;
+}
+
+.lct-row {
+  padding: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.lct-row > * {
+  margin-top: 4rem;
+}
+
+.img-box1,
+.img-box2,
+.img-box3,
+.img-box4,
+.img-box5,
+.img-box6 {
+  height: 345px;
+  border-radius: 0.5rem;
+  position: relative;
+  overflow: hidden;
+  -webkit-transition: all 0.3s ease-in;
+}
+
+.img-box1 > img:hover,
+.img-box2 > img:hover,
+.img-box3 > img:hover,
+.img-box4 > img:hover,
+.img-box5 > img:hover,
+.img-box6 > img:hover {
+  transform: scale(1.1);
+}
+
+.img-box1-headings,
+.img-box2-headings,
+.img-box3-headings,
+.img-box4-headings,
+.img-box5-headings,
+.img-box6-headings {
+  position: absolute;
+  top: 5rem;
+  width: 100%;
+}
+
+.img-box1-headings > h1,
+.img-box2-headings > h1,
+.img-box3-headings > h1,
+.img-box4-headings > h1,
+.img-box5-headings > h1,
+.img-box6-headings > h1 {
+  font-family: hackneyvector;
+  font-size: 3rem;
+  color: white;
+}
+
+.img-box1-headings > h3,
+.img-box2-headings > h3,
+.img-box3-headings > h3,
+.img-box4-headings > h3,
+.img-box5-headings > h3,
+.img-box6-headings > h3 {
+  color: white;
+  font-family: 'Oswald', sans-serif;
+  margin-top: 0.5rem;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.63;
+  letter-spacing: 0.3px;
+}
