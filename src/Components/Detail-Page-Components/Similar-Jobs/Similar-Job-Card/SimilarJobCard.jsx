@@ -21,6 +21,8 @@ const SimilarJobCard = ({similar,id }) => {
       disptach(JobDetail(DETAIL_API));
     },[jobDetail.id]);
 
+// as
+
 useEffect(()=>{
     disptach(SimilarJob(SIMILAR_API))
   },[id])
