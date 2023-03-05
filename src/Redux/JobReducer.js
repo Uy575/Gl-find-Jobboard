@@ -46,5 +46,18 @@ export function JobDetail(endpoint) {
     const request = await axios.get(endpoint);
     const response = await request;
     dispatch(setJobDetail(response.data.data));
+    console.log('jd')
+  };
+}
+
+
+
+// Similar Job Thunk
+export function SimilarJob(endpoint) {
+  return async function fetchThunk(dispatch, getState) {
+    const request = await axios.get(endpoint);
+    const response = await request;
+    console.log('sj')
+    dispatch(setSimilarJob(response.data.data));
   };
 }

@@ -13,10 +13,9 @@ const CardJobBoard = ({
   showform,
   jobdata,
   only,
-  jobdetail
+  jobdetail,
 }) => {
   let [showForm, setShowForm] = useState(false);
-
   const navigate = useNavigate();
   const share = `https://www.get-licensed.co.uk/jobs/_next/image?url=%2Fjobs%2Fimages%2Ficon-share.svg&w=96&q=75`;
   return (
@@ -26,16 +25,18 @@ const CardJobBoard = ({
           <div className="jb-row">
             <div className="time-span-badge">
               <span id="time">9 hours ago</span>
-              {only === "jobpage" && jobdata.is_immediately === 1 ? (
+              {only === "jobpage" && jobdata.is_immediate === 1 ? (
                 <span id="badge">
                   <img src={thunder} alt="" />
                   <span id="bdg-text">IMMEDIATE START</span>
                 </span>
-              ) :(
+              ) : only === "detailpage" && jobdetail.is_immediate === 1 ? (
                 <span id="badge">
                   <img src={thunder} alt="" />
                   <span id="bdg-text">IMMEDIATE START</span>
                 </span>
+              ) : (
+                ""
               )}
             </div>
 
@@ -47,22 +48,40 @@ const CardJobBoard = ({
           {/* org text  */}
           <div className="org-col">
             <h4 id="post">
-              {only === "jobpage" ? jobdata.title : only === "detailpage" ? jobdetail.title:''}
+              {only === "jobpage"
+                ? jobdata.title
+                : only === "detailpage"
+                ? jobdetail.title
+                : ""}
             </h4>
             <div className="org-row">
               {/* org-right-split */}
               <div className="org-right">
                 <img
-                  src={only === "jobpage" ? jobdata.logo_url : orgLogo}
+                  src={
+                    only === "jobpage"
+                      ? jobdata.logo_url
+                      : only === "detailpage"
+                      ? jobdetail.logo_url
+                      : orgLogo
+                  }
                   style={{ height: "3rem" }}
                   alt=""
                 />
                 <div className="org-text">
                   <h5 id="org">
-                    {only === "jobpage" ? jobdata.name : "GENT SECURITY LTD"}
+                    {only === "jobpage"
+                      ? jobdata.name
+                      : only === "detailpage"
+                      ? jobdetail.company_name
+                      : "GENT SECURITY LTD"}
                   </h5>
                   <span id="location">
-                    {only === "jobpage" ? jobdata.city : "Edinburgh, UK"}
+                    {only === "jobpage"
+                      ? jobdata.city
+                      : only === "detailpage"
+                      ? jobdetail.city
+                      : "EDINBERK, UK"}
                   </span>
                 </div>
               </div>
@@ -80,7 +99,16 @@ const CardJobBoard = ({
                       <p> cancel</p>
                     </div>
                   </>
-                ) : (
+                ) : only === "detailpage" ? (
+                  <button
+                    id={!showForm ? "jb-button" : "rm-button"}
+                    onClick={() => {
+                      setShowForm(showform);
+                    }}
+                  >
+                    {buttonTitle}
+                  </button>
+                ) : only === "jobpage" ? (
                   <button
                     id={!showForm ? "jb-button" : "rm-button"}
                     onClick={() => {
@@ -90,8 +118,9 @@ const CardJobBoard = ({
                   >
                     {buttonTitle}
                   </button>
+                ) : (
+                  ""
                 )}
-                <></>
               </div>
             </div>
 
@@ -108,7 +137,12 @@ const CardJobBoard = ({
             </sup>
             <span>
               <strong>
-                &#163;{only === "jobpage" ? jobdata.salary_per : 11}
+                &#163;
+                {only === "jobpage"
+                  ? jobdata.salary_per
+                  : only === "detailpage"
+                  ? jobdetail.salary_per
+                  : 11}
               </strong>
               <span>/Per Hour</span>
             </span>{" "}
@@ -117,7 +151,13 @@ const CardJobBoard = ({
           <div className="card-ft-left">
             <span>Venue type</span>
             <img src={retailImg} alt="" className="jb-retailimg" />
-            <span>{only === "jobpage" ? jobdata.venue_type : "Retail"}</span>
+            <span>
+              {only === "jobpage"
+                ? jobdata.venue_type
+                : only === "detailpage"
+                ? jobdetail.venue_type
+                : "not"}
+            </span>
           </div>
         </div>
       </div>

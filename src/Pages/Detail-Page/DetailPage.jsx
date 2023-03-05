@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { JobDetail } from "../../Redux/JobReducer";
+import { JobDetail , SimilarJob} from "../../Redux/JobReducer";
 import ShortDetail from "../../Components/Detail-Page-Components/Short-Detail/ShortDetail";
 import CardJobBoard from "../../Components/Job-Board-Components/Card-Job-Board/CardJobBoard";
 import requirementIcon from "../../Assets/Detail-Page-Assets/Icons/licence-img.svg";
@@ -20,12 +20,21 @@ function DetailPage() {
   const disptach = useDispatch();
   const DETAIL_API = `https://staging.get-licensed.co.uk/guardpass/api/public/${id}/detail`;
 
-  const { jobDetail } = JobsState;
-  console.log(jobDetail);
+  const SIMILAR_API =`  https://staging.get-licensed.co.uk/guardpass/api/public/jobs/${id}/similar
+`
 
+  const { jobDetail ,similarJob } = JobsState;
+ 
   useEffect(() => {
     disptach(JobDetail(DETAIL_API));
-  },[]);
+  },[jobDetail.id]);
+
+
+
+useEffect(()=>{
+  disptach(SimilarJob(SIMILAR_API))
+  console.log(similarJob.id)
+},[])
 
   return (
     <>
@@ -51,17 +60,21 @@ function DetailPage() {
             <hr />
             <ShortDetail
               heading="Job type"
-              Image={jobTypeIcon}
+               Image={jobTypeIcon}
               title="Part time employment"
+              emptype={jobDetail.employment_type}
             />
             <hr />
+
+
             <ShortDetail
               heading="Benefits"
               Image={storeDiscountsIcon}
               title="Store discounts"
+              benefits={jobDetail.job_benefits}
             />
             <hr />
-            <DetailDescription />
+            <DetailDescription description={jobDetail.description} />
           </div>
         </div>
         <div className="detail-aside">
@@ -73,7 +86,7 @@ function DetailPage() {
             formsec="dt-form-sec"
             downloadh="dt-aside-download-h"
           />
-          <SimilarJobs />
+          <SimilarJobs similarJob={similarJob} id={id} />
         </div>
       </div>
     </>

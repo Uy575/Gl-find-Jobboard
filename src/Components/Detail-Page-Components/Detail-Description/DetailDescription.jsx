@@ -1,10 +1,10 @@
 import React from 'react'
 
-function DetailDescription() {
+function DetailDescription({description}) {
   return (
     <div>
         <h1>Description</h1>
-        <h3>test</h3>
+        <h3>{description}</h3>
     </div>
   )
 }
