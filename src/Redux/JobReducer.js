@@ -7,8 +7,9 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   Jobs: [],
-jobDetail: [],
-similarJob :[]
+  jobDetail: [],
+  similarJob: [],
+  paginated: [],
 };
 
 const JobSlice = createSlice({
@@ -24,10 +25,14 @@ const JobSlice = createSlice({
     setSimilarJob(state, action) {
       state.similarJob = action.payload;
     },
+    setPaginated(state, action) {
+      state.paginated = action.payload;
+    },
   },
 });
 
-export const { setJobs , setJobDetail ,setSimilarJob} = JobSlice.actions;
+export const { setJobs, setJobDetail, setSimilarJob, setPaginated } =
+  JobSlice.actions;
 export default JobSlice.reducer;
 
 // Get JOBLIST THunk
@@ -39,25 +44,20 @@ export function FetchJobs(endpoint) {
   };
 }
 
-
 // Job Detail Thunk
 export function JobDetail(endpoint) {
   return async function fetchThunk(dispatch, getState) {
     const request = await axios.get(endpoint);
     const response = await request;
     dispatch(setJobDetail(response.data.data));
-    console.log('jd')
   };
 }
-
-
 
 // Similar Job Thunk
 export function SimilarJob(endpoint) {
   return async function fetchThunk(dispatch, getState) {
     const request = await axios.get(endpoint);
     const response = await request;
-    console.log('sj')
     dispatch(setSimilarJob(response.data.data));
   };
 }

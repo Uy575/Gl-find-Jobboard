@@ -1,0 +1,25 @@
+
+.pagination {
+color: black;
+display: flex;
+justify-content: center;
+text-align: center;
+}
+.pagination >li >a {
+color: black;
+padding: .2rem  .6rem;
+border: 2px solid gray;
+color: #188333;
+}
+
+.pagination >li{
+display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+.active>.page-num{
+color: white;
+background-color: rgb(87, 208, 87);
+}
+

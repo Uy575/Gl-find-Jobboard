@@ -6,7 +6,7 @@ const SimilarJobList = ({similarJob,id}) => {
       
 {
     similarJob.map((similar)=>{
-        return <SimilarJobCard similar={similar} id={id} />
+        return <SimilarJobCard similar={similar} id={id} key={similar.id} />
     })
 }
 

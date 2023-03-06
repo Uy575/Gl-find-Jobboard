@@ -9,6 +9,7 @@ import AsideJobBoard from "../../Components/Job-Board-Components/Aside-Job-Board
 import BackHome from "../../Components/Job-Board-Components/Back-To-Home/BackHome";
 import JobBoardJobs from "../../Components/Job-Board-Components/Job-Boad-Jobs/JobBoardJobs";
 import "./Jobs.css";
+import Pagination from "../../Components/Job-Board-Components/Paginate/Pagination";
 
 
 

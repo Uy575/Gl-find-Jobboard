@@ -3,6 +3,7 @@ import TopJobList from "./TopJobList";
 import { addingTopProducts } from "../../../Redux/TopJobReduer";
 import { useDispatch } from "react-redux";
 import { useEffect } from "react";
+
 function TopJobs() {
   const dispatch = useDispatch();
   useEffect(() => {
@@ -18,12 +19,15 @@ function TopJobs() {
      <div className="ls_container">
      <h1 className="main-heading">Latest Security Vacancies</h1>
      </div>
-     <div style={{display:'flex',flexWrap:'wrap'}} >
+
+     <div className="div">
      <TopJobList />
      </div>
      <div className="ls_container">
      <button className="ls_button">Explore More Jobs</button>
      </div>
+
+
      </>
   )
 }

@@ -33,9 +33,9 @@ const DetailForm = () => {
   } = useFormik({
     initialValues: INITIAL_STATE,
     // validationSchema: ,
-    onSubmit: (values,action) => {
+    onSubmit: (values, action) => {
       onSubmitHandle();
-      action.resetForm()
+      action.resetForm();
     },
   });
 
@@ -49,11 +49,11 @@ const DetailForm = () => {
         job_id: 443,
         has_licence: checkValue,
       });
-       message = request.data.message;
-toast(message)       
+      message = request.data.message;
+      toast.success(message);
     } catch (err) {
-       message = err.response.data.message; 
-       toast(message)
+      message = err.response.data.message;
+      toast.error(message);
     }
   };
 

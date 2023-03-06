@@ -1,10 +1,11 @@
 import React,{useState} from 'react'
 import { useSelector } from 'react-redux'
 import CardJobBoard from '../../Card-Job-Board/CardJobBoard'
+import Pagination from '../../Paginate/Pagination'
 import './joblist.css'
 const JobList = () => {
   const JobsState = useSelector((state) => state.JobReducer)
-const {Jobs} =JobsState
+const {Jobs , paginated} =JobsState
 
 return (
 <>
@@ -12,14 +13,15 @@ return (
 
 {
   
-Jobs.map((job)=>{
+paginated.map((job)=>{
   return (
-      <CardJobBoard buttonTitle="View Job Details" classname="card-body" showform='false' key={job.id} jobdata={job} only="jobpage" /> 
+      <CardJobBoard buttonTitle="View Job Details" classname="card-body" showform='false' key={job.id} jobdata={job} paginated={paginated} only="jobpage" /> 
 
 )
 
 })
 }
+<Pagination />
 </div>
 </>
   )

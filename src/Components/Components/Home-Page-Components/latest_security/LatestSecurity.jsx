@@ -1,12 +1,12 @@
 import React from "react";
 import cardIcon1 from "../../../Assets/Logo/event-security.webp";
+
 import "./latest_sec.css";
 
 const LatestSecurity = ({topProduct}) => {
-
   return (
-    <div className="ls_container">
 
+    <div className="ls_container">
       <div className="col">
         <div className="row">
           <div className="card">
