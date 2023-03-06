@@ -1,6 +1,10 @@
 import React from 'react'
 
 function DetailDescription({description}) {
+  // const regex = /(<([^>]+)>)/ig;
+  // const result = description.replace(regex, '');
+
+
   return (
     <div>
         <h1>Description</h1>

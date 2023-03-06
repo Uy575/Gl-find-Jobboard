@@ -19,7 +19,7 @@ const SimilarJobCard = ({similar,id }) => {
     
     useEffect(() => {
       disptach(JobDetail(DETAIL_API));
-    },[jobDetail.id]);
+    },[id]);
 
 // as
 

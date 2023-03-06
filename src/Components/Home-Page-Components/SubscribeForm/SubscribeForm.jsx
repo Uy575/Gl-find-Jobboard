@@ -3,6 +3,9 @@ import "./SubscribeForm.css"
 import { useFormik } from 'formik';
 import axios from 'axios';
 import { subscriberSchema } from '../../../Schemas/SubscribeFormYup';
+import MsgTostify from '../../Custom-Components/Tostify/MsgTostify';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 function SubscribeForm() {
      
     const subscriberEmailApi = "https://uat.get-licensed.co.uk/subscriber/register";
@@ -35,6 +38,11 @@ function SubscribeForm() {
     
 }
 
+ const subscribeFormHandle = ()=>{
+  let message = 'subscribed';
+     toast(message)
+ }
+
   return (
    <form onSubmit={handleSubmit}>
       <div className='mainSubscriberFormContainer'>
@@ -65,10 +73,10 @@ function SubscribeForm() {
       </div>
       </div>
      <div>
-     <input className='subscribeFormButton' type="submit" value="Subscribe" />
+     <input className='subscribeFormButton' type="submit" value="Subscribe" onClick={subscribeFormHandle} />
     </div>
   </div>
-
+    <MsgTostify/>
    </form>
   )
 }

@@ -4,9 +4,9 @@ import 'react-toastify/dist/ReactToastify.css';
 import { useState } from "react";
 import Form from "react-bootstrap/Form";
 import React from "react";
-import MsgTostify from "../../Custom-Components/Tostify/MsgTostify";
 import "./detailform.css";
 import axios from "axios";
+import { applyForJobSchema } from "../../../Schemas/ApplyForJobFormYup";
 
 const POST_API = `https://staging.get-licensed.co.uk/guardpass/api/public/sms/job/link`;
 const INITIAL_STATE = {
@@ -20,7 +20,6 @@ let message;
 
 const DetailForm = () => {
   const [checkValue, setCheckValue] = useState();
-  const [showMessage, setShowMessage] = useState(false);
 
   const {
     values,
@@ -32,7 +31,7 @@ const DetailForm = () => {
     handleSubmit,
   } = useFormik({
     initialValues: INITIAL_STATE,
-    // validationSchema: ,
+    validationSchema: applyForJobSchema ,
     onSubmit: (values,action) => {
       onSubmitHandle();
       action.resetForm()
@@ -76,6 +75,7 @@ toast(message)
           onBlur={handleBlur}
           onChange={handleChange}
         />
+        {errors.firstName && touched.firstName? <p style={{color:'red'}}> {errors.firstName} </p>:null}
         <Form.Control
           type="text"
           placeholder="Last Name"
@@ -84,7 +84,7 @@ toast(message)
           onBlur={handleBlur}
           onChange={handleChange}
         />
-
+            {errors.lastName && touched.lastName? <p style={{color:'red'}}> {errors.lastName} </p>:null}
         <Form.Control
           type="text"
           placeholder="Email Address"
@@ -93,14 +93,16 @@ toast(message)
           onBlur={handleBlur}
           onChange={handleChange}
         />
+           {errors.email && touched.email? <p style={{color:'red'}}> {errors.email} </p>:null}
         <Form.Control
-          type="text"
+          type="number"
           placeholder="Phone Number"
           name="number"
           value={values.number}
           onBlur={handleBlur}
           onChange={handleChange}
         />
+           {errors.number && touched.number? <p style={{color:'red'}}> {errors.number} </p>:null}
       </div>
 
       <div className="det-form-buttons">

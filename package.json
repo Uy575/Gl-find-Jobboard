@@ -12,15 +12,19 @@
     "formik": "^2.2.9",
     "react": "^18.2.0",
     "react-bootstrap": "^2.7.2",
+    "react-bootstrap-accordion": "^1.0.0",
     "react-dom": "^18.2.0",
+    "react-google-autocomplete": "^2.7.3",
+    "react-multi-carousel": "^2.8.2",
+    "react-places-autocomplete": "^7.3.0",
     "react-redux": "^8.0.5",
     "react-router-dom": "6",
     "react-scripts": "5.0.1",
-    "redux": "^4.2.1",
-    "web-vitals": "^2.1.4",
-    "yup": "^1.0.2",
     "react-toastify": "^9.1.1",
-    "web-vitals": "^2.1.4"
+    "redux": "^4.2.1",
+    "redux-devtools-extension": "^2.13.9",
+    "web-vitals": "^2.1.4",
+    "yup": "^1.0.2"
   },
   "scripts": {
     "start": "react-scripts start",
