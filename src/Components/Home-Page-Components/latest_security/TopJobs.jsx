@@ -18,7 +18,7 @@ function TopJobs() {
      <div className="ls_container">
      <h1 className="main-heading">Latest Security Vacancies</h1>
      </div>
-     <div style={{display:'flex',flexWrap:'wrap'}} >
+     <div style={{display:'flex'}} >
      <TopJobList />
      </div>
      <div className="ls_container">

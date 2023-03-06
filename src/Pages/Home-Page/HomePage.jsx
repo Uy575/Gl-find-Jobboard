@@ -6,10 +6,10 @@ import SeventhSection from "../../Components/Home-Page-Components/Seventh-Sectio
 import SectionEight from "../../Components/Home-Page-Components/Section-Eight/SectionEight";
 import SectionNine from "../../Components/Home-Page-Components/Section-Nine/SectionNine";
 import DesiredVenue from "../../Components/Home-Page-Components/desired_venue/DesiredVenue";
-import LatestSecurity from "../../Components/Home-Page-Components/latest_security/LatestSecurity";
 import Location from "../../Components/Home-Page-Components/locations/Location";
 import Footer from "../../Components/Home-Page-Components/footer/Footer";
 import TopJobs from "../../Components/Home-Page-Components/latest_security/TopJobs";
+import ReactCarousal from "../../Components/Home-Page-Components/latest_security/ReactCarousal";
 function HomePage() {
   return (
     <>

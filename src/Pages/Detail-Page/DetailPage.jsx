@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, {  useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { JobDetail, SimilarJob } from "../../Redux/JobReducer";
@@ -14,6 +14,8 @@ import SimilarJobs from "../../Components/Detail-Page-Components/Similar-Jobs/Si
 import BackHome from "../../Components/Job-Board-Components/Back-To-Home/BackHome";
 import DetailForm from "../../Components/Detail-Page-Components/Form-Submit/DetailForm";
 import "./DetailPage.css";
+import AccordionComp from "../../Components/Detail-Page-Components/Accordion/Accordion";
+import GetSiaLicense from "../../Components/Detail-Page-Components/Get-Sia-License/GetSiaLicense";
 function DetailPage() {
   const JobsState = useSelector((state) => state.JobReducer);
   const { id } = useParams();
@@ -46,6 +48,13 @@ function DetailPage() {
             only="detailpage"
             jobdetail={jobDetail}
           />
+          
+          <div>
+            <GetSiaLicense/>
+          </div>
+          <div className="detailContent">
+            <AccordionComp/>
+          </div>
           <div className="detailContent">
             <hr />
             <ShortDetail

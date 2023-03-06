@@ -139,9 +139,9 @@ const CardJobBoard = ({
               <strong>
                 &#163;
                 {only === "jobpage"
-                  ? jobdata.salary_per
+                  ? jobdata.salary
                   : only === "detailpage"
-                  ? jobdetail.salary_per
+                  ? jobdetail.salary
                   : 11}
               </strong>
               <span>/Per Hour</span>
