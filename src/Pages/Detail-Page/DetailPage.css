@@ -17,8 +17,9 @@
 
   margin-top: -0.09rem;
 }
-.detailContent * + * {
-  margin-bottom: 2rem;
+.detailContent * + div {
+padding: 1rem;
+margin-bottom: 1rem;
 }
 
 /*////////////////////////////////// style components for detail page ////////////////////////////*/

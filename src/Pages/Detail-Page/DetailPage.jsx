@@ -49,9 +49,6 @@ function DetailPage() {
             jobdetail={jobDetail}
           />
           
-          <div>
-            <GetSiaLicense/>
-          </div>
           <div className="detailContent">
             <AccordionComp/>
           </div>

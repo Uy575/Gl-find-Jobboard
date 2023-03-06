@@ -1,11 +1,12 @@
 import { useFormik } from "formik";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import { useState } from "react";
 import Form from "react-bootstrap/Form";
 import React from "react";
 import "./detailform.css";
 import axios from "axios";
+import GetSiaLicense from "../Get-Sia-License/GetSiaLicense";
 import { applyForJobSchema } from "../../../Schemas/ApplyForJobFormYup";
 
 const POST_API = `https://staging.get-licensed.co.uk/guardpass/api/public/sms/job/link`;
@@ -64,6 +65,8 @@ const DetailForm = () => {
     setCheckValue(e.target.value);
   }
 
+  console.log(checkValue);
+
   return (
     <section className="detail-form-container">
       <div className="detailform-input">
@@ -75,7 +78,9 @@ const DetailForm = () => {
           onBlur={handleBlur}
           onChange={handleChange}
         />
-        {errors.firstName && touched.firstName? <p style={{color:'red'}}> {errors.firstName} </p>:null}
+        {errors.firstName && touched.firstName ? (
+          <p style={{ color: "red" }}> {errors.firstName} </p>
+        ) : null}
         <Form.Control
           type="text"
           placeholder="Last Name"
@@ -84,7 +89,9 @@ const DetailForm = () => {
           onBlur={handleBlur}
           onChange={handleChange}
         />
-            {errors.lastName && touched.lastName? <p style={{color:'red'}}> {errors.lastName} </p>:null}
+        {errors.lastName && touched.lastName ? (
+          <p style={{ color: "red" }}> {errors.lastName} </p>
+        ) : null}
         <Form.Control
           type="text"
           placeholder="Email Address"
@@ -93,7 +100,9 @@ const DetailForm = () => {
           onBlur={handleBlur}
           onChange={handleChange}
         />
-           {errors.email && touched.email? <p style={{color:'red'}}> {errors.email} </p>:null}
+        {errors.email && touched.email ? (
+          <p style={{ color: "red" }}> {errors.email} </p>
+        ) : null}
         <Form.Control
           type="number"
           placeholder="Phone Number"
@@ -102,7 +111,9 @@ const DetailForm = () => {
           onBlur={handleBlur}
           onChange={handleChange}
         />
-           {errors.number && touched.number? <p style={{color:'red'}}> {errors.number} </p>:null}
+        {errors.number && touched.number ? (
+          <p style={{ color: "red" }}> {errors.number} </p>
+        ) : null}
       </div>
 
       <div className="det-form-buttons">
@@ -129,6 +140,8 @@ const DetailForm = () => {
           </button>
         </div>
       </div>
+      {checkValue === "0" ? <GetSiaLicense /> : ""}
+
       <ToastContainer />
     </section>
   );

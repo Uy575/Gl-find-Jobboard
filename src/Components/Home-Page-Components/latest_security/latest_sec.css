@@ -8,16 +8,16 @@
 }
 .ls_container {
   text-align: center;
-  padding: 5rem;
+  padding: 1rem;
 }
 
 .col {
-  padding: 2rem;
+  padding: 1rem;
 }
 
 .card {
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
-  width: 432px;
+  width: 360px;
   height: 17rem;
   max-height: 18rem;
   border-radius: 0.4rem;
