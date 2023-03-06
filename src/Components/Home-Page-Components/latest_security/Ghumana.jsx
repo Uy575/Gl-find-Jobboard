@@ -1,7 +1,8 @@
 import React from 'react'
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-function ReactCarousal() {
+import TopJobList from './TopJobList';
+function Ghumana() {
     const responsive = {
         superLargeDesktop: {
           // the naming can be any, depends on you.
@@ -23,11 +24,25 @@ function ReactCarousal() {
       };
   return (
     <div>
-  <Carousel responsive={responsive}>
-   <div>Item 1</div>
-</Carousel>;
+  <Carousel responsive={responsive}
+    swipeable={false}
+    draggable={false}
+    showDots={true}
+    ssr={true} // means to render carousel on server-side.
+    infinite={true}
+    autoPlaySpeed={1000}
+    keyBoardControl={true}
+    customTransition="all .5"
+    transitionDuration={500}
+    containerClass="carousel-container"
+    removeArrowOnDeviceType={["tablet", "mobile"]}
+    dotListClass="custom-dot-list-style"
+    itemClass="carousel-item-padding-40-px">
+  
+   <div><TopJobList/></div>
+ </Carousel>
     </div>
   )
 }
 
-export default ReactCarousal
+export default Ghumana;

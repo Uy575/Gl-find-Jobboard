@@ -1,0 +1,15 @@
+.suggestion{
+    cursor: pointer;
+     border-bottom: 1px solid black;
+    /* border-right: 1px solid black;
+    border-left: 1px solid black;  */
+    background-color: white;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 0.4rem;
+   
+
+}
+
+.suggestion:hover{
+    background-color: grey;
+}

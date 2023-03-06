@@ -9,7 +9,8 @@ import DesiredVenue from "../../Components/Home-Page-Components/desired_venue/De
 import Location from "../../Components/Home-Page-Components/locations/Location";
 import Footer from "../../Components/Home-Page-Components/footer/Footer";
 import TopJobs from "../../Components/Home-Page-Components/latest_security/TopJobs";
-import ReactCarousal from "../../Components/Home-Page-Components/latest_security/ReactCarousal";
+import ReactCarousal from "../../Components/Home-Page-Components/latest_security/Ghumana";
+import Ghumana from "../../Components/Home-Page-Components/latest_security/Ghumana";
 function HomePage() {
   return (
     <>
@@ -17,7 +18,6 @@ function HomePage() {
     <FindJob/>
     <ThirdSection/>
     <TopJobs/>
-    {/* <LatestSecurity/> */}
     <DesiredVenue/>
     <Location/>
     <SeventhSection/>
