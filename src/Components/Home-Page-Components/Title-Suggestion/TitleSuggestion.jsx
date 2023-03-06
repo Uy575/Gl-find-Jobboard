@@ -12,7 +12,12 @@ function TitleSuggestion({formInputs}) {
             setTitle(response.data.data);
          }
          loadJobTitle();
-    },[])
+        },[])
+        
+        const onSuggestHandler = (text)=>{
+            setText(text);
+            setSuggestion([]);
+        }
 
     const onChangeHandler = (text)=>{
         let matches = [];
@@ -26,17 +31,26 @@ function TitleSuggestion({formInputs}) {
         setSuggestion(matches)
         setText(text)
     }
+
   return (
       <>
       <h4>Job Title</h4> 
-      <input className={formInputs} placeholder='e.g Security supervisor' type="text"   name="name"
+      <input className={formInputs} placeholder='e.g Security supervisor' type="search"   name="name"
       onChange={e => onChangeHandler(e.target.value)}
       value = {text}
+      onBlur = {()=>{
+        setTimeout(() => {
+            setSuggestion([]);
+            setText('')
+        }, 200);
+      }}
       />
-      <div style={{marginTop:'0.7rem',overflowY:'scroll',height:'20rem',width:'15rem'}}>
+
+      <div className={text? "suggestionDiv":''}>
       {suggestion && suggestion.map((suggest,i)=>{
-          console.log("title",suggest);
-          return <div key={i} className='suggestion'>{suggest}</div>
+          return <div  key={i} className='suggestion' onClick={()=>{
+            onSuggestHandler(suggest);
+          }}>{suggest}</div>
         })}
         </div>
         </>

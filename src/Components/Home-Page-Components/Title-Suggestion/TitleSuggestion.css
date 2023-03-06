@@ -13,3 +13,10 @@
 .suggestion:hover{
     background-color: grey;
 }
+
+.suggestionDiv{
+    margin-top:0.7rem;
+    overflow-y:scroll;
+    height:20rem;
+    width:15rem;
+}
