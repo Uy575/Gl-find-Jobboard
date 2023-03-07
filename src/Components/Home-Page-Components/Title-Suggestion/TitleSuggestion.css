@@ -21,6 +21,6 @@
 .suggestionDiv{
     margin-top:0.7rem;
     overflow-y:auto;
-    height:20rem;
+    max-height: 20rem;
     width:15rem;
 }
