@@ -1,6 +1,8 @@
 import React from 'react'
 import LatestSecurity from './LatestSecurity'
 import { useSelector } from "react-redux";
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
 
 function TopJobList() {
  
@@ -26,9 +28,11 @@ function TopJobList() {
       }
     };
   return (
-     topProducts.map((topProduct)=>{
-         return<LatestSecurity key={topProduct.id} topProduct = {topProduct}/>
-})
+    <>
+   {  topProducts.map((topProduct)=>{
+       return<LatestSecurity key={topProduct.id} topProduct = {topProduct}/>
+})}
+</>
   )
 }
 

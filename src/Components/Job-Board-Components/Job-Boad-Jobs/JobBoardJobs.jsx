@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useDispatch  ,useSelector} from "react-redux";
 import JobList from "./Jobs-List/JobList";
+import loader from '../../Custom-Components/Loader/loader.svg'
 import { FetchJobs ,setStatuses } from "../../../Redux/JobReducer";
 
 import "./jobboardjob.css";
@@ -18,10 +19,11 @@ const JobBoardJobs = () => {
   return (
     <>
     {STATUSES === "loading" ?
-  <h2>Loading..</h2>
-  :   <JobList />}
+<div className="loaderDiv" style={{width:'100%' , display:'flex' , alignItems:'center' , justifyContent:'center'}}>
+  <img src={loader} alt="" />
+</div>
+:   <JobList />}
    
-  // ''
     </>
   );
 };

@@ -3,7 +3,6 @@ import TopJobList from "./TopJobList";
 import { addingTopProducts } from "../../../Redux/TopJobReduer";
 import { useDispatch } from "react-redux";
 import { useEffect } from "react";
-// import Ghumana from "./Ghumana";
 
 
 function TopJobs() {
@@ -21,6 +20,7 @@ function TopJobs() {
      <div className="ls_container">
      <h1 className="main-heading">Latest Security Vacancies</h1>
      </div>
+     
      <div style={{display:'flex'}} >
      <TopJobList />
      </div>
