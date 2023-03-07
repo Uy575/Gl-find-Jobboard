@@ -16,9 +16,7 @@ function HomePage() {
       <Header/>
     <FindJob/>
     <ThirdSection/>
-    <ReactCarousals />
     <TopJobs/> 
-
     <DesiredVenue/>
     <Location/>
     <SeventhSection/>
