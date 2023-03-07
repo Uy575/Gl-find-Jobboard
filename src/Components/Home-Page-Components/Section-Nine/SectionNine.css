@@ -5,3 +5,43 @@
     padding: 3rem;
 
 }
+
+@media (max-width: 320.98px) {
+    .sectionNineLogoContainer{
+        /* flex-direction: column; */
+        flex-wrap: wrap;
+    }
+    .sectionNineLogoContainer > div{
+        flex: 25%;
+      
+    }
+    .item{
+        width: 50%;
+    }
+} 
+@media (max-width: 575.98px) {
+    .sectionNineLogoContainer{
+        /* flex-direction: column; */
+        flex-wrap: wrap;
+        padding: 4rem;
+        padding-left:5rem;
+        justify-content: center;
+        
+
+    }
+    .sectionNineLogoContainer > div{
+        flex: 50%;
+       
+    }
+    .item{
+        width: 50%;
+    
+    }
+    .item > img{
+        height: 50%;
+    }
+   
+    .lastItem > img{
+        height: 28px;
+    }
+} 

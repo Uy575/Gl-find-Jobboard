@@ -10,17 +10,17 @@ import sixthgroup from "../../../Assets/Logo/group-6.svg";
 
 function SectionNine() {
   return (
-    <div className='sectionNineLogoContainer'>
+      <div className='sectionNineLogoContainer'>
         
-            <img src={firstgroup} alt='group1'/>
-            <img src={secondgroup} alt='group2'/>
-            <img src={thirdgroup} alt='group3'/>
-            <img src={fourthgroup} alt='group4'/>
-            <img src={fifthgroup} alt='group5'/>
-            <img src={sixthgroup} alt='group6'/>
-     
+            <div className='item'><img src={firstgroup} alt='group1'/></div>
 
-   
+
+            <div className='item'><img src={secondgroup} alt='group2'/></div>
+            <div className='item'><img src={thirdgroup} alt='group3'/></div>
+            <div className='item'><img src={fourthgroup} alt='group4'/></div>
+            <div className='item'><img src={fifthgroup} alt='group5'/></div>
+            <div className='lastItem'><img src={sixthgroup} alt='group6'/></div>
+        
     </div>
   )
 }

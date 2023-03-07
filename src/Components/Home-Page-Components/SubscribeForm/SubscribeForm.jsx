@@ -3,7 +3,6 @@ import "./SubscribeForm.css"
 import { useFormik } from 'formik';
 import axios from 'axios';
 import { subscriberSchema } from '../../../Schemas/SubscribeFormYup';
-import MsgTostify from '../../Custom-Components/Tostify/MsgTostify';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 function SubscribeForm() {
@@ -43,6 +42,43 @@ function SubscribeForm() {
 console.log(values.email)
    console.log(request)
     
+        const formData = JSON.stringify({"subscriberEmail" : values.email});
+    const response = await axios.post(subscriberEmailApi,formData, {headers: {
+      'Accept-Type' : 'application/json', 
+      'Content-Type': 'application/json'}
+  });
+
+    console.log(formData)
+    console.log(response.data);
+    toast.success(response.data);
+  } catch (err) {
+    message = err.response.data.message;
+    toast.error(message);
+  }
+        
+    
+// }
+
+// var myHeaders = new Headers();
+// myHeaders.append("Accept", "application/json");
+// myHeaders.append("Content-Type", "application/json");
+
+// var raw = JSON.stringify({
+//   subscriberEmail : values.email
+// });
+
+
+// var requestOptions = {
+//   method: 'POST',
+//   headers: myHeaders,
+//   body: raw,
+//   redirect: 'follow'
+// };
+//  const userSubscribe = async ()=>{
+// fetch("https://uat.get-licensed.co.uk/subscriber/register", requestOptions)
+//   .then(response => response.text())
+//   .then(result => console.log(result))
+//   .catch(error => console.log('error', error));
 }
 
 

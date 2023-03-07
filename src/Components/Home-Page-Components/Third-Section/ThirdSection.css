@@ -27,3 +27,33 @@
   font-weight: 700;
   
 }
+
+@media (max-width: 320.98px) {
+  .thirdSectionMainContainer{
+    margin-top: 0rem;
+    padding: 0rem;
+  
+  }
+  .thirdSectionText{
+    margin-left: 0rem;
+  }
+  .headingFontSize {
+    font-size: 22px;
+    /* margin-bottom: 1rem; */
+  }
+
+} 
+@media (max-width: 575.98px) {
+  .thirdSectionMainContainer{
+    margin-top: 0rem;
+    padding: 0rem;
+  }
+  .thirdSectionText{
+    margin-left: 0rem;
+  }
+  .headingFontSize {
+    font-size: 22px;
+    /* margin-bottom: 1rem; */
+  }
+ 
+} 

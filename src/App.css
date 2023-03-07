@@ -16,3 +16,9 @@ body{
 p{
     font-family: 'Baloo Bhai 2', cursive;
 }
+
+@media (max-width: 575.98px){
+    body{
+        overflow-x: hidden ;
+    }
+}

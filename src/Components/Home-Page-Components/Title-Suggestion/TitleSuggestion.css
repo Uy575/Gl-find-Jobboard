@@ -1,8 +1,6 @@
 .suggestion{
     cursor: pointer;
-     border-bottom: 1px solid black;
-    /* border-right: 1px solid black;
-    border-left: 1px solid black;  */
+     border-bottom: 1px solid rgb(207, 206, 206);
     background-color: white;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     padding: 0.4rem;
@@ -21,6 +19,13 @@
 .suggestionDiv{
     margin-top:0.7rem;
     overflow-y:auto;
-    height:20rem;
+    max-height: 20rem;
     width:15rem;
+
+}
+
+.jobTitleHeading{
+    padding-top: 1rem;
+    padding-right: 13.5rem;
+    margin-bottom: 0rem;
 }

@@ -30,9 +30,6 @@ function Form({formFields,formCard,jobTitleInputField,formInputs,locationInputFi
       </div>
       <div className={locationInputField}>
       <h4>Enter Location</h4>
-      {/* <PlacesAutocomplete value={address} onChange={setAddress} onSelect ={handleSelect}>
-  
-      </PlacesAutocomplete> */}
       <input className={formInputs} placeholder='e.g London' type="text" name="name" />
       </div>
       </div>

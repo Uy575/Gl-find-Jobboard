@@ -33,3 +33,23 @@
     display: block;
     
 }
+
+@media (max-width: 320.98px) {
+
+    .header-logo{
+        margin: 1rem 0rem;
+
+    }
+    .header-post-job{
+        display: none;
+    }
+} 
+
+@media (max-width: 575.98px) {
+    .header-logo {
+        margin: 1rem 0rem;
+    }
+    .header-post-job{
+        display: none;
+    }
+} 
