@@ -10,6 +10,7 @@ const responsive = {
     // the naming can be any, depends on you.
     breakpoint: { max: 4000, min: 3000 },
     items: 5,
+    
   },
   desktop: {
     breakpoint: { max: 3000, min: 1024 },
@@ -32,7 +33,9 @@ const ReactCarousals = ({ topList }) => {
       responsive={responsive}
       arrows={true}
       swipeable={false}
-      draggable={false}
+      draggable={false}  transitionDuration={500}  autoPlaySpeed={1000}
+
+
     >
       {topProducts.map((topProduct) => {
         return <LatestSecurity key={topProduct.id} topProduct={topProduct} />;

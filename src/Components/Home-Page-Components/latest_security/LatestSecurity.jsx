@@ -5,9 +5,6 @@ import "./latest_sec.css";
 const LatestSecurity = ({topProduct}) => {
   return (
     <div className="ls_container">
-      <div className="col">
-        <div className="row"> 
-        
           <div className="card">
             <div className="card-li1">
               <div className="card-li1-headings">
@@ -40,8 +37,7 @@ const LatestSecurity = ({topProduct}) => {
             </div>
           </div>
          </div>
-        </div>
-     </div>
+     
   );
 };
 
