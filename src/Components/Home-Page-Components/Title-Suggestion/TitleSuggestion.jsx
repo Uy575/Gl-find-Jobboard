@@ -34,7 +34,7 @@ function TitleSuggestion({formInputs}) {
 
   return (
       <>
-      <h4>Job Title</h4> 
+      <h4 className="jobTitleHeading">Job Title</h4> 
       <input className={formInputs} placeholder='e.g Security supervisor' type="search"   name="name" autoComplete="off"
       onChange={e => onChangeHandler(e.target.value)}
       value = {text}

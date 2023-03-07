@@ -3,7 +3,6 @@ import "./SubscribeForm.css"
 import { useFormik } from 'formik';
 import axios from 'axios';
 import { subscriberSchema } from '../../../Schemas/SubscribeFormYup';
-import MsgTostify from '../../Custom-Components/Tostify/MsgTostify';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 function SubscribeForm() {
@@ -19,7 +18,7 @@ function SubscribeForm() {
         initialValues,
           validationSchema:subscriberSchema,
           onSubmit: (values,action) =>{  
-          userSubscribe(values);
+          userSubscribe();
             action.resetForm();  
        
         },
@@ -29,21 +28,57 @@ function SubscribeForm() {
       
   });
 
-    const userSubscribe = async (values)=>{
-    const formData = JSON.stringify({subscriberEmail : values.email});
-    const request = await axios.post(subscriberEmailApi, formData);
-
-   
+   let message = 'Subscribed';
+  
+  const userSubscribe = async ()=>{
+      try{
     
+        const formData = JSON.stringify({"subscriberEmail" : values.email});
+    const response = await axios.post(subscriberEmailApi,formData, {headers: {
+      'Accept-Type' : 'application/json', 
+      'Content-Type': 'application/json'}
+  });
+
+    console.log(formData)
+    console.log(response.data);
+    toast.success(response.data);
+  } catch (err) {
+    message = err.response.data.message;
+    toast.error(message);
+  }
+        
+    
+// }
+
+// var myHeaders = new Headers();
+// myHeaders.append("Accept", "application/json");
+// myHeaders.append("Content-Type", "application/json");
+
+// var raw = JSON.stringify({
+//   subscriberEmail : values.email
+// });
+
+
+// var requestOptions = {
+//   method: 'POST',
+//   headers: myHeaders,
+//   body: raw,
+//   redirect: 'follow'
+// };
+//  const userSubscribe = async ()=>{
+// fetch("https://uat.get-licensed.co.uk/subscriber/register", requestOptions)
+//   .then(response => response.text())
+//   .then(result => console.log(result))
+//   .catch(error => console.log('error', error));
 }
 
- const subscribeFormHandle = ()=>{
-  let message = 'subscribed';
-  console.log("toast",initialValues)
+//  const subscribeFormHandle = ()=>{
+//   let message = 'subscribed';
+//   console.log("toast",initialValues)
 
-   toast(message)
+//    toast(message)
 
- }
+//  }
 
   return (
    <form onSubmit={handleSubmit}>
@@ -75,13 +110,13 @@ function SubscribeForm() {
       </div>
       </div>
      <div>
-     <input className='subscribeFormButton' type="submit" value="Subscribe" onClick={subscribeFormHandle} />
+     <input className='subscribeFormButton' type="submit" value="Subscribe" />
     </div>
   </div>
 
-   {
-     initialValues.name && initialValues.email === ""? '':<MsgTostify/>
-   }
+   
+  <ToastContainer />
+   
    </form>
   )
 }

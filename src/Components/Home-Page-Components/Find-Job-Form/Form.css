@@ -70,3 +70,116 @@
   width: 50%;
   font-family: 'Baloo Bhai 2', cursive;
 }
+
+@media (max-width: 320.98px) {
+.homeFormCard{
+   display: block;
+   background-color: none ;
+}
+.homeFindJobButton{
+    left:9rem;
+    top: 16rem;
+      width: 21rem;
+    height: 4rem;
+    font-size: 1.2rem;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+
+
+ }
+ .homeJobTitleInputField{
+    margin-top: 5rem;
+    margin-left: 0rem;
+    width: 21rem;
+    background-color: white;
+
+    border-right: none;
+    height: auto;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    border-radius: 6px;
+ }
+ .homeLocationInputField{
+    margin-top: 1rem;
+    margin-left: 0rem;
+    width: 21rem;
+    background-color: white;
+    border-right: none;
+    height: auto;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    border-radius: 6px;
+ }
+ .homeFindJobArrow {
+    left: 18rem;
+    top: 16.6rem;
+    height: 3rem;
+ }
+  .homeLocationInputField > h4{
+   padding-right: 11rem;
+   padding-top: 1rem;
+   margin-bottom: 0rem;
+  }
+
+  .homeFormInputs::placeholder{
+       
+    color: skyblue;
+    padding-bottom: 1rem;
+}      
+} 
+@media (max-width: 575.98px) {
+    .homeFormCard{
+        display: block;
+        background: none ;
+        width: auto;
+        box-shadow: none;
+     }
+     .homeFindJobButton{
+        left:9rem;
+        top: 17rem;
+          width: 21rem;
+        height: 4rem;
+        font-size: 1.2rem;
+        border-top-left-radius: 4px;
+        border-bottom-left-radius: 4px;
+    
+
+     }
+     .homeJobTitleInputField{
+        margin-top: 5rem;
+        margin-left: 0rem;
+        width: 21rem;
+        background-color: white;
+
+        border-right: none;
+        height: auto;
+        box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+        border-radius: 6px;
+     }
+     .homeLocationInputField{
+        margin-top: 1rem;
+        margin-left: 0rem;
+        width: 21rem;
+        background-color: white;
+        border-right: none;
+        height: auto;
+        box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+        border-radius: 6px;
+        padding-bottom: 0.5rem;
+      
+     }
+     .homeFindJobArrow {
+        left: 18rem;
+        top: 16.6rem;
+        height: 3rem;
+     }
+      .homeLocationInputField > h4{
+       padding-right: 11rem;
+       padding-top: 1rem;
+       margin-bottom: 0rem;
+      }
+
+      .homeFormInputs{
+           
+        padding-right: 5rem;
+        
+    }      
+} 

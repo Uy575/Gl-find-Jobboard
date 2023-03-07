@@ -6,7 +6,7 @@ function Header() {
   return (
    <div className='header bottom'>
     <span className='header-logo'><img src={headerlogo} alt='Logo'/></span>
-    <div className='header-post-job'><img src={briefcase} alt = 'briefcase'/> <br/>
+    <div className='header-post-job'><a href = "https://www.get-licensed.co.uk/employers/login"><img src={briefcase} alt = 'briefcase'/></a> <br/>
     <span className='header-post-job-text'> Post Job </span></div>
    </div>
   )
