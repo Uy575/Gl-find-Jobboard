@@ -1,0 +1,23 @@
+
+@import 'react-multi-carousel/lib/styles.css';
+
+.div1{
+display: flex;
+margin-left: 1rem;
+}
+.div2{
+background-color: blue;
+display: flex;
+}
+
+.react-multi-carousel-list  > ul > li{
+color: black;
+}
+
+.div3{
+background-color: red;
+}
+
+.div4{
+background-color: yellow;
+}
