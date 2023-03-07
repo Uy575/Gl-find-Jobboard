@@ -20,9 +20,8 @@ function SubscribeForm() {
           validationSchema:subscriberSchema,
           onSubmit: (values,action) =>{  
           userSubscribe(values);
-          console.log(values);
-          
-          action.resetForm();  
+            action.resetForm();  
+       
         },
 
 
@@ -40,7 +39,10 @@ function SubscribeForm() {
 
  const subscribeFormHandle = ()=>{
   let message = 'subscribed';
-     toast(message)
+  console.log("toast",initialValues)
+
+   toast(message)
+
  }
 
   return (
@@ -76,7 +78,10 @@ function SubscribeForm() {
      <input className='subscribeFormButton' type="submit" value="Subscribe" onClick={subscribeFormHandle} />
     </div>
   </div>
-    <MsgTostify/>
+
+   {
+     initialValues.name && initialValues.email === ""? '':<MsgTostify/>
+   }
    </form>
   )
 }

@@ -3,8 +3,11 @@ import TopJobList from "./TopJobList";
 import { addingTopProducts } from "../../../Redux/TopJobReduer";
 import { useDispatch } from "react-redux";
 import { useEffect } from "react";
+<<<<<<< Updated upstream
 
 
+=======
+>>>>>>> Stashed changes
 function TopJobs() {
   const dispatch = useDispatch();
   useEffect(() => {

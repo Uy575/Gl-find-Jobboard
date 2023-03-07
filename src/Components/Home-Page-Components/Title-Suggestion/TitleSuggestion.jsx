@@ -35,18 +35,17 @@ function TitleSuggestion({formInputs}) {
   return (
       <>
       <h4>Job Title</h4> 
-      <input className={formInputs} placeholder='e.g Security supervisor' type="search"   name="name"
+      <input className={formInputs} placeholder='e.g Security supervisor' type="search"   name="name" autoComplete="off"
       onChange={e => onChangeHandler(e.target.value)}
       value = {text}
       onBlur = {()=>{
         setTimeout(() => {
             setSuggestion([]);
-            setText('')
-        }, 200);
+          }, 500);
       }}
       />
 
-      <div className={text? "suggestionDiv":''}>
+      <div className="suggestionDiv">
       {suggestion && suggestion.map((suggest,i)=>{
           return <div  key={i} className='suggestion' onClick={()=>{
             onSuggestHandler(suggest);

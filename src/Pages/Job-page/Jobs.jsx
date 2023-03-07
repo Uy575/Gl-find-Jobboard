@@ -26,7 +26,7 @@ function Jobs() {
         findJobArrow="jobBoardFindJobArrow"
       />
       <div className="jobBoardPageMainContainer">
-        <BackHome backArrowDescription="Home" navigating= "/" />
+
         <FilterJob />
         <JobBoardJobs />
         {/* <CardJobBoard buttonTitle="View Job Details" classname="card-body" showform='false' /> */}

@@ -32,7 +32,7 @@ const DetailForm = () => {
     handleSubmit,
   } = useFormik({
     initialValues: INITIAL_STATE,
-    // validationSchema: ,
+    validationSchema: applyForJobSchema,
     onSubmit: (values, action) => {
       onSubmitHandle();
       action.resetForm();
