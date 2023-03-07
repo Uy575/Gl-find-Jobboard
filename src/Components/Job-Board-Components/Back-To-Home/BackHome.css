@@ -4,6 +4,14 @@
     
 }
 
+.backopt{
+text-align: center;
+/* border: 2px solid ; */
+position: relative;
+left: 6rem;
+top: .5rem;
+display: inline-flex;
+}
 figure{
     display: inline-block;
 }

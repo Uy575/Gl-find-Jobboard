@@ -11,6 +11,7 @@ return (
 <>
 <div className="joblist" style={{display:"flex" , flexDirection:'column'}}>
 
+
 {
   
 paginated.map((job)=>{

@@ -16,8 +16,10 @@ function SeventhSection() {
        <p>Apply for jobs, track your applications, and get job alert notifications all from the GuardPass app.</p>
        <span>Download</span>
        <div className='downloadAppButtons'>
-       <button className='seventhSectionAppleButton'><img src={appleicon} alt='apple'/></button>
-       <button className='seventhSectionAndriodButton seventhSectionAndriodButtonText'><img src={androidicon} alt='andriod'/></button>
+       <a target='_blank' href='https://apps.apple.com/pk/app/protect-by-get-licensed/id1562863073#?platform=iphone' ><button className='seventhSectionAppleButton'><img src={appleicon} alt='apple'/></button>
+       </a>
+       <a target='_blank' href="https://play.google.com/store/apps/details?id=com.getlicensed.protect.released&hl=en_GB&gl=US" ><button className='seventhSectionAndriodButton seventhSectionAndriodButtonText'><img src={androidicon} alt='andriod'/></button>
+       </a>
        </div>
      </div>
  

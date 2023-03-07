@@ -80,26 +80,24 @@
   font-family: "Roboto", sans-serif;
 }
 
-#rm-button{
+#rm-button {
   width: 8rem;
   background: none;
   border: none;
 }
-.cancel{
-display: flex;
+.cancel {
+  display: flex;
 }
-.cancel > *{
-padding-right: .5rem;
-}
-
-.cancel > p{
-font-size: 1rem;
-font-weight: 500;
-font-family: "Roboto",sans-serif;
-cursor: pointer;
+.cancel > * {
+  padding-right: 0.5rem;
 }
 
-
+.cancel > p {
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: "Roboto", sans-serif;
+  cursor: pointer;
+}
 
 #jb-button {
   min-width: 157px;
@@ -165,4 +163,76 @@ cursor: pointer;
   margin-right: 0.5rem;
   position: relative;
   width: 30px;
+}
+
+@media (max-width: 320.98px) {
+  .card-body {
+    width: 322px;
+    margin: 0 1rem;
+    margin-top: 1rem;
+    padding: 5px;
+  }
+  .jb-card {
+    border-radius: 3px;
+    padding: 25px 15px 26px;
+  }
+
+  .jb-row {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #time {
+    color: #d0d0d0;
+    font-size: 14px;
+    padding: 5px;
+  }
+
+  #badge {
+    background-color: var(--bs-warning-rgb);
+    padding-left: 3px;
+  }
+
+  #badge #bdg-text {
+    margin-left: 5px;
+    padding-right: 3px;
+    color: white;
+  }
+
+  .share > img {
+    cursor: pointer;
+  }
+
+  .org-col {
+    margin-top: 32px;
+  }
+
+  .org-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .org-right {
+    margin-top: 20px;
+    width: 100%;
+  }
+  .org-left {
+    width: 100%;
+  }
+
+  #jb-button {
+    width: 100%;
+  }
+  .card-ft-right {
+    flex-direction: column;
+  }
+  .card-ft-left {
+    line-height: 2rem;
+    flex-direction: column;
+  }
+  .card-footer {
+padding: .5rem;
+  }
 }

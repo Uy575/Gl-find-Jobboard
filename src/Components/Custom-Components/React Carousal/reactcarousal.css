@@ -1,38 +1,64 @@
+@import "react-multi-carousel/lib/styles.css";
 
-@import 'react-multi-carousel/lib/styles.css';
-
-.div1{
-display: flex;
-margin-left: 1rem;
-}
-.div2{
-background-color: blue;
-display: flex;
-}
-.react-multiple-carousel__arrow{
-height: 84px;
-width: 84px;
-border-radius: 50%;
-padding: .5rem;
-margin:  3rem 2rem;
-/* min-height: 60px; */
-background-color: #e5e5e5;
+.rc-container {
+  display: flex;
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
 
-.react-multi-carousel-list  > ul > li{
-color: black;
+.react-multiple-carousel__arrow {
+  height: 84px;
+  width: 84px;
+  border-radius: 50%;
+  padding: 0.5rem;
+  margin: 3rem 2rem;
+  /* min-height: 60px; */
+  background-color: #e5e5e5;
 }
 
-.react-multi-carousel-list > ul{
-    display: flex;
-    align-items: baseline;
-    padding: 0 2.4rem;
+.react-multi-carousel-list > ul > li {
+  color: black;
 }
 
-.div3{
-background-color: red;
+.react-multi-carousel-list > ul {
+  display: flex;
+  align-items: baseline;
+  padding: 0 2.4rem;
 }
 
-.div4{
-background-color: yellow;
+
+.react-multi-carousel-item{
+width: 100%;
+}
+
+@media (max-width: 320.98px) {
+
+body{
+
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+
+
+.rc-container{
+width: 100%;
+margin-left: .2rem;
+margin-right: .2rem;
+
+}
+
+.react-multi-carousel-list > ul {
+    padding: 0 0rem;
+}
+  
+
+} 
+@media only screen and (min-width:320.99px) and (max-width: 575.98px){
+  .react-multi-carousel-list > ul {
+    padding: 0 0rem;
+}
+
+
 }

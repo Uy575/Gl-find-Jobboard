@@ -8,10 +8,13 @@ import BackHome from "../../Components/Job-Board-Components/Back-To-Home/BackHom
 import JobBoardJobs from "../../Components/Job-Board-Components/Job-Boad-Jobs/JobBoardJobs";
 import "./Jobs.css";
 import Pagination from "../../Components/Job-Board-Components/Paginate/Pagination";
-
+import FilterButton from "../../Components/Job-Board-Components/Filter-Button/FilterButton";
 
 
 function Jobs() {
+
+  let browserWidth =window.outerWidth;
+ 
   return (
     <>
       <Header /> 
@@ -27,7 +30,8 @@ function Jobs() {
       />
       <div className="jobBoardPageMainContainer">
 
-        <FilterJob />
+ {browserWidth <= 500 ? <FilterButton fjob={<FilterJob />} />:<FilterJob show="true" />}
+      
         <JobBoardJobs />
         {/* <CardJobBoard buttonTitle="View Job Details" classname="card-body" showform='false' /> */}
         <AsideJobBoard

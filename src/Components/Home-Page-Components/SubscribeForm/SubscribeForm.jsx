@@ -19,8 +19,8 @@ function SubscribeForm() {
         initialValues,
           validationSchema:subscriberSchema,
           onSubmit: (values,action) =>{  
-          userSubscribe(values);
-            action.resetForm();  
+            // action.resetForm();  
+          userSubscribe();
        
         },
 
@@ -29,21 +29,22 @@ function SubscribeForm() {
       
   });
 
-    const userSubscribe = async (values)=>{
+    const userSubscribe = async ()=>{
     const formData = JSON.stringify({subscriberEmail : values.email});
-    const request = await axios.post(subscriberEmailApi, formData);
+    const request = await axios.post(subscriberEmailApi,{ 
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': "*",
+        'Accept': "application/json"
 
-   
+      }
+        ,
+      formData});
+console.log(values.email)
+   console.log(request)
     
 }
 
- const subscribeFormHandle = ()=>{
-  let message = 'subscribed';
-  console.log("toast",initialValues)
-
-   toast(message)
-
- }
 
   return (
    <form onSubmit={handleSubmit}>
@@ -75,13 +76,10 @@ function SubscribeForm() {
       </div>
       </div>
      <div>
-     <input className='subscribeFormButton' type="submit" value="Subscribe" onClick={subscribeFormHandle} />
+     <input className='subscribeFormButton' type="submit" value="Subscribe"  />
     </div>
   </div>
 
-   {
-     initialValues.name && initialValues.email === ""? '':<MsgTostify/>
-   }
    </form>
   )
 }

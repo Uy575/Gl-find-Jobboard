@@ -6,3 +6,14 @@
     /* align-items: center; */
     /* width: 100%; */
 }
+
+
+
+
+@media  (max-width: 320.98px) {
+
+    .jobBoardPageMainContainer{
+flex-direction: column;
+    
+    }
+    } 

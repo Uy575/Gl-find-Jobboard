@@ -33,7 +33,7 @@ const LatestSecurity = ({topProduct}) => {
             {/* card li 3 */}
 
             <div className="card-li3">
-              <a href="#">Read more</a>
+              <a href={`/jobs/detail/${topProduct.id}`}>Read more</a>
             </div>
           </div>
          </div>

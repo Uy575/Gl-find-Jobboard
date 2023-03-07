@@ -9,7 +9,7 @@ const responsive = {
   superLargeDesktop: {
     // the naming can be any, depends on you.
     breakpoint: { max: 4000, min: 3000 },
-    items: 5,
+    items: 4,
     
   },
   desktop: {
@@ -18,7 +18,7 @@ const responsive = {
   },
   tablet: {
     breakpoint: { max: 1024, min: 464 },
-    items: 2,
+    items: 1,
   },
   mobile: {
     breakpoint: { max: 464, min: 0 },
@@ -29,12 +29,15 @@ const ReactCarousals = ({ topList }) => {
   const topProductsState = useSelector((state) => state.topProducts);
   const { topProducts } = topProductsState;
   return (
+    
     <Carousel
       responsive={responsive}
-      arrows={true}
+      // arrows={true}
       swipeable={false}
       draggable={false}  transitionDuration={500}  autoPlaySpeed={1000}
+      // showDots={true}
 
+containerClass="rc-container"
 
     >
       {topProducts.map((topProduct) => {
