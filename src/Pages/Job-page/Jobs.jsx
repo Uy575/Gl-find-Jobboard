@@ -4,10 +4,8 @@ import Form from "../../Components/Home-Page-Components/Find-Job-Form/Form";
 import Header from "../../Components/Home-Page-Components/Header/Header";
 import FilterJob from "../../Components/Job-Board-Components/Filter-Job/FilterJob";
 import AsideJobBoard from "../../Components/Job-Board-Components/Aside-Job-Board/AsideJobBoard";
-import BackHome from "../../Components/Job-Board-Components/Back-To-Home/BackHome";
 import JobBoardJobs from "../../Components/Job-Board-Components/Job-Boad-Jobs/JobBoardJobs";
 import "./Jobs.css";
-import Pagination from "../../Components/Job-Board-Components/Paginate/Pagination";
 import FilterButton from "../../Components/Job-Board-Components/Filter-Button/FilterButton";
 import { useEffect, useState } from "react";
 
@@ -23,8 +21,8 @@ const [browserWidth , setBrowserWidth] = useState(window.innerWidth)
   return (
     <>
       <Header /> 
-      {/* sending css classes as props in find job form  */}
-      {/* <Form
+       {/* sending css classes as props in find job form   */}
+       <Form
         formFields="jobBoardFormFields"
         formCard="jobBoardFormCard"
         jobTitleInputField="jobBoardJobTitleInputField"
@@ -32,10 +30,10 @@ const [browserWidth , setBrowserWidth] = useState(window.innerWidth)
         locationInputField="jobBoardLocationInputField"
         findJobButton="jobBoardFindJobButton"
         findJobArrow="jobBoardFindJobArrow"
-      /> */}
+      /> 
       <div className="jobBoardPageMainContainer">
 
- {browserWidth <= 500 ? <FilterButton fjob={<FilterJob />} />:<FilterJob show="true" />}
+       {browserWidth <= `${500}px` ? <FilterButton fjob={<FilterJob />} />:<FilterJob show="true" />}
       
         <JobBoardJobs />
         {/* <CardJobBoard buttonTitle="View Job Details" classname="card-body" showform='false' /> */}

@@ -1,10 +1,17 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import './TitleSuggestion.css'
+import { useDispatch,useSelector } from "react-redux";
+import { addJobType} from "../../../Redux/LocationAndJobTypeReducer";
+
 function TitleSuggestion({formInputs}) {
 
+     const dispatch = useDispatch();
+     const {jobType} = useSelector((state)=>state.LocationAndJobTypeReducer)
+    
+
     const  [title,setTitle] = useState([])
-    const  [text,setText] = useState('')
+    const  [text,setText] = useState(jobType)
     const  [suggestion,setSuggestion] = useState([])
     useEffect(()=>{
          const loadJobTitle = async ()=>{
@@ -18,8 +25,8 @@ function TitleSuggestion({formInputs}) {
             setText(text);
             setSuggestion([]);
         }
-
-    const onChangeHandler = (text)=>{
+        dispatch(addJobType(text))
+    const onChangeHandler = (text)=>{   
         let matches = [];
         if(text.length > 0 ){
             matches = title.filter((title)=>{
@@ -27,7 +34,6 @@ function TitleSuggestion({formInputs}) {
                 return title.match(regex)
             })
         }
-        console.log("matches",matches);
         setSuggestion(matches)
         setText(text)
     }
@@ -35,14 +41,14 @@ function TitleSuggestion({formInputs}) {
   return (
       <>
       <h4 className="jobTitleHeading">Job Title</h4> 
-      <input className={formInputs} placeholder='e.g Security supervisor' type="search"   name="name" autoComplete="off"
+      <input className={formInputs}  placeholder='e.g Security supervisor' type="search"   name="name" autoComplete="off"
       onChange={e => onChangeHandler(e.target.value)}
       value = {text}
-      // onBlur = {()=>{
-      //   setTimeout(() => {
-      //       setSuggestion([]);
-      //     }, 500);
-      // } }
+      onBlur = {()=>{
+        setTimeout(() => {
+            setSuggestion([]);
+          }, 500);
+      } }
       />
 
       <div className="suggestionDiv">
