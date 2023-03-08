@@ -204,7 +204,7 @@
   }
 
   .org-col {
-    margin-top: 32px;
+    margin-top: 10px;
   }
 
   .org-row {
@@ -233,6 +233,12 @@
     flex-direction: column;
   }
   .card-footer {
-padding: .5rem;
+padding: .1rem;
+margin: 0 0;
+  }
+
+
+  .jb-aside{
+  padding: 0 1rem;
   }
 }

@@ -9,17 +9,22 @@ import JobBoardJobs from "../../Components/Job-Board-Components/Job-Boad-Jobs/Jo
 import "./Jobs.css";
 import Pagination from "../../Components/Job-Board-Components/Paginate/Pagination";
 import FilterButton from "../../Components/Job-Board-Components/Filter-Button/FilterButton";
+import { useEffect, useState } from "react";
 
 
 function Jobs() {
+const [browserWidth , setBrowserWidth] = useState(window.innerWidth)
 
-  let browserWidth =window.outerWidth;
+  useEffect(()=>{
+  
+  setBrowserWidth(browserWidth)
+  },[])
  
   return (
     <>
       <Header /> 
       {/* sending css classes as props in find job form  */}
-      <Form
+      {/* <Form
         formFields="jobBoardFormFields"
         formCard="jobBoardFormCard"
         jobTitleInputField="jobBoardJobTitleInputField"
@@ -27,7 +32,7 @@ function Jobs() {
         locationInputField="jobBoardLocationInputField"
         findJobButton="jobBoardFindJobButton"
         findJobArrow="jobBoardFindJobArrow"
-      />
+      /> */}
       <div className="jobBoardPageMainContainer">
 
  {browserWidth <= 500 ? <FilterButton fjob={<FilterJob />} />:<FilterJob show="true" />}
