@@ -4,11 +4,17 @@ import Retail from "../../../Assets/Icons/icon-retail.svg";
 import Corporate from "../../../Assets/Icons/icon-corporate.svg";
 import barClub from "../../../Assets/Icons/icon-barclub.svg";
 import Event from "../../../Assets/Icons/icon-event.svg";
+import { setBar  ,setRetail ,setEvent  } from "../../../Redux/LocationAndJobTypeReducer";
 import Mobile from "../../../Assets/Icons/icon-mobile.svg";
+import { useDispatch } from "react-redux";
+
 function FilterJobForm() {
   const [checkedValue, setCheckedValue] = useState(true);
   const [milesRange, setMilesRange] = useState(1);
   const [payRange, setPayRange] = useState(9);
+
+  const dispatch = useDispatch();
+
 
   const resettingForm = (e) => {
     e.preventDefault();
@@ -56,12 +62,14 @@ function FilterJobForm() {
             onChange={(e) => {
               setCheckedValue(!checkedValue);
               console.log(checkedValue);
+
+
             }}
           />{" "}
           <img src={Retail} alt="Retail" height="20px" /> <span> Retail </span>
         </div>
         <div>
-          <input type="checkbox" />{" "}
+          <input type="checkbox"  />{" "}
           <img src={Corporate} alt="Corporate" height="20px" />{" "}
           <span> Corporate </span>
         </div>

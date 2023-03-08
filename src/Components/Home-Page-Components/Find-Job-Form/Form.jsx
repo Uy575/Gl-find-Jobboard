@@ -8,6 +8,11 @@ import ReactPlace from "../../Custom-Components/ReactPlace/ReactPlace";
 import { useSelector } from "react-redux";
 
 
+// import PlacesAutocomplete,{
+//     geocodebyAddress,
+//     getLating
+// } from "react-places-autocomplete"
+
 function Form({
   formFields,
   formCard,
@@ -18,10 +23,10 @@ function Form({
   findJobArrow,
 }) {
   const [address, setAddress] = useState("");
+  const {jobType,location} = useSelector((state)=> state.LocationAndJobTypeReducer)
   const handleSelect = (value) => {};
 
   const navigate = useNavigate();
-  const {jobType,location} = useSelector((state)=> state.LocationAndJobTypeReducer)
   const handleSubmit = (e) => {
     e.preventDefault();
     navigate(`/jobs/title=${jobType}&city=${location}&venue=&sia-licence=&lat=&lng`);

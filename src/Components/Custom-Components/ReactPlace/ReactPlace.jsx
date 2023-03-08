@@ -43,7 +43,7 @@ const ReactPlace = () => {
               {...getInputProps({
                 placeholder: "e.g. London",
                 className: "location-search-input",
-                type : 'search'
+                // type : 'search'
               })}
             />
             <div className="autocomplete-dropdown-container">
