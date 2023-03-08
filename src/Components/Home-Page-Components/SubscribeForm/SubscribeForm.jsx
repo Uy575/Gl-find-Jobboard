@@ -14,6 +14,7 @@ function SubscribeForm() {
       email:'',
     }
 
+    
     const {values,handleBlur,handleChange,errors,handleSubmit,touched} = useFormik({
         initialValues,
           validationSchema:subscriberSchema,
@@ -29,31 +30,14 @@ function SubscribeForm() {
   });
 
     const userSubscribe = async ()=>{
-    const formData = JSON.stringify({subscriberEmail : values.email});
-    const request = await axios.post(subscriberEmailApi,{ 
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': "*",
-        'Accept': "application/json"
-
-      }
-        ,
-      formData});
-console.log(values.email)
-   console.log(request)
-    
-        const formData = JSON.stringify({"subscriberEmail" : values.email});
-    const response = await axios.post(subscriberEmailApi,formData, {headers: {
-      'Accept-Type' : 'application/json', 
-      'Content-Type': 'application/json'}
-  });
-
-    console.log(formData)
-    console.log(response.data);
-    toast.success(response.data);
-  } catch (err) {
-    message = err.response.data.message;
-    toast.error(message);
+    try{
+      const formData = JSON.stringify({subscriberEmail : values.email});
+      const response = await axios.post(subscriberEmailApi,formData);
+      toast.success(response.data);
+    }
+    catch (err) {     
+      toast.error(err);
+    }
   }
     
 

@@ -10,10 +10,12 @@ import Location from "../../Components/Home-Page-Components/locations/Location";
 import Footer from "../../Components/Home-Page-Components/footer/Footer";
 import TopJobs from "../../Components/Home-Page-Components/latest_security/TopJobs";
 import ReactCarousals from '../../Components/Custom-Components/React Carousal/ReactCarousals'
+import ReactPlace from "../../Components/Custom-Components/ReactPlace/ReactPlace";
 function HomePage() {
   return (
     <>
       <Header/>
+    <ReactPlace />
     <FindJob/>
     <ThirdSection/>
     <TopJobs/> 

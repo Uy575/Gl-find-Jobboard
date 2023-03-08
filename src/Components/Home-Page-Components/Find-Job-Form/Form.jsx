@@ -4,6 +4,7 @@ import "../../Job-Board-Components/Find-Job-Form/FindJobBoardForm.css"
 import arrow from "../../../Assets/Icons/arrow-right.svg"
 import { useNavigate } from 'react-router-dom'
 import TitleSuggestion from '../Title-Suggestion/TitleSuggestion'
+import ReactPlace from '../../Custom-Components/ReactPlace/ReactPlace'
 // import PlacesAutocomplete,{
 //     geocodebyAddress,
 //     getLating
@@ -30,7 +31,8 @@ function Form({formFields,formCard,jobTitleInputField,formInputs,locationInputFi
       </div>
       <div className={locationInputField}>
       <h4>Enter Location</h4>
-      <input className={formInputs} placeholder='e.g London' type="text" name="name" />
+      <ReactPlace />
+      {/* <input className={formInputs} placeholder='e.g London' type="text" name="name" /> */}
       </div>
       </div>
       <div>
