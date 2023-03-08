@@ -10,7 +10,7 @@ const JobBoardJobs = () => {
   const statusState = useSelector((state) => state.JobReducer);
 
   const {STATUSES} = statusState
-  const FETCH_JOBS_API = `https://staging.get-licensed.co.uk/guardpass/api/public/search/jobs`;
+  const FETCH_JOBS_API = `https://staging.get-licensed.co.uk/guardpass/api/public/search/jobs?title=security&city=lodon&venue=&sia-licence=&lat=&lng=`;
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(FetchJobs(FETCH_JOBS_API));
