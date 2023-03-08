@@ -18,7 +18,7 @@ function SubscribeForm() {
         initialValues,
           validationSchema:subscriberSchema,
           onSubmit: (values,action) =>{  
-            // action.resetForm();  
+           action.resetForm();  
           userSubscribe();
        
         },
@@ -29,58 +29,16 @@ function SubscribeForm() {
   });
 
     const userSubscribe = async ()=>{
-    const formData = JSON.stringify({subscriberEmail : values.email});
-    const request = await axios.post(subscriberEmailApi,{ 
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': "*",
-        'Accept': "application/json"
-
-      }
-        ,
-      formData});
-console.log(values.email)
-   console.log(request)
-    
-        const formData = JSON.stringify({"subscriberEmail" : values.email});
-    const response = await axios.post(subscriberEmailApi,formData, {headers: {
-      'Accept-Type' : 'application/json', 
-      'Content-Type': 'application/json'}
-  });
-
-    console.log(formData)
-    console.log(response.data);
-    toast.success(response.data);
-  } catch (err) {
-    message = err.response.data.message;
-    toast.error(message);
+    try{
+      const formData = JSON.stringify({subscriberEmail : values.email});
+      const response = await axios.post(subscriberEmailApi,formData);
+      toast.success(response.data);
+    }
+    catch (err) {     
+      toast.error(err);
+    }
   }
-        
     
-// }
-
-// var myHeaders = new Headers();
-// myHeaders.append("Accept", "application/json");
-// myHeaders.append("Content-Type", "application/json");
-
-// var raw = JSON.stringify({
-//   subscriberEmail : values.email
-// });
-
-
-// var requestOptions = {
-//   method: 'POST',
-//   headers: myHeaders,
-//   body: raw,
-//   redirect: 'follow'
-// };
-//  const userSubscribe = async ()=>{
-// fetch("https://uat.get-licensed.co.uk/subscriber/register", requestOptions)
-//   .then(response => response.text())
-//   .then(result => console.log(result))
-//   .catch(error => console.log('error', error));
-}
-
 
   return (
    <form onSubmit={handleSubmit}>
@@ -93,7 +51,7 @@ console.log(values.email)
      ></input>
      
       {
-        errors.name && touched.name? <p style={{color:'red'}}> {errors.name} </p> : null
+        errors.name && touched.name? <p className='subscribeFormErrors' style={{color:'red'}}> {errors.name} </p> : null
       }
 
      </div>
@@ -107,7 +65,7 @@ console.log(values.email)
       <div>
 
       {
-        errors.email && touched.email? <p style={{color:'red'}}> {errors.email} </p> : null
+        errors.email && touched.email? <p className='subscribeFormErrors' style={{color:'red'}}> {errors.email} </p> : null
       }
       </div>
       </div>
@@ -115,7 +73,7 @@ console.log(values.email)
      <input className='subscribeFormButton' type="submit" value="Subscribe"  />
     </div>
   </div>
-
+    <ToastContainer/>
    </form>
   )
 }

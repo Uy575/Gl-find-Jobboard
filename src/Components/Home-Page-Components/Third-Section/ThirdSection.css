@@ -46,10 +46,13 @@
 @media (max-width: 575.98px) {
   .thirdSectionMainContainer{
     margin-top: 0rem;
-    padding: 0rem;
+    /* padding: 2rem 2rem 2rem 3.5rem; */
+    justify-content: center;
+    align-items: center;
   }
   .thirdSectionText{
     margin-left: 0rem;
+    width: 17rem;
   }
   .headingFontSize {
     font-size: 22px;

@@ -32,3 +32,31 @@
  margin-bottom: 1rem;
  font-weight: bolder;
 }
+
+@media (max-width: 575.98px) {
+    .mainContainer{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+.sectionEightHeading{
+   font-size: 1.3rem;
+   text-align: center;
+}
+.sectionEightHeading + span{
+     text-align: center;
+     display: block;
+
+}
+.sectionEightPera{
+ font-size: 1.2rem;
+ text-align: center;
+}
+.sectionEightLi *+*{
+    padding-left: 5rem;
+    margin-top: 1rem;
+}
+.sectionEightBackground{
+    margin-top: 0rem;
+}
+} 
