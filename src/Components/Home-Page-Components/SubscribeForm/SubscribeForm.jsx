@@ -29,19 +29,8 @@ function SubscribeForm() {
   });
 
     const userSubscribe = async ()=>{
-    const formData = JSON.stringify({subscriberEmail : values.email});
-    const request = await axios.post(subscriberEmailApi,{ 
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': "*",
-        'Accept': "application/json"
 
-      }
-        ,
-      formData});
-console.log(values.email)
-   console.log(request)
-    
+      try{
         const formData = JSON.stringify({"subscriberEmail" : values.email});
     const response = await axios.post(subscriberEmailApi,formData, {headers: {
       'Accept-Type' : 'application/json', 
@@ -52,8 +41,7 @@ console.log(values.email)
     console.log(response.data);
     toast.success(response.data);
   } catch (err) {
-    message = err.response.data.message;
-    toast.error(message);
+    toast.error(err);
   }
         
     
