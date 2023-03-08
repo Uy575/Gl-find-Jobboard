@@ -28,6 +28,7 @@ const ReactPlace = () => {
   return (
     <div>
       <PlacesAutocomplete
+    
         value={Address}
         onChange={setAddress}
         onSelect={handleSelect}
@@ -42,6 +43,7 @@ const ReactPlace = () => {
               {...getInputProps({
                 placeholder: "e.g. London",
                 className: "location-search-input",
+                type : 'search'
               })}
             />
             <div className="autocomplete-dropdown-container">

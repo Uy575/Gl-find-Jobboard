@@ -5,10 +5,8 @@ import arrow from "../../../Assets/Icons/arrow-right.svg";
 import { useNavigate } from "react-router-dom";
 import TitleSuggestion from "../Title-Suggestion/TitleSuggestion";
 import ReactPlace from "../../Custom-Components/ReactPlace/ReactPlace";
-// import PlacesAutocomplete,{
-//     geocodebyAddress,
-//     getLating
-// } from "react-places-autocomplete"
+import { useSelector } from "react-redux";
+
 
 function Form({
   formFields,
@@ -23,9 +21,10 @@ function Form({
   const handleSelect = (value) => {};
 
   const navigate = useNavigate();
+  const {jobType,location} = useSelector((state)=> state.LocationAndJobTypeReducer)
   const handleSubmit = (e) => {
     e.preventDefault();
-    navigate("/jobs/title=security&city=lodon&venue=&sia-licence=&lat=&lng");
+    navigate(`/jobs/title=${jobType}&city=${location}&venue=&sia-licence=&lat=&lng`);
   };
 
   return (
