@@ -23,7 +23,7 @@ function Form({
   findJobArrow,
 }) {
   const [address, setAddress] = useState("");
-  const {jobType,location} = useSelector((state)=> state.LocationAndJobTypeReducer)
+  const {jobType,location ,Retail ,Corporate ,Event ,Bar ,Mobile} = useSelector((state)=> state.LocationAndJobTypeReducer)
   const handleSelect = (value) => {};
 
   const navigate = useNavigate();
