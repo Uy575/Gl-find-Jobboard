@@ -30,6 +30,7 @@ function Form({
   const handleSubmit = (e) => {
     e.preventDefault();
     navigate(`/jobs/title=${jobType}&city=${location}&venue=&sia-licence=&lat=&lng`);
+    // "/"
   };
 
   return (
