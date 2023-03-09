@@ -4,7 +4,13 @@ import Retail from "../../../Assets/Icons/icon-retail.svg";
 import Corporate from "../../../Assets/Icons/icon-corporate.svg";
 import barClub from "../../../Assets/Icons/icon-barclub.svg";
 import Event from "../../../Assets/Icons/icon-event.svg";
-import { setBar  ,setRetail ,setEvent  } from "../../../Redux/LocationAndJobTypeReducer";
+import {
+  setBar,
+  setRetail,
+  setEvent,
+  setCorporate,
+  setMobile,
+} from "../../../Redux/LocationAndJobTypeReducer";
 import Mobile from "../../../Assets/Icons/icon-mobile.svg";
 import { useDispatch } from "react-redux";
 
@@ -12,9 +18,9 @@ function FilterJobForm() {
   const [checkedValue, setCheckedValue] = useState(true);
   const [milesRange, setMilesRange] = useState(1);
   const [payRange, setPayRange] = useState(9);
+  const [retail, SetRetail] = useState(null);
 
   const dispatch = useDispatch();
-
 
   const resettingForm = (e) => {
     e.preventDefault();
@@ -53,37 +59,79 @@ function FilterJobForm() {
         {" "}
         <span> &pound;{payRange}.00 </span> <span> &pound;50.00 </span>
       </div>
-      <hr  className="hr"/>
+      <hr className="hr" />
       <div className="venue">
         <span>Venue</span>
         <div>
           <input
+            value="Retail"
             type="checkbox"
             onChange={(e) => {
-              setCheckedValue(!checkedValue);
-              console.log(checkedValue);
-
-
+              if (e.target.checked) {
+                dispatch(setRetail(e.target.value));
+              } else {
+                return;
+              }
             }}
           />{" "}
           <img src={Retail} alt="Retail" height="20px" /> <span> Retail </span>
         </div>
         <div>
-          <input type="checkbox"  />{" "}
+          <input
+            type="checkbox"
+            value="Coporate"
+            onChange={(e) => {
+              if (e.target.checked) {
+                dispatch(setCorporate(e.target.value));
+              } else {
+                return;
+              }
+            }}
+          />{" "}
           <img src={Corporate} alt="Corporate" height="20px" />{" "}
           <span> Corporate </span>
         </div>
         <div>
-          <input type="checkbox" />{" "}
+          <input
+            type="checkbox"
+            value="Bar"
+            onChange={(e) => {
+              if (e.target.checked) {
+                dispatch(setBar(e.target.value));
+              } else {
+                return;
+              }
+            }}
+          />{" "}
           <img src={barClub} alt="Bar/Club" height="20px" />{" "}
           <span> Bar/club </span>
         </div>
         <div>
-          <input type="checkbox" />{" "}
+          <input
+            type="checkbox"
+            value="Event"
+            onChange={(e) => {
+              if (e.target.checked) {
+                dispatch(setEvent(e.target.value));
+              } else {
+                return;
+              }
+            }}
+          />{" "}
           <img src={Event} alt="Event" height="20px" /> <span> Event </span>
         </div>
         <div>
-          <input type="checkbox" />{" "}
+          <input
+            type="checkbox"
+            value="Mobile"
+            onChange={(e) => {
+              if (e.target.checked) {
+                dispatch(setMobile(e.target.value));
+              } else {
+                return;
+              }
+            }}
+          />{" "}
           <img src={Mobile} alt="Mobile" height="20px" /> <span> Mobile </span>
         </div>
       </div>
