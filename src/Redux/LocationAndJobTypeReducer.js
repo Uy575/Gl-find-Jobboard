@@ -3,11 +3,14 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   location: "",
   jobType: "",
-  Retail: "",
-  Corporate: "",
-  Bar: "",
+  Retail: "Retail",
+  Corporate: "Corporate",
+  Bar: "Bar",
   Event: "",
   Mobile: "",
+  jobFilter:[] ,
+  salary:[],
+  geoLocation:[]
 };
 
 const LocationAndJobTypeSlicer = createSlice({
@@ -34,10 +37,14 @@ const LocationAndJobTypeSlicer = createSlice({
       state.Event = action.payload;
     },
     setMobile(state, action) {
-      state.Mobile = action.payload;
+      state.jobFilter = action.payload;
+    }, setSalary(state, action) {
+      state.salary = action.payload;
+    }, setGeoLocation(state, action) {
+      state.geoLocation = action.payload;
     },
   },
 });
 
-export const { addLocation, addJobType , setBar , setCorporate ,setEvent ,setMobile ,setRetail } = LocationAndJobTypeSlicer.actions;
-export default LocationAndJobTypeSlicer.reducer;
+export const { addLocation, addJobType , setBar , setCorporate ,setEvent ,setMobile ,setRetail ,setSalary , setGeoLocation} = LocationAndJobTypeSlicer.actions;
+export default LocationAndJobTypeSlicer.reducer; 

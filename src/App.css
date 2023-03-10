@@ -8,7 +8,15 @@ html{
 }
 body{
     overflow-x: hidden;
+    
 }
+h4,h5,span,button{
+font-family: "Roboto",sans-serif;
+}
+h4,h2{
+color: black;
+}
+
 .App{
     font-family: 'Oswald', sans-serif;
 

@@ -1,0 +1,18 @@
+.rc-slider,.rc-slider-rail,.rc-slider-track{
+height: 18px;
+background-color:black;
+width: 15rem;
+}
+.rc-slider-handle{
+height: 23px;
+width: 23px;
+background-color: yellow;
+}
+.rc-rng{
+align-self: center;
+margin-bottom: 1rem;
+}
+
+.priceRangeDiv{
+margin-top: 1rem;
+}

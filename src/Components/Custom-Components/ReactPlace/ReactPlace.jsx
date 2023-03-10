@@ -5,12 +5,12 @@ import PlacesAutocomplete, {
   geocodeByPlaceId,
   getLatLng,
 } from "react-places-autocomplete";
-import { useSelector,useDispatch } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { addLocation } from "../../../Redux/LocationAndJobTypeReducer";
-
+import { setGeoLocation } from "../../../Redux/LocationAndJobTypeReducer";
 const ReactPlace = () => {
   const dispatch = useDispatch();
-  const {location} = useSelector((state)=>state.LocationAndJobTypeReducer)
+  const { location  } = useSelector((state) => state.LocationAndJobTypeReducer);
   const [Address, setAddress] = useState(location);
   const [cordinates, setCordinates] = useState({
     lat: null,
@@ -20,26 +20,27 @@ const ReactPlace = () => {
   const handleSelect = async (value) => {
     const result = await geocodeByAddress(value);
     let latlng = await getLatLng(result[0]);
+    dispatch(setGeoLocation(latlng))
+    console.log(latlng);
     setAddress(value);
-    setCordinates(latlng);
   };
 
-  dispatch(addLocation(Address))
+  dispatch(addLocation(Address));
   return (
     <div>
       <PlacesAutocomplete
-    
         value={Address}
         onChange={setAddress}
         onSelect={handleSelect}
         searchOptions={{
           types: ["geocode"],
-          componentRestrictions: { country: 'uk' },
-  }}
+          componentRestrictions: { country: "uk" },
+        }}
       >
-        {({ getInputProps, suggestions, getSuggestionItemProps, loading , }) => (
+        {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
           <div>
-            <input style={{outline:'none' ,border:'none' }}
+            <input
+              style={{ outline: "none", border: "none" }}
               {...getInputProps({
                 placeholder: "e.g. London",
                 className: "location-search-input",
@@ -50,7 +51,8 @@ const ReactPlace = () => {
               {/* {loading && <div>Loading...</div>} */}
               {suggestions.map((suggestion) => {
                 return (
-                  <div className="suggestion"
+                  <div
+                    className="suggestion"
                     key={suggestion.index}
                     {...getSuggestionItemProps(suggestion, {})}
                   >

@@ -1,21 +1,27 @@
 import "./App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import DetailPage from "./Pages/Detail-Page/DetailPage";
 import HomePage from "./Pages/Home-Page/HomePage";
 import Jobs from "./Pages/Job-page/Jobs";
 import { useSelector } from "react-redux";
+import { useSearchParams } from "react-router-dom";
+
 function App() {
-  const {jobType,location ,Retail ,Corporate ,Event ,Bar ,Mobile} = useSelector((state)=> state.LocationAndJobTypeReducer)
+  const { jobType, location, Retail, jobFilter } = useSelector(
+    (state) => state.LocationAndJobTypeReducer
+  );
+
+  const { retails, bar, corporate } = jobFilter;
+
   return (
-    <div className="App">
-      <BrowserRouter>
-        <Routes>
-          <Route index element={<HomePage />} />
-          <Route path={`/Jobs/title=${jobType}&city=${location}&venue=London&a-licence=&lat=&lng`} element={<Jobs />} />
-          <Route path="/jobs/detail/:id" element={<DetailPage />} />
-        </Routes>
-      </BrowserRouter>
-    </div>
+    <Routes>
+      <Route index element={<HomePage />} />
+      <Route
+        path={`/jobs?`}
+        element={<Jobs />}
+      />
+      <Route path="/jobs/detail/:id" element={<DetailPage />} />
+    </Routes>
   );
 }
 

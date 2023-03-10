@@ -16,30 +16,40 @@ const DesiredVenue = () => {
             Desired Venues
           </h1>
 
+         <a href="/jobs?title=&city=&venue=Retail&sia-licence=&salary-min=&salary-max=&lat=&lng=">
           <div className="retail-box">
             <img src={retail} alt="" />
-            <h2>Retail</h2>
+            <h4>Retail</h4>
           </div>
+         </a>
 
+         <a href="/jobs?title=&city=&venue=Coporate&sia-licence=&salary-min=&salary-max=&lat=&lng=">
           <div className="corporate-box">
             <img src={coporate} alt="" />
             <h2>Corporate</h2>
           </div>
+          </a>
 
+          <a href="/jobs?title=&city=&venue=Bar/Clubs&sia-licence=&salary-min=&salary-max=&lat=&lng=">
           <div className="bar-box">
             <img src={bar} alt="" />
             <h2>Bar/Club</h2>
           </div>
+          </a>
 
+          <a href="/jobs?title=&city=&venue=Event&sia-licence=&salary-min=&salary-max=&lat=&lng=">
           <div className="event-box">
             <img src={event} alt="" />
             <h2>Event</h2>
           </div>
-
+</a>
+    
+<a href="/jobs?title=&city=&venue=Mobile&sia-licence=&salary-min=&salary-max=&lat=&lng=">
           <div className="mobile-box">
             <img src={mobile} alt="" />
             <h2>Mobile</h2>
           </div>
+          </a>
         </div>
       </div>
     </div>

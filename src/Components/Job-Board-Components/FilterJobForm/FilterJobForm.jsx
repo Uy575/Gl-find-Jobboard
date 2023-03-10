@@ -1,64 +1,89 @@
-import React, { useState } from "react";
-import "./FilterJobForm.css";
+import React, { useEffect, useState } from "react";
 import Retail from "../../../Assets/Icons/icon-retail.svg";
 import Corporate from "../../../Assets/Icons/icon-corporate.svg";
 import barClub from "../../../Assets/Icons/icon-barclub.svg";
 import Event from "../../../Assets/Icons/icon-event.svg";
-import {
-  setBar,
-  setRetail,
-  setEvent,
-  setCorporate,
-  setMobile,
-} from "../../../Redux/LocationAndJobTypeReducer";
-import Mobile from "../../../Assets/Icons/icon-mobile.svg";
-import { useDispatch } from "react-redux";
+import { setMobile } from "../../../Redux/LocationAndJobTypeReducer";
+import { useSearchParams } from "react-router-dom";
+import LocationAndJobTypeReducer from "../../../Redux/LocationAndJobTypeReducer";
+import MobileIco from "../../../Assets/Icons/icon-mobile.svg";
+import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router";
+import RcRange from "../Rc-range-slider/RcRange";
+import "./FilterJobForm.css";
+import RangeSlider from "../../Custom-Components/Range Slider/RangeSlider";
+import axios from "axios";
+
+
 
 function FilterJobForm() {
-  const [checkedValue, setCheckedValue] = useState(true);
   const [milesRange, setMilesRange] = useState(1);
-  const [payRange, setPayRange] = useState(9);
-  const [retail, SetRetail] = useState(null);
+  const [retails, setRetails] = useState("");
+  const [corporate, setCorporates] = useState(" ");
+  const [bar, setBars] = useState("");
+  const [events, setEvents] = useState("");
+  const [mobiles, setMobiles] = useState("");
+  const [searchParams, setSearchParams] = useSearchParams();
+  const { salary , geoLocation} = useSelector((state) => state.LocationAndJobTypeReducer);
 
+  let title = searchParams.get("title");
+  let city = searchParams.get("location");
+  let venue = searchParams.get("venue");
+
+  let { lat, lng } = geoLocation;
+  console.log(lat, lng);
+
+  lat = parseFloat(lat)
+
+  const POST = `https://staging.get-licensed.co.uk/guardpass/api/public/search/jobs
+  `
+  
   const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  
+
+
 
   const resettingForm = (e) => {
     e.preventDefault();
+    window.location.reload(true);
   };
+
+  
+  const applyFilter = async (e) => {
+    e.preventDefault();
+    dispatch(setMobile({ retails, bar, corporate, events, mobiles }));
+    navigate(
+      `/jobs?title=${title}&city=${city}&venue=${`${retails},${corporate},${bar},${events},${mobiles}`}&sia-licence=&salary-min=${
+        salary.min
+      }&salary-max=${salary.max}&lat=&lng`
+      );
+  const request =await axios.post(POST,[{
+    title: `${title}`,
+location: `${city}`,
+distance: 34,
+salary_range: [salary.min, salary.max],
+venue_type: `${venue}`,
+latitude: `${lat}` ,
+longitude: `${lng}`,
+  }])  
+  console.log(request)
+  
+};
 
   return (
     <form className="filterForm">
       <h5>FILTER YOUR SEARCH</h5>
-      <div className="mileRangeHeading">
-        <span>Jobs within </span> <span>{milesRange} miles away</span>{" "}
-      </div>
-      <input
-        type="range"
-        min="1"
-        max="250"
-        defaultValue="1"
-        onChange={(e) => {
-          setMilesRange(e.target.value);
-        }}
-      />{" "}
+      <RangeSlider />
       <br />
       <hr className="hr" />
       <span className="payRangeHeading">Pay range</span>
       <br />
-      <input
-        type="range"
-        min="9"
-        max="50"
-        defaultValue="9"
-        onChange={(e) => {
-          setPayRange(e.target.value);
-        }}
-      />{" "}
+      <RcRange />
+
       <br />
-      <div className="priceRangeDiv">
-        {" "}
-        <span> &pound;{payRange}.00 </span> <span> &pound;50.00 </span>
-      </div>
+
       <hr className="hr" />
       <div className="venue">
         <span>Venue</span>
@@ -68,9 +93,9 @@ function FilterJobForm() {
             type="checkbox"
             onChange={(e) => {
               if (e.target.checked) {
-                dispatch(setRetail(e.target.value));
+                setRetails(e.target.value);
               } else {
-                return;
+                setRetails("");
               }
             }}
           />{" "}
@@ -79,12 +104,12 @@ function FilterJobForm() {
         <div>
           <input
             type="checkbox"
-            value="Coporate"
+            value="Corporate"
             onChange={(e) => {
               if (e.target.checked) {
-                dispatch(setCorporate(e.target.value));
+                setCorporates(e.target.value);
               } else {
-                return;
+                setCorporates("");
               }
             }}
           />{" "}
@@ -94,12 +119,12 @@ function FilterJobForm() {
         <div>
           <input
             type="checkbox"
-            value="Bar"
+            value="Bar/Clubs"
             onChange={(e) => {
               if (e.target.checked) {
-                dispatch(setBar(e.target.value));
+                setBars(e.target.value);
               } else {
-                return;
+                setBars("");
               }
             }}
           />{" "}
@@ -112,9 +137,9 @@ function FilterJobForm() {
             value="Event"
             onChange={(e) => {
               if (e.target.checked) {
-                dispatch(setEvent(e.target.value));
+                setEvents(e.target.value);
               } else {
-                return;
+                setEvents("");
               }
             }}
           />{" "}
@@ -126,13 +151,14 @@ function FilterJobForm() {
             value="Mobile"
             onChange={(e) => {
               if (e.target.checked) {
-                dispatch(setMobile(e.target.value));
+                setMobiles(e.target.value);
               } else {
-                return;
+                setMobiles("");
               }
             }}
           />{" "}
-          <img src={Mobile} alt="Mobile" height="20px" /> <span> Mobile </span>
+          <img src={MobileIco} alt="Mobile" height="20px" />{" "}
+          <span> Mobile </span>
         </div>
       </div>
       <hr className="hr" />
@@ -143,7 +169,12 @@ function FilterJobForm() {
           value="Reset Filter"
           onClick={resettingForm}
         />
-        <input className="applyFilter" type="submit" value="Apply Filter" />
+        <input
+          className="applyFilter"
+          type="button"
+          value="Apply Filter"
+          onClick={applyFilter}
+        />
       </div>
     </form>
   );

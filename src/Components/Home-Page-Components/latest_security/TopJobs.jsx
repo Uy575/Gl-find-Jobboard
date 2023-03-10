@@ -25,7 +25,7 @@ function TopJobs() {
       <ReactCarousals />
 
       <div className="ls_container" style={{padding:'4rem'}}>
-        <a href="/jobs" className="ls_button"  >Explore More Jobs</a>
+        <a href="/jobs?title=&city=&venue=Mobile&sia-licence=&salary-min=&salary-max=&lat=&lng=" className="ls_button"  >Explore More Jobs</a>
       </div>
     </>
   );

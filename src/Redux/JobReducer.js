@@ -3,9 +3,9 @@ import axios from "axios";
 import { createSlice } from "@reduxjs/toolkit";
 
 const STATUSES = Object.freeze({
-IDLE :"idle",
-ERROR :'error',
-LOADING :'loading'
+  IDLE: "idle",
+  ERROR: "error",
+  LOADING: "loading",
 });
 
 const initialState = {
@@ -27,7 +27,8 @@ const JobSlice = createSlice({
     },
     setSimilarJob(state, action) {
       state.similarJob = action.payload;
-    },setStatuses(state, action) {
+    },
+    setStatuses(state, action) {
       state.STATUSES = action.payload;
     },
     setPaginated(state, action) {
@@ -36,18 +37,23 @@ const JobSlice = createSlice({
   },
 });
 
-export const { setJobs, setJobDetail, setSimilarJob, setPaginated ,setStatuses } =
-  JobSlice.actions;
+export const {
+  setJobs,
+  setJobDetail,
+  setSimilarJob,
+  setPaginated,
+  setStatuses,
+} = JobSlice.actions;
 export default JobSlice.reducer;
 
 // Get JOBLIST THunk
 export function FetchJobs(endpoint) {
   return async function fetchThunk(dispatch, getState) {
-  dispatch(setStatuses(STATUSES.LOADING))
+    dispatch(setStatuses(STATUSES.LOADING));
     const request = await axios.post(endpoint);
     const response = await request;
     dispatch(setJobs(response.data.data.data));
-   dispatch(setStatuses(STATUSES.IDLE))
+    dispatch(setStatuses(STATUSES.IDLE));
   };
 }
 
