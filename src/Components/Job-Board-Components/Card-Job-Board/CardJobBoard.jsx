@@ -139,7 +139,7 @@ const CardJobBoard = ({
               <strong>
                 &#163;
                 {only === "jobpage"
-                  ? jobdata.salary
+                  ? jobdata.salary_type === "Fixed Rate"? jobdata.salary : jobdata.salary_max
                   : only === "detailpage"
                   ? jobdetail.salary
                   : 11}
