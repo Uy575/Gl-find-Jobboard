@@ -33,7 +33,7 @@ const JobSlice = createSlice({
     },
     setPaginated(state, action) {
       state.paginated = action.payload;
-    },
+    }
   },
 });
 
@@ -43,6 +43,7 @@ export const {
   setSimilarJob,
   setPaginated,
   setStatuses,
+  
 } = JobSlice.actions;
 export default JobSlice.reducer;
 
@@ -74,3 +75,5 @@ export function SimilarJob(endpoint) {
     dispatch(setSimilarJob(response.data.data));
   };
 }
+
+

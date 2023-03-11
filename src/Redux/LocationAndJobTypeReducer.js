@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import axios from "axios";
 
 const initialState = {
   location: "",
@@ -10,7 +11,9 @@ const initialState = {
   Mobile: "",
   jobFilter:[] ,
   salary:[],
-  geoLocation:[]
+  geoLocation:[],
+filterJobs:[],
+searchStatus :''
 };
 
 const LocationAndJobTypeSlicer = createSlice({
@@ -42,9 +45,42 @@ const LocationAndJobTypeSlicer = createSlice({
       state.salary = action.payload;
     }, setGeoLocation(state, action) {
       state.geoLocation = action.payload;
-    },
+    }, setSearchStatus(state , action){
+      state.searchStatus= action.payload
+    }
+    , setJobFilter(state , action){
+      state.filterJobs= action.payload
+    }
   },
 });
 
-export const { addLocation, addJobType , setBar , setCorporate ,setEvent ,setMobile ,setRetail ,setSalary , setGeoLocation} = LocationAndJobTypeSlicer.actions;
+export const { addLocation, addJobType , setBar , setCorporate ,setEvent ,setMobile ,setRetail ,setSalary , setGeoLocation , setJobFilter , setSearchStatus} = LocationAndJobTypeSlicer.actions;
 export default LocationAndJobTypeSlicer.reducer; 
+
+
+
+
+// export function jobFilter(endpoint) {
+//   return async function fetchThunk(dispatch, getState) {
+//     const request = await axios.post(endpoint,{
+//       title : initialState.jobFilter,
+//       location :initialState.location,
+// venue_type : initialState.jobFilter,
+// latitude : initialState.geoLocation.lat,
+// longitude : initialState.geoLocation.lng 
+
+// });
+//     const response = await request;
+//     dispatch(setFilterJobs(response.data.data.data));
+//     console.log(response)
+//   };
+
+// const request = await axios.post(POST, {
+//   title: ,
+//   location: `${city}`,
+//   // distance :30,
+//   // salary_range: [minSalary , maxSalary],
+//   venue_type: [`${venue_type}`],
+//   latitude: 51.5072,
+//   langitude: 0.1276,
+// })

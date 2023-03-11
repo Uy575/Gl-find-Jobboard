@@ -6,8 +6,8 @@ import "./rcrange.css";
 import { setSalary } from "../../../Redux/LocationAndJobTypeReducer";
 const RcRange = () => {
   const [rangeValue, setRangeValue] = useState();
-  const [min, setMin] = useState(9);
-  const [max, setMax] = useState(50);
+  const [min, setMin] = useState(0);
+  const [max, setMax] = useState(55);
 
   const dispatch = useDispatch();
   const handleChange = (value) => {

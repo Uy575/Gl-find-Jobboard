@@ -10,67 +10,74 @@ import MobileIco from "../../../Assets/Icons/icon-mobile.svg";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router";
 import RcRange from "../Rc-range-slider/RcRange";
-import "./FilterJobForm.css";
 import RangeSlider from "../../Custom-Components/Range Slider/RangeSlider";
 import axios from "axios";
-
-
+import { setJobFilter ,setSearchStatus } from "../../../Redux/LocationAndJobTypeReducer";
+import "./FilterJobForm.css";
 
 function FilterJobForm() {
+  const POST = `https://staging.get-licensed.co.uk/guardpass/api/public/search/jobs`;
+  
   const [milesRange, setMilesRange] = useState(1);
   const [retails, setRetails] = useState("");
   const [corporate, setCorporates] = useState(" ");
   const [bar, setBars] = useState("");
   const [events, setEvents] = useState("");
   const [mobiles, setMobiles] = useState("");
+  const [minSalary , setMinSalary] = useState(0);
+  const [maxSalary , setMaxSalary] = useState(55);
+  const [searchFlag , setSearchFlag] = useState(false);
+
   const [searchParams, setSearchParams] = useSearchParams();
-  const { salary , geoLocation} = useSelector((state) => state.LocationAndJobTypeReducer);
-
-  let title = searchParams.get("title");
-  let city = searchParams.get("location");
-  let venue = searchParams.get("venue");
-
-  let { lat, lng } = geoLocation;
-  console.log(lat, lng);
-
-  lat = parseFloat(lat)
-
-  const POST = `https://staging.get-licensed.co.uk/guardpass/api/public/search/jobs
-  `
-  
   const dispatch = useDispatch();
   const navigate = useNavigate();
-
   
+  const {salary, geoLocation ,searchStatus } = useSelector(
+    (state) => state.LocationAndJobTypeReducer
+  );
+
+  let title = searchParams.get("title");
+  let city = searchParams.get("city");
+  let venue = searchParams.get("venue");
+  let { lat, lng } = geoLocation;
+  let venue_type = [`${retails}${corporate}${bar}${events}${mobiles}`]
+  
+useEffect(()=>{
+  setMinSalary(salary.min);
+  setMaxSalary(salary.max);
+},[salary.min,salary.max ])
+
 
 
 
   const resettingForm = (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     window.location.reload(true);
+  searchStatus(false)
   };
 
-  
   const applyFilter = async (e) => {
     e.preventDefault();
-    dispatch(setMobile({ retails, bar, corporate, events, mobiles }));
+setSearchFlag(true);
     navigate(
-      `/jobs?title=${title}&city=${city}&venue=${`${retails},${corporate},${bar},${events},${mobiles}`}&sia-licence=&salary-min=${
-        salary.min
-      }&salary-max=${salary.max}&lat=&lng`
+      `/jobs?title=${title}&city=${city}&venue=${retails},${corporate},${bar},${events},${mobiles} &sia-licence=&salary-min=${minSalary}&salary-max=${maxSalary}&lat=&lng`
       );
-  const request =await axios.post(POST,[{
-    title: `${title}`,
-location: `${city}`,
-distance: 34,
-salary_range: [salary.min, salary.max],
-venue_type: `${venue}`,
-latitude: `${lat}` ,
-longitude: `${lng}`,
-  }])  
-  console.log(request)
+    const request = await axios.post(POST, {
+      title: `${title}`,
+      location: `${city}`,
+      // distance :30,
+      // salary_range: [minSalary , maxSalary],
+      venue_type: [`${venue_type}`],
+      latitude: 51.5072,
+      langitude: 0.1276,
+    });
+    const response = request.data.data.data
+console.log(response)
+dispatch(setSearchStatus(searchFlag))
+    dispatch(setJobFilter(response))
+  };
   
-};
+
 
   return (
     <form className="filterForm">

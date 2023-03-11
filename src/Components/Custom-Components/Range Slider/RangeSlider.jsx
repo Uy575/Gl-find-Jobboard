@@ -9,7 +9,6 @@ const RangeSlider = () => {
     setMilesRange(e);
   };
 
-  console.log(milesRange);
 
   return (
     <>

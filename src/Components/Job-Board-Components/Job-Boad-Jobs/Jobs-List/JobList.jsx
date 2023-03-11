@@ -5,16 +5,24 @@ import Pagination from '../../Paginate/Pagination'
 import './joblist.css'
 const JobList = () => {
   const JobsState = useSelector((state) => state.JobReducer)
-const {Jobs , paginated} =JobsState
-
+  const { jobFilter, geoLocation , filterJobs ,searchStatus} = useSelector(
+    (state) => state.LocationAndJobTypeReducer
+  );
+  const {Jobs , paginated} =JobsState
+console.log(paginated)
 return (
 <>
 <div className="joblist" style={{display:"flex" , flexDirection:'column'}}>
 
+{searchStatus ?
+filterJobs.map((job)=>{
+  return (
+      <CardJobBoard buttonTitle="View Job Details" classname="card-body" showform='false' key={job.id} jobdata={job} paginated={paginated} only="jobpage" /> 
 
-{
-  
-paginated.map((job)=>{
+)
+
+})
+:paginated.map((job)=>{
   return (
       <CardJobBoard buttonTitle="View Job Details" classname="card-body" showform='false' key={job.id} jobdata={job} paginated={paginated} only="jobpage" /> 
 

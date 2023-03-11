@@ -21,7 +21,6 @@ const JobBoardJobs = () => {
   );
   const { retails, corporate } = jobFilter;
   const { lat, lng } = geoLocation;
-  console.log(lat, lng);
 
   const FETCH_JOBS_API = `https://staging.get-licensed.co.uk/guardpass/api/public/search/jobs?title=${title}&city=${city}&venue=${venue}&sia-licence=&salary-min=${salarymin}&salary-max=${salarmax}&latitude=${lat}&lng=${lng}`;
 
