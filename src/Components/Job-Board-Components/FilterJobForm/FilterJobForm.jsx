@@ -48,11 +48,14 @@ useEffect(()=>{
 },[salary.min,salary.max ])
 
 
+useEffect(()=>{
+  setSearchFlag(!searchFlag)
+},[])
 
 
   const resettingForm = (e) => {
     // e.preventDefault();
-    window.location.reload(true);
+    // window.location.reload(true);
   searchStatus(false)
   };
 

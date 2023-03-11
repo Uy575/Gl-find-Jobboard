@@ -14,15 +14,7 @@ return (
 <>
 <div className="joblist" style={{display:"flex" , flexDirection:'column'}}>
 
-{searchStatus ?
-filterJobs.map((job)=>{
-  return (
-      <CardJobBoard buttonTitle="View Job Details" classname="card-body" showform='false' key={job.id} jobdata={job} paginated={paginated} only="jobpage" /> 
-
-)
-
-})
-:paginated.map((job)=>{
+{paginated.map((job)=>{
   return (
       <CardJobBoard buttonTitle="View Job Details" classname="card-body" showform='false' key={job.id} jobdata={job} paginated={paginated} only="jobpage" /> 
 

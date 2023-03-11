@@ -6,25 +6,37 @@ import "./pagination.css";
 
 export default function Pagination() {
   const JobsState = useSelector((state) => state.JobReducer);
+  const { filterJobs, searchStatus } = useSelector(
+    (state) => state.LocationAndJobTypeReducer
+  );
   const { Jobs } = JobsState;
   const dispatch = useDispatch();
-  const itemsPerPage = 8;
+  const itemsPerPage = !searchStatus ? 8 : 5;
   const [itemOffset, setItemOffset] = useState(0);
   const [pageCount, setPageCount] = useState(0);
 
   const endOffset = itemOffset + itemsPerPage;
-  const currentItems = Jobs.slice(itemOffset, endOffset);
-console.log(Jobs)
+  const currentItems = !searchStatus
+    ? Jobs.slice(itemOffset, endOffset)
+    : searchStatus || filterJobs.length > 0
+    ? filterJobs.slice(itemOffset, endOffset)
+    : "";
+
   useEffect(() => {
     dispatch(setPaginated(currentItems));
-    setPageCount(Math.ceil(Jobs.length / itemsPerPage));
-  }, [itemOffset, Jobs]);
+    setPageCount(
+      !searchStatus
+        ? Math.ceil(Jobs.length / itemsPerPage)
+        : Math.ceil(filterJobs.length / itemsPerPage)
+    );
+  }, [itemOffset, Jobs, filterJobs]);
 
   function handlePageClick(event) {
-    const newOffset = (event.selected * itemsPerPage) % Jobs.length;
+    const newOffset = !searchStatus
+      ? (event.selected * itemsPerPage) % Jobs.length
+      : (event.selected * itemsPerPage) % filterJobs.length;
     setItemOffset(newOffset);
   }
-
   return (
     <ReactPaginate
       breakLabel="..."
