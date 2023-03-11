@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-
 import PlacesAutocomplete, {
   geocodeByAddress,
   geocodeByPlaceId,
@@ -8,6 +7,7 @@ import PlacesAutocomplete, {
 import { useSelector, useDispatch } from "react-redux";
 import { addLocation } from "../../../Redux/LocationAndJobTypeReducer";
 import { setGeoLocation } from "../../../Redux/LocationAndJobTypeReducer";
+
 const ReactPlace = () => {
   const dispatch = useDispatch();
   const { location  } = useSelector((state) => state.LocationAndJobTypeReducer);

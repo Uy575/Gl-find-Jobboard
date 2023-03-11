@@ -19,13 +19,11 @@ function FilterJobForm() {
   const POST = `https://staging.get-licensed.co.uk/guardpass/api/public/search/jobs`;
   
   const [milesRange, setMilesRange] = useState(1);
-  const [retails, setRetails] = useState("");
+  const [retails, setRetails] = useState("Retail");
   const [corporate, setCorporates] = useState(" ");
-  const [bar, setBars] = useState("");
-  const [events, setEvents] = useState("");
-  const [mobiles, setMobiles] = useState("");
-  const [minSalary , setMinSalary] = useState(0);
-  const [maxSalary , setMaxSalary] = useState(55);
+  const [bar, setBars] = useState("Bar/Club");
+  const [events, setEvents] = useState("Event");
+  const [mobiles, setMobiles] = useState("Mobile");
   const [searchFlag , setSearchFlag] = useState(false);
 
   const [searchParams, setSearchParams] = useSearchParams();
@@ -40,22 +38,10 @@ function FilterJobForm() {
   let city = searchParams.get("city");
   let venue = searchParams.get("venue");
   let { lat, lng } = geoLocation;
-  let venue_type = [`${retails}${corporate}${bar}${events}${mobiles}`]
-  
-useEffect(()=>{
-  setMinSalary(salary.min);
-  setMaxSalary(salary.max);
-},[salary.min,salary.max ])
-
-
-useEffect(()=>{
-  setSearchFlag(!searchFlag)
-},[])
+  let venue_type = [retails ,corporate, bar ,events, mobiles]
 
 
   const resettingForm = (e) => {
-    // e.preventDefault();
-    // window.location.reload(true);
   searchStatus(false)
   };
 
@@ -63,14 +49,14 @@ useEffect(()=>{
     e.preventDefault();
 setSearchFlag(true);
     navigate(
-      `/jobs?title=${title}&city=${city}&venue=${retails},${corporate},${bar},${events},${mobiles} &sia-licence=&salary-min=${minSalary}&salary-max=${maxSalary}&lat=&lng`
+      `/jobs?title=${title}&city=${city}&venue=${venue_type} &sia-licence=&salary-min=${salary.min}&salary-max=${salary.max}&lat=&lng`
       );
     const request = await axios.post(POST, {
       title: `${title}`,
       location: `${city}`,
       // distance :30,
-      // salary_range: [minSalary , maxSalary],
-      venue_type: [`${venue_type}`],
+      salary_range: [salary.min , salary.max],
+      venue_type: venue_type,
       latitude: 51.5072,
       langitude: 0.1276,
     });

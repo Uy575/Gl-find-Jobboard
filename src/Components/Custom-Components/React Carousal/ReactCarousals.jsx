@@ -23,6 +23,7 @@ const responsive = {
   mobile: {
     breakpoint: { max: 464, min: 0 },
     items: 1,
+    
   },
 };
 const ReactCarousals = ({ topList }) => {
@@ -32,7 +33,7 @@ const ReactCarousals = ({ topList }) => {
     
     <Carousel
       responsive={responsive}
-      // arrows={true}
+      arrows={true}
       swipeable={false}
       draggable={false}  transitionDuration={500}  autoPlaySpeed={1000}
       // showDots={true}
