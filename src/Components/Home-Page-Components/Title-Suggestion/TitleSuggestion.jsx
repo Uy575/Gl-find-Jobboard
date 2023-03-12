@@ -3,15 +3,17 @@ import axios from "axios";
 import './TitleSuggestion.css'
 import { useDispatch,useSelector } from "react-redux";
 import { addJobType} from "../../../Redux/LocationAndJobTypeReducer";
+import { useSearchParams } from "react-router-dom";
 
 function TitleSuggestion({formInputs}) {
 
-     const dispatch = useDispatch();
-     const {jobType} = useSelector((state)=>state.LocationAndJobTypeReducer)
-    
+     const dispatch = useDispatch();   
+     const [searchParams,setSearchParams] = useSearchParams();
+
+     const jobcatagory = searchParams.get("title")
 
     const  [title,setTitle] = useState([])
-    const  [text,setText] = useState(jobType)
+    const  [text,setText] = useState(jobcatagory=== null? '' : jobcatagory)
     const  [suggestion,setSuggestion] = useState([])
     useEffect(()=>{
          const loadJobTitle = async ()=>{

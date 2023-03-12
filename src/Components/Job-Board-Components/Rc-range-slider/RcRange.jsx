@@ -24,27 +24,28 @@ useEffect(()=>{
         dispatch(setSalary({ min, max }));   
 },[min,max])
 
- const salaryMin = searchParams.get("salary-min");
- const salaryMax = searchParams.get("salary-max");
-
+ const salaryMin = Number(searchParams.get("salary-min"));
+ const salaryMax = Number(searchParams.get("salary-max"));
+console.log("usama",salaryMin,salaryMax)
   return (
     <>
       <div className="rc-rng">
         <Slider
           range
           allowCross={false}
-          defaultValue={[{salaryMin}, {salaryMax}]}
+          defaultValue={[salaryMin, salaryMax]}
           min={9}
           max={50}
           onChange={handleChange}
-        />
+          />
 
         <div className="priceRangeDiv">
-          <span> &pound;{salaryMin} </span> <span> &pound;{salaryMax} </span>
+          
+          <span> &pound;{min} </span> <span> &pound;{max} </span>
         </div>
       </div>
     </>
-
   );
+
 };
 export default RcRange;
