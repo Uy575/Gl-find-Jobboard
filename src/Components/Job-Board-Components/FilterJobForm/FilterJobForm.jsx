@@ -27,36 +27,41 @@ function FilterJobForm() {
   const [searchFlag , setSearchFlag] = useState(false);
 
   const [searchParams, setSearchParams] = useSearchParams();
+  
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [isChecked ,setIsChecked] = useState(true)
-
+  
   const {salary, geoLocation ,searchStatus ,miles } = useSelector(
     (state) => state.LocationAndJobTypeReducer
-  );
+    );
+    
+    let title = searchParams.get("title");
+    let city = searchParams.get("city");
+    let venue = searchParams.get("venue");
+    let smin = searchParams.get("salary-min");
+    let smax = searchParams.get("salary-max")
+    let distance = searchParams.get("distance")
+    let { lat, lng } = geoLocation;
+    let venue_type = [retails ,corporate, bar ,events, mobiles]
+    let min =Number(salary.min)
+    let max = Number(salary.max)
+    let dis = 30
+    let minSal = 9
+    let maxSal = 50
+    
 
-  let title = searchParams.get("title");
-  let city = searchParams.get("city");
-  let venue = searchParams.get("venue");
-  let smin = searchParams.get("salary-min");
-  let smax = searchParams.get("salary-max")
-  let distance = searchParams.get("distance")
-  let { lat, lng } = geoLocation;
-  let venue_type = [retails ,corporate, bar ,events, mobiles]
-  let min =Number(salary.min)
-  let max = Number(salary.max)
-  let dis = 30
+ 
+    let Retailchecking = venue === "Retail"? true : false;
 
-  
-  console.log()
-  console.log(min,max)
+
 
   const resettingForm = (e) => {
   e.preventDefault()
   setSearchFlag(false)
   dispatch(setSearchStatus(searchFlag))
   navigate(
-    `/jobs?title=&city=&venue=&sia-licence=&distance=${30}&salary-min=&salary-max=&lat=&lng`
+    `/jobs?title=&city=&venue=&sia-licence=&distance=${30}&salary-min=${minSal}&salary-max=${maxSal}&lat=&lng`
     );  
 };
 
@@ -101,17 +106,19 @@ dispatch(setSearchStatus(searchFlag))
         <span>Venue</span>
         <div>
           <input
-checked ={isChecked}
-value="Retail"
+            value="Retail"
             type="checkbox"
+            defaultChecked = {Retailchecking}
             onChange={(e) => {
-              if (e.target.checked || venue === "Retail") {
+              if (e.target.checked) {
                 setRetails(e.target.value);
+      
+       
               } else {
                 setRetails("");
               }
             }}
-            />{" "}
+            />
           <img src={Retail} alt="Retail" height="20px" /> <span> Retail </span>
         </div>
         <div>
