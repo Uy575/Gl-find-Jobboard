@@ -45,17 +45,23 @@ function FilterJobForm() {
   searchStatus(false)
   };
 
+
+  let min =Number.parseFloat(salary.min)
+  let max = Number.parseFloat(salary.max)
+let c =[min , max]
+
+
   const applyFilter = async (e) => {
     e.preventDefault();
 setSearchFlag(true);
     navigate(
-      `/jobs?title=${title}&city=${city}&venue=${venue_type} &sia-licence=&salary-min=${salary.min}&salary-max=${salary.max}&lat=&lng`
+      `/jobs?title=${title}&city=${city}&venue=${venue_type} &sia-licence=&salary-min=${min}&salary-max=${max}&lat=&lng`
       );
     const request = await axios.post(POST, {
       title: `${title}`,
       location: `${city}`,
       // distance :30,
-      salary_range: [salary.min , salary.max],
+      salary_range: [min ,max],
       venue_type: venue_type,
       latitude: 51.5072,
       langitude: 0.1276,

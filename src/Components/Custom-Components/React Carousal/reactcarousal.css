@@ -4,7 +4,9 @@
   display: flex;
   margin-left: 2rem;
   margin-right: 2rem;
+  margin-top: 1rem;
 }
+
 
 .react-multiple-carousel__arrow {
   height: 84px;
@@ -28,11 +30,11 @@
 
 
 .react-multi-carousel-item{
-width: 100%;
+  width: 100%;
 }
 
 @media (max-width: 320.98px) {
-
+  
 body{
 
 margin: 0;
@@ -58,6 +60,10 @@ margin-right: .2rem;
 @media only screen and (min-width:320.99px) and (max-width: 575.98px){
   .react-multi-carousel-list > ul {
     padding: 0 0rem;
+}
+
+.react-multiple-carousel__arrow{
+  display: none;
 }
 
 

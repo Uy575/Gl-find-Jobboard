@@ -23,9 +23,9 @@ const RcRange = () => {
         <Slider
           range
           allowCross={false}
-          defaultValue={[9, 50]}
-          min={9}
-          max={50}
+          defaultValue={[0, 55]}
+          min={0}
+          max={55}
           onChange={handleChange}
         />
 
@@ -37,5 +37,4 @@ const RcRange = () => {
 
   );
 };
-
 export default RcRange;

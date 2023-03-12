@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import "./reactcarousal.css";
@@ -22,21 +22,22 @@ const responsive = {
   },
   mobile: {
     breakpoint: { max: 464, min: 0 },
-    items: 1,
-    
-  },
+    items: 1,  
+  },  
 };
+
 const ReactCarousals = ({ topList }) => {
+
   const topProductsState = useSelector((state) => state.topProducts);
   const { topProducts } = topProductsState;
   return (
     
     <Carousel
       responsive={responsive}
-      arrows={true}
-      swipeable={false}
-      draggable={false}  transitionDuration={500}  autoPlaySpeed={1000}
-      // showDots={true}
+      arrows={window.innerWidth <=500 ? false:true}
+      swipeable={true}
+      draggable={true}  transitionDuration={500}  autoPlaySpeed={1000}
+      showDots={window.innerWidth <=500 ? true:false}
 
 containerClass="rc-container"
 
