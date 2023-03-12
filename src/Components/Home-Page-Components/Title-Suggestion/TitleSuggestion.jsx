@@ -20,6 +20,7 @@ function TitleSuggestion({formInputs}) {
             const response  = await axios.get('https://staging.get-licensed.co.uk/vantage/api/title/suggestions');
             setTitle(response.data.data);
          }
+         
          loadJobTitle();
         },[])
         

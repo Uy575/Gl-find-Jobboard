@@ -75,3 +75,4 @@ const ReactPlace = () => {
 };
 
 export default ReactPlace;
+
