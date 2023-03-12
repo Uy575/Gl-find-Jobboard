@@ -54,7 +54,6 @@ function FilterJobForm() {
 };
 
 
-console.log(typeof min , typeof max)
   const applyFilter = async (e) => {
     e.preventDefault();
 setSearchFlag(true);
@@ -174,6 +173,7 @@ dispatch(setSearchStatus(searchFlag))
           type="submit"
           value="Reset Filter"
           onClick={resettingForm}
+         
         />
         <input
           className="applyFilter"

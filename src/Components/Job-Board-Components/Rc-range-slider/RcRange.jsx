@@ -5,9 +5,9 @@ import "rc-slider/assets/index.css";
 import "./rcrange.css";
 import { setSalary } from "../../../Redux/LocationAndJobTypeReducer";
 const RcRange = () => {
-  const [rangeValue, setRangeValue] = useState();
-  const [min, setMin] = useState(0);
-  const [max, setMax] = useState(55);
+  const [rangeValue, setRangeValue] = useState(0);
+  const [min, setMin] = useState(9);
+  const [max, setMax] = useState(50);
 
   const dispatch = useDispatch();
   const handleChange = (value) => {
@@ -29,9 +29,9 @@ const RcRange = () => {
         <Slider
           range
           allowCross={false}
-          defaultValue={[0, 55]}
-          min={0}
-          max={55}
+          defaultValue={[9, 50]}
+          min={1}
+          max={50}
           onChange={handleChange}
           onFocus={handleData}
         />

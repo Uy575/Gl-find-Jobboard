@@ -5,7 +5,7 @@ import { setMiles } from "../../../Redux/LocationAndJobTypeReducer";
 import { useDispatch } from "react-redux";
 
 const RangeSlider = () => {
-  const [milesRange, setMilesRange] = useState(1);
+  const [milesRange, setMilesRange] = useState(30);
   const dispatch = useDispatch()
 
   const handleChnage = (e) => {
@@ -24,7 +24,7 @@ function  handleData(){
         <span>Jobs within </span> <span>{milesRange} miles away</span>{" "}
       </div>
       <div  style={{alignSelf:"center"}}>
-        <Slider min={1} max={2000} defaultValue={3} onChange={handleChnage} onFocus={handleData}  />
+        <Slider min={1} max={250} defaultValue='30' onChange={handleChnage} onFocus={handleData}  />
       </div>
     </>
   );
