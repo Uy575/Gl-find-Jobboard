@@ -102,7 +102,7 @@ dispatch(setSearchStatus(searchFlag))
               if (e.target.checked) {
                 setRetails(e.target.value);
               } else {
-                setRetails("");
+                setRetails(""); 
               }
             }}
           />{" "}
