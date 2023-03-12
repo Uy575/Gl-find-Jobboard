@@ -23,7 +23,7 @@ const RangeSlider = () => {
         <span>Jobs within </span> <span>{milesRange} miles away</span>{" "}
       </div>
       <div  style={{alignSelf:"center"}}>
-        <Slider min={1} max={250} defaultValue='30' onChange={handleChnage}/>
+        <Slider min={9} max={250} defaultValue='30' onChange={handleChnage}/>
       </div>
     </>
   );

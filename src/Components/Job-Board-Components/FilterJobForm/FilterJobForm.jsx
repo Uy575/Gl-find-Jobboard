@@ -29,7 +29,8 @@ function FilterJobForm() {
   const [searchParams, setSearchParams] = useSearchParams();
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  
+  const [isChecked ,setIsChecked] = useState(true)
+
   const {salary, geoLocation ,searchStatus ,miles } = useSelector(
     (state) => state.LocationAndJobTypeReducer
   );
@@ -39,11 +40,13 @@ function FilterJobForm() {
   let venue = searchParams.get("venue");
   let smin = searchParams.get("salary-min");
   let smax = searchParams.get("salary-max")
+  let distance = searchParams.get("distance")
   let { lat, lng } = geoLocation;
   let venue_type = [retails ,corporate, bar ,events, mobiles]
   let min =Number(salary.min)
   let max = Number(salary.max)
-
+  
+  console.log()
   console.log(min,max)
 
   const resettingForm = (e) => {
@@ -65,8 +68,8 @@ setSearchFlag(true);
     const request = await axios.post(POST, {
       title: `${title}`,
       location: `${city}`,
-      distance :miles,
-      // salary_range: [min, max],
+      distance :distance,
+      salary_range: [smin, smax],
       venue_type: venue_type,
       latitude: lat,
       langitude: lng,
@@ -96,16 +99,18 @@ dispatch(setSearchStatus(searchFlag))
         <span>Venue</span>
         <div>
           <input
-            value="Retail"
+checked ={isChecked}
+value="Retail"
             type="checkbox"
             onChange={(e) => {
-              if (e.target.checked) {
+              if (e.target.checked || venue === "Retail") {
                 setRetails(e.target.value);
-              } else {
+                setIsChecked(!isChecked)
+              }else{
                 setRetails("");
               }
             }}
-          />{" "}
+            />{" "}
           <img src={Retail} alt="Retail" height="20px" /> <span> Retail </span>
         </div>
         <div>
