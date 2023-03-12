@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import Slider, { Range } from "rc-slider";
 import "rc-slider/assets/index.css";
@@ -12,16 +12,15 @@ const RcRange = () => {
   const dispatch = useDispatch();
   const handleChange = (value) => {
     setRangeValue({ value });
+    console.log(rangeValue)
     setMin(value[0]);
     setMax(value[1]);
   };
   
-  function handleData(){
-      if(min >=0 && max>=0){
-        dispatch(setSalary({ min, max }));
-      }
-
-    }
+console.log(min,max)
+useEffect(()=>{
+        dispatch(setSalary({ min, max }));   
+},[min,max])
 
   return (
     <>
@@ -33,7 +32,6 @@ const RcRange = () => {
           min={1}
           max={50}
           onChange={handleChange}
-          onFocus={handleData}
         />
 
         <div className="priceRangeDiv">

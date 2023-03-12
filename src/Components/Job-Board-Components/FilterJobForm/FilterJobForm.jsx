@@ -37,6 +37,8 @@ function FilterJobForm() {
   let title = searchParams.get("title");
   let city = searchParams.get("city");
   let venue = searchParams.get("venue");
+  let smin = searchParams.get("salary-min");
+  let smax = searchParams.get("salary-max")
   let { lat, lng } = geoLocation;
   let venue_type = [retails ,corporate, bar ,events, mobiles]
   let min =Number(salary.min)
@@ -45,7 +47,7 @@ function FilterJobForm() {
   console.log(min,max)
 
   const resettingForm = (e) => {
-  // e.preventDefault()
+  e.preventDefault()
   setSearchFlag(false)
   dispatch(setSearchStatus(searchFlag))
   navigate(

@@ -23,6 +23,7 @@ function App() {
     <Routes>
       <Route index element={<HomePage />} />
       <Route path={`/jobs?`} element={<Jobs />} />
+      
       <Route path="/jobs/security-jobs-in-london" element={<London />} />
       <Route path="/jobs/security-jobs-in-leeds" element={<Leeds />} />
       <Route path="/jobs/security-jobs-in-machester" element={<Machester />} />

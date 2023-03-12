@@ -17,21 +17,22 @@ function Form({
   findJobArrow,
 }) {
   const [address, setAddress] = useState("");
-  const { jobType, location, jobFilter } = useSelector(
+  const { salary , jobType, location, jobFilter ,miles } = useSelector(
     (state) => state.LocationAndJobTypeReducer
   );
   const handleSelect = (value) => {};
-
+let {min ,max} = salary;
+min = min === "undefined" ? 9 : 9;
+max = max === "undefined" ? 50 : 50
 
   const navigate = useNavigate();
   const handleSubmit = (e) => {
-    e.preventDefault();
-
-
+    e.preventDefault();    
     navigate(
-    `/jobs?title=${jobType}&city=${location}&venue=&sia-licence=&salary-min=&salary-max=&lat=&lng=`
-    );
-  };
+      `/jobs?title=${jobType}&city=${location}&venue=&sia-licence=&distance=${miles}&salary-min=${Number(min)}&salary-max=${max}&lat=&lng=`
+      );
+    };
+    console.log(min,max)
 
   return (
     <form onSubmit={handleSubmit}>
