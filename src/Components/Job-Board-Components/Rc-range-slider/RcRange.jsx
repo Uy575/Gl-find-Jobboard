@@ -42,6 +42,7 @@ useEffect(()=>{
         <div className="priceRangeDiv">
           
           <span> &pound;{min} </span> <span> &pound;{max} </span>
+          
         </div>
       </div>
     </>
