@@ -29,12 +29,16 @@ function FilterJobForm() {
   const [searchParams, setSearchParams] = useSearchParams();
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const [isChecked ,setIsChecked] = useState(true)
+  const [isRetailChecked ,setIsRetailChecked] = useState(false)
+  const [isCoporateChecked ,setIsCoporateChecked] = useState(false)
+  const [isBarChecked ,setIsBarChecked] = useState(false)
+  const [isEventChecked ,setIsEventChecked] = useState(false)
+  const [isMobileChecked ,setIsMobileChecked] = useState(false)
 
   const {salary, geoLocation ,searchStatus ,miles } = useSelector(
     (state) => state.LocationAndJobTypeReducer
   );
-
+  
   let title = searchParams.get("title");
   let city = searchParams.get("city");
   let venue = searchParams.get("venue");
@@ -47,6 +51,7 @@ function FilterJobForm() {
   let max = Number(salary.max)
   let dis = 30
 
+  let checked = venue === "Retail" ? true : false;
   
   console.log()
   console.log(min,max)
@@ -101,26 +106,29 @@ dispatch(setSearchStatus(searchFlag))
         <span>Venue</span>
         <div>
           <input
-checked ={isChecked}
+defaultChecked={checked}
 value="Retail"
             type="checkbox"
             onChange={(e) => {
-              if (e.target.checked || venue === "Retail") {
+              console.log(e)
+              if (e.target.checked || venue ==="Retail" ) {
                 setRetails(e.target.value);
-              } else {
-                setRetails("");
-              }
-            }}
+                setIsRetailChecked(!isRetailChecked)
+              }else{
+              setRetails("");
+            }            }}
             />{" "}
           <img src={Retail} alt="Retail" height="20px" /> <span> Retail </span>
         </div>
         <div>
           <input
+            checked={isCoporateChecked}
             type="checkbox"
             value="Corporate"
             onChange={(e) => {
-              if (e.target.checked) {
+              if (e.target.checked || venue === "Corporate") {
                 setCorporates(e.target.value);
+setIsCoporateChecked(!isCoporateChecked)
               } else {
                 setCorporates("");
               }
@@ -134,8 +142,9 @@ value="Retail"
             type="checkbox"
             value="Bar/Club"
             onChange={(e) => {
-              if (e.target.checked) {
+              if (e.target.checked || venue === "Bar/Club") {
                 setBars(e.target.value);
+                setIsBarChecked(!isBarChecked)
               } else {
                 setBars("");
               }

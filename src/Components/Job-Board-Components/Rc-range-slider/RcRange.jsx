@@ -6,7 +6,7 @@ import Slider, { Range } from "rc-slider";
 import "rc-slider/assets/index.css";
 import "./rcrange.css";
 import { setSalary } from "../../../Redux/LocationAndJobTypeReducer";
-import { useSearchParams } from "react-router-dom";
+
 const RcRange = () => {
   const [rangeValue, setRangeValue] = useState(0);
   const [min, setMin] = useState(9);
