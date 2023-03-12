@@ -14,6 +14,7 @@ const JobBoardJobs = ({ api }) => {
   let city = searchParams.get("location");
   let salarymin = searchParams.get("salary-min");
   let salarymax = searchParams.get("salary-max");
+  let distance =  searchParams.get("distance")
   console.log(city);
   const statusState = useSelector((state) => state.JobReducer);
   const { jobFilter, geoLocation } = useSelector(
@@ -22,7 +23,7 @@ const JobBoardJobs = ({ api }) => {
   const { retails, corporate } = jobFilter;
   const { lat, lng } = geoLocation;
 
-  const FETCH_JOBS_API = `https://staging.get-licensed.co.uk/guardpass/api/public/search/jobs?title=${title}&city=${city}&venue=${venue}&sia-licence=&salary-min=&salary-max=&latitude=${lat}&lng=${lng}`;
+  const FETCH_JOBS_API = `https://staging.get-licensed.co.uk/guardpass/api/public/search/jobs?title=${title}&city=${city}&venue=${venue}&sia-licence=&distance=${distance}&salary-min=${salarymin}&salary-max=${salarymax}&latitude=${lat}&lng=${lng}`;
 
   const c = api ? api : FETCH_JOBS_API;
 

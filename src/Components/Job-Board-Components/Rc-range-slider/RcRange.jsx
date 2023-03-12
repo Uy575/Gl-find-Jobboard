@@ -14,8 +14,14 @@ const RcRange = () => {
     setRangeValue({ value });
     setMin(value[0]);
     setMax(value[1]);
-    dispatch(setSalary({ min, max }));
   };
+  
+  function handleData(){
+      if(min >=0 && max>=0){
+        dispatch(setSalary({ min, max }));
+      }
+
+    }
 
   return (
     <>
@@ -27,6 +33,7 @@ const RcRange = () => {
           min={0}
           max={55}
           onChange={handleChange}
+          onFocus={handleData}
         />
 
         <div className="priceRangeDiv">

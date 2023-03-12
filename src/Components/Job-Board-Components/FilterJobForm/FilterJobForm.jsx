@@ -19,18 +19,18 @@ function FilterJobForm() {
   const POST = `https://staging.get-licensed.co.uk/guardpass/api/public/search/jobs`;
   
   const [milesRange, setMilesRange] = useState(1);
-  const [retails, setRetails] = useState("Retail");
-  const [corporate, setCorporates] = useState(" ");
-  const [bar, setBars] = useState("Bar/Club");
-  const [events, setEvents] = useState("Event");
-  const [mobiles, setMobiles] = useState("Mobile");
+  const [retails, setRetails] = useState("");
+  const [corporate, setCorporates] = useState("");
+  const [bar, setBars] = useState("");
+  const [events, setEvents] = useState("");
+  const [mobiles, setMobiles] = useState("");
   const [searchFlag , setSearchFlag] = useState(false);
 
   const [searchParams, setSearchParams] = useSearchParams();
   const dispatch = useDispatch();
   const navigate = useNavigate();
   
-  const {salary, geoLocation ,searchStatus } = useSelector(
+  const {salary, geoLocation ,searchStatus ,miles } = useSelector(
     (state) => state.LocationAndJobTypeReducer
   );
 
@@ -39,32 +39,36 @@ function FilterJobForm() {
   let venue = searchParams.get("venue");
   let { lat, lng } = geoLocation;
   let venue_type = [retails ,corporate, bar ,events, mobiles]
+  let min =Number(salary.min)
+  let max = Number(salary.max)
 
+  console.log(min,max)
 
   const resettingForm = (e) => {
-  searchStatus(false)
-  };
+  // e.preventDefault()
+  setSearchFlag(false)
+  dispatch(setSearchStatus(searchFlag))
+  navigate(
+    `/jobs?title=&city=&venue=&sia-licence=&distance=&distance=&salary-min=&salary-max=&lat=&lng`
+    );  
+};
 
 
-  let min =Number.parseFloat(salary.min)
-  let max = Number.parseFloat(salary.max)
-let c =[min , max]
-
-
+console.log(typeof min , typeof max)
   const applyFilter = async (e) => {
     e.preventDefault();
 setSearchFlag(true);
     navigate(
-      `/jobs?title=${title}&city=${city}&venue=${venue_type} &sia-licence=&salary-min=${min}&salary-max=${max}&lat=&lng`
+      `/jobs?title=${title}&city=${city}&venue=${venue_type}&sia-licence=&distance=${miles}&salary-min=${min}&salary-max=${max}&lat=${lat}&lng=${lng}`
       );
     const request = await axios.post(POST, {
       title: `${title}`,
       location: `${city}`,
-      // distance :30,
-      salary_range: [min ,max],
+      distance :miles,
+      // salary_range: [min, max],
       venue_type: venue_type,
-      latitude: 51.5072,
-      langitude: 0.1276,
+      latitude: lat,
+      langitude: lng,
     });
     const response = request.data.data.data
 console.log(response)
@@ -121,7 +125,7 @@ dispatch(setSearchStatus(searchFlag))
         <div>
           <input
             type="checkbox"
-            value="Bar/Clubs"
+            value="Bar/Club"
             onChange={(e) => {
               if (e.target.checked) {
                 setBars(e.target.value);

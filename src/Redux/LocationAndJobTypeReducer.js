@@ -13,7 +13,8 @@ const initialState = {
   salary:[],
   geoLocation:[],
 filterJobs:[],
-searchStatus :''
+searchStatus :'',
+miles:'',
 };
 
 const LocationAndJobTypeSlicer = createSlice({
@@ -50,11 +51,13 @@ const LocationAndJobTypeSlicer = createSlice({
     }
     , setJobFilter(state , action){
       state.filterJobs= action.payload
+    }, setMiles(state , action){
+      state.miles= action.payload
     }
   },
 });
 
-export const { addLocation, addJobType , setBar , setCorporate ,setEvent ,setMobile ,setRetail ,setSalary , setGeoLocation , setJobFilter , setSearchStatus} = LocationAndJobTypeSlicer.actions;
+export const { addLocation, addJobType , setBar , setCorporate ,setEvent ,setMobile ,setRetail ,setSalary , setGeoLocation , setJobFilter , setSearchStatus ,setMiles} = LocationAndJobTypeSlicer.actions;
 export default LocationAndJobTypeSlicer.reducer; 
 
 
