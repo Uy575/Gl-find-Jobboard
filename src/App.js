@@ -34,6 +34,8 @@ function App() {
       />
       <Route path="/jobs/security-jobs-in-cardif" element={<Cardif />} />
       <Route path="/jobs/detail/:id" element={<DetailPage />} />
+      <Route path="/jobs?title=&city=&venue=&sia-licence=&distance=30&salary-min=9&salary-max=50&lat=&lng" element={<Jobs />} />
+     
     </Routes>
   );
 }

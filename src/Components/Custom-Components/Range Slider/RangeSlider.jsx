@@ -3,10 +3,15 @@ import Slider from "rc-slider";
 // import '../../assets/index.less';
 import { setMiles } from "../../../Redux/LocationAndJobTypeReducer";
 import { useDispatch } from "react-redux";
+import { useSearchParams } from "react-router-dom";
 
 const RangeSlider = () => {
+
+  
   const [milesRange, setMilesRange] = useState(30);
   const dispatch = useDispatch()
+
+   const [searchParams,setSearchParams] = useSearchParams();
 
   const handleChnage = (e) => {
     setMilesRange(e);
@@ -16,11 +21,11 @@ const RangeSlider = () => {
     dispatch(setMiles(milesRange))
   },[milesRange])
 
-
+  let distance = searchParams.get("distance");
   return (
     <>
       <div className="mileRangeHeading">
-        <span>Jobs within </span> <span>{milesRange} miles away</span>{" "}
+        <span>Jobs within </span> <span>{distance} miles away</span>{" "}
       </div>
       <div  style={{alignSelf:"center"}}>
         <Slider min={9} max={250} defaultValue='30' onChange={handleChnage}/>

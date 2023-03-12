@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useSearchParams } from "react-router-dom";
 import PlacesAutocomplete, {
   geocodeByAddress,
   geocodeByPlaceId,
@@ -10,8 +11,12 @@ import { setGeoLocation } from "../../../Redux/LocationAndJobTypeReducer";
 
 const ReactPlace = () => {
   const dispatch = useDispatch();
-  const { location  } = useSelector((state) => state.LocationAndJobTypeReducer);
-  const [Address, setAddress] = useState(location);
+
+  const [searchParams,setSearchParams] = useSearchParams();
+
+  const locationName = searchParams.get("city")
+
+  const [Address, setAddress] = useState(locationName === null? '' : locationName);
   const [cordinates, setCordinates] = useState({
     lat: null,
     lng: null,
@@ -70,3 +75,4 @@ const ReactPlace = () => {
 };
 
 export default ReactPlace;
+

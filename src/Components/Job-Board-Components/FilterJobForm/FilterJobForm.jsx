@@ -45,6 +45,8 @@ function FilterJobForm() {
   let venue_type = [retails ,corporate, bar ,events, mobiles]
   let min =Number(salary.min)
   let max = Number(salary.max)
+  let dis = 30
+
   
   console.log()
   console.log(min,max)
@@ -54,14 +56,14 @@ function FilterJobForm() {
   setSearchFlag(false)
   dispatch(setSearchStatus(searchFlag))
   navigate(
-    `/jobs?title=&city=&venue=&sia-licence=&distance=&distance=&salary-min=&salary-max=&lat=&lng`
+    `/jobs?title=&city=&venue=&sia-licence=&distance=${30}&salary-min=&salary-max=&lat=&lng`
     );  
 };
 
 
   const applyFilter = async (e) => {
     e.preventDefault();
-setSearchFlag(true);
+    setSearchFlag(true);
     navigate(
       `/jobs?title=${title}&city=${city}&venue=${venue_type}&sia-licence=&distance=${miles}&salary-min=${min}&salary-max=${max}&lat=${lat}&lng=${lng}`
       );
@@ -105,8 +107,7 @@ value="Retail"
             onChange={(e) => {
               if (e.target.checked || venue === "Retail") {
                 setRetails(e.target.value);
-                setIsChecked(!isChecked)
-              }else{
+              } else {
                 setRetails("");
               }
             }}

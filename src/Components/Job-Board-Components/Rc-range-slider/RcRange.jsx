@@ -6,6 +6,7 @@ import Slider, { Range } from "rc-slider";
 import "rc-slider/assets/index.css";
 import "./rcrange.css";
 import { setSalary } from "../../../Redux/LocationAndJobTypeReducer";
+import { useSearchParams } from "react-router-dom";
 const RcRange = () => {
   const [rangeValue, setRangeValue] = useState(0);
   const [min, setMin] = useState(9);
@@ -26,6 +27,9 @@ useEffect(()=>{
         dispatch(setSalary({ min, max }));   
 },[min,max])
 
+ const salaryMin = Number(searchParams.get("salary-min"));
+ const salaryMax = Number(searchParams.get("salary-max"));
+console.log("usama",salaryMin,salaryMax)
   return (
     <>
       <div className="rc-rng">
@@ -36,14 +40,15 @@ useEffect(()=>{
           min={9}
           max={50}
           onChange={handleChange}
-        />
+          />
 
         <div className="priceRangeDiv">
+          
           <span> &pound;{min} </span> <span> &pound;{max} </span>
         </div>
       </div>
     </>
-
   );
+
 };
 export default RcRange;
