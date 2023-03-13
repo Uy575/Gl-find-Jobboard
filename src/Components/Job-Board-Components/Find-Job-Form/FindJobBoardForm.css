@@ -139,7 +139,20 @@
         left: 73.5rem;
     }
 }
+/* @media only screen and (max-width: 991.98px){
+
+    .jobBoardFindJobButton{
+        left: 56rem;
+    }
+    .jobBoardFindJobArrow{
+        left: 55.5rem;
+    }
+} */
 @media (max-width: 767.98px) {
+    body{
+        margin: 0px;
+        padding: 0px;
+    }
     .jobBoardFormCard{
        display: block;
        background: none ;
@@ -239,11 +252,11 @@
         margin-right: 0rem;
     }
     .jobBoardFindJobButton{
-       width: 24rem;
+       width: 22.5rem;
        top: 12rem;
     }
     .jobBoardFindJobArrow {
-        left: 22rem;
+        left: 20rem;
         top: 13rem;
       
        

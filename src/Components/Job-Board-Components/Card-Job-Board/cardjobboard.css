@@ -207,7 +207,7 @@ width: 100%;
 
 
 }
-@media (max-width: 360px) {
+@media (max-width: 575px) {
  
   .card-body{
     width: 100%;
