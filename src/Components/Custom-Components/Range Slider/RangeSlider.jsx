@@ -13,6 +13,8 @@ const RangeSlider = () => {
 
    const [searchParams,setSearchParams] = useSearchParams();
 
+   const city = searchParams.get("city");
+
   const handleChnage = (e) => {
     setMilesRange(e);
   };
@@ -28,7 +30,7 @@ const RangeSlider = () => {
         <span>Jobs within </span> <span>{distance} miles away</span>{" "}
       </div>
       <div  style={{alignSelf:"center"}}>
-        <Slider min={9} max={250} defaultValue='30' onChange={handleChnage}/>
+        <Slider min={9} max={250} defaultValue='30' onChange={handleChnage} disabled={city === "" ?true:false}/>
       </div>
     </>
   );

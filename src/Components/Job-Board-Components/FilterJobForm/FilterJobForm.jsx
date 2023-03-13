@@ -12,82 +12,81 @@ import { useNavigate } from "react-router";
 import RcRange from "../Rc-range-slider/RcRange";
 import RangeSlider from "../../Custom-Components/Range Slider/RangeSlider";
 import axios from "axios";
-import { setJobFilter ,setSearchStatus } from "../../../Redux/LocationAndJobTypeReducer";
+import {
+  setJobFilter,
+  setSearchStatus,
+} from "../../../Redux/LocationAndJobTypeReducer";
 import "./FilterJobForm.css";
 
 function FilterJobForm() {
   const POST = `https://staging.get-licensed.co.uk/guardpass/api/public/search/jobs`;
-  
+
   const [milesRange, setMilesRange] = useState(1);
   const [retails, setRetails] = useState("");
   const [corporate, setCorporates] = useState("");
   const [bar, setBars] = useState("");
   const [events, setEvents] = useState("");
   const [mobiles, setMobiles] = useState("");
-  const [searchFlag , setSearchFlag] = useState(false);
+  const [searchFlag, setSearchFlag] = useState(false);
 
   const [searchParams, setSearchParams] = useSearchParams();
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const [isRetailChecked ,setIsRetailChecked] = useState(false)
-  const [isCoporateChecked ,setIsCoporateChecked] = useState(false)
-  const [isBarChecked ,setIsBarChecked] = useState(false)
-  const [isEventChecked ,setIsEventChecked] = useState(false)
-  const [isMobileChecked ,setIsMobileChecked] = useState(false)
 
-  const {salary, geoLocation ,searchStatus ,miles } = useSelector(
+  const { salary, geoLocation, searchStatus, miles } = useSelector(
     (state) => state.LocationAndJobTypeReducer
   );
-  
+
   let title = searchParams.get("title");
   let city = searchParams.get("city");
   let venue = searchParams.get("venue");
   let smin = searchParams.get("salary-min");
-  let smax = searchParams.get("salary-max")
-  let distance = searchParams.get("distance")
+  let smax = searchParams.get("salary-max");
+  let distance = searchParams.get("distance");
   let { lat, lng } = geoLocation;
-  let venue_type = [retails ,corporate, bar ,events, mobiles]
-  let min =Number(salary.min)
-  let max = Number(salary.max)
-  let dis = 30
+  let venue_type = [retails, corporate, bar, events, mobiles];
+  let min = Number(salary.min);
+  let max = Number(salary.max);
+  let dis = 30;
 
-  let checked = venue === "Retail" ? true : false;
-  
-  console.log()
-  console.log(min,max)
+  let checkedRetail = venue === "Retail" ? true : false;
+  let checkedCorporate = venue === "Coporate" ? true : false;
+  let checkedBar = venue === "Bar/Clubs" ? true : false;
+  let checkedEvent = venue === "Event" ? true : false;
+  let checkedMobile = venue === "Mobile" ? true : false;
+
+  console.log();
+  console.log(min, max);
 
   const resettingForm = (e) => {
-  e.preventDefault()
-  setSearchFlag(false)
-  dispatch(setSearchStatus(searchFlag))
-  navigate(
-    `/jobs?title=&city=&venue=&sia-licence=&distance=${30}&salary-min=&salary-max=&lat=&lng`
-    );  
-};
-
+    e.preventDefault();
+    setSearchFlag(false);
+    dispatch(setSearchStatus(searchFlag));
+    navigate(
+      `/jobs?title=&city=&venue=&sia-licence=&distance=${30}&salary-min=${min}&salary-max=${max}&lat=&lng`
+    );
+  };
 
   const applyFilter = async (e) => {
     e.preventDefault();
     setSearchFlag(true);
     navigate(
       `/jobs?title=${title}&city=${city}&venue=${venue_type}&sia-licence=&distance=${miles}&salary-min=${min}&salary-max=${max}&lat=${lat}&lng=${lng}`
-      );
+    );
     const request = await axios.post(POST, {
       title: `${title}`,
       location: `${city}`,
-      distance :distance,
+      distance: distance,
       salary_range: [smin, smax],
       venue_type: venue_type,
       latitude: lat,
       langitude: lng,
     });
-    const response = request.data.data.data
-console.log(response)
-dispatch(setSearchStatus(searchFlag))
-    dispatch(setJobFilter(response))
+    const response = request.data.data.data;
+    console.log(response);
+    dispatch(setSearchStatus(searchFlag));
+    dispatch(setJobFilter(response));
   };
-  
-
 
   return (
     <form className="filterForm">
@@ -106,29 +105,28 @@ dispatch(setSearchStatus(searchFlag))
         <span>Venue</span>
         <div>
           <input
-defaultChecked={checked}
-value="Retail"
+            value="Retail"
             type="checkbox"
+            defaultChecked={checkedRetail}
             onChange={(e) => {
-              console.log(e)
-              if (e.target.checked || venue ==="Retail" ) {
+              console.log(e);
+              if (e.target.checked || venue === "Retail") {
                 setRetails(e.target.value);
-                setIsRetailChecked(!isRetailChecked)
-              }else{
-              setRetails("");
-            }            }}
-            />{" "}
+              } else {
+                setRetails("");
+              }
+            }}
+          />{" "}
           <img src={Retail} alt="Retail" height="20px" /> <span> Retail </span>
         </div>
         <div>
           <input
-            checked={isCoporateChecked}
+            defaultChecked={checkedCorporate}
             type="checkbox"
             value="Corporate"
             onChange={(e) => {
               if (e.target.checked || venue === "Corporate") {
                 setCorporates(e.target.value);
-setIsCoporateChecked(!isCoporateChecked)
               } else {
                 setCorporates("");
               }
@@ -139,12 +137,12 @@ setIsCoporateChecked(!isCoporateChecked)
         </div>
         <div>
           <input
+            defaultChecked={checkedBar}
             type="checkbox"
             value="Bar/Club"
             onChange={(e) => {
               if (e.target.checked || venue === "Bar/Club") {
                 setBars(e.target.value);
-                setIsBarChecked(!isBarChecked)
               } else {
                 setBars("");
               }
@@ -155,6 +153,7 @@ setIsCoporateChecked(!isCoporateChecked)
         </div>
         <div>
           <input
+            defaultChecked={checkedEvent}
             type="checkbox"
             value="Event"
             onChange={(e) => {
@@ -169,6 +168,7 @@ setIsCoporateChecked(!isCoporateChecked)
         </div>
         <div>
           <input
+            defaultChecked={checkedMobile}
             type="checkbox"
             value="Mobile"
             onChange={(e) => {
@@ -190,7 +190,6 @@ setIsCoporateChecked(!isCoporateChecked)
           type="submit"
           value="Reset Filter"
           onClick={resettingForm}
-         
         />
         <input
           className="applyFilter"
