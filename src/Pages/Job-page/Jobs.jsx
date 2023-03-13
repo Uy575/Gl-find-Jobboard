@@ -11,13 +11,14 @@ import { useEffect, useState } from "react";
 
 
 function Jobs() {
-const [browserWidth , setBrowserWidth] = useState(window.innerWidth)
+const [browserWidth , setBrowserWidth] = useState(window.outerWidth)
 
+console.log(window.outerWidth)
   useEffect(()=>{
-  
   setBrowserWidth(browserWidth)
-  },[])
+  },[window.outerWidth])
  
+  
   return (
     <>
       <Header /> 
@@ -33,7 +34,7 @@ const [browserWidth , setBrowserWidth] = useState(window.innerWidth)
       /> 
       <div className="jobBoardPageMainContainer">
 
-       {browserWidth <= `${500}px` ? <FilterButton fjob={<FilterJob />} />:<FilterJob show="true" />}
+       {browserWidth <= `${767}` ? <FilterButton fjob={<FilterJob />} />: browserWidth >=770 ? <FilterJob show="true" /> :''}
       
         <JobBoardJobs />
         {/* <CardJobBoard buttonTitle="View Job Details" classname="card-body" showform='false' /> */}

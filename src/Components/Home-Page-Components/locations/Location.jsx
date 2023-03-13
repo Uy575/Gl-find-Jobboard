@@ -43,7 +43,7 @@ const Location = () => {
               </div>
             </div>
           </a>
-          s{/* box4 */}
+          {/* box4 */}
           <a href="/jobs/security-jobs-in-leeds">
             <div className="img-box4">
               <img src={leeds} alt="" className="leeds-img" />

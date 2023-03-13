@@ -10,11 +10,16 @@ body{
     overflow-x: hidden;
     
 }
-h4,h5,span,button{
+h4,h5,span{
 font-family: "Roboto",sans-serif;
 }
 h4,h2{
 color: black;
+}
+
+button{
+    font-family: "Roboto",sans-serif !important;
+
 }
 
 .App{

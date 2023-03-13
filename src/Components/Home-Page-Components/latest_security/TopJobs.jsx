@@ -5,6 +5,7 @@ import { useEffect } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import ReactCarousals from "../../Custom-Components/React Carousal/ReactCarousals";
+import './latest_sec.css'
 
 function TopJobs() {
   const dispatch = useDispatch();
@@ -25,7 +26,7 @@ function TopJobs() {
       <ReactCarousals />
 
       <div className="ls_container" style={{padding:'4rem'}}>
-        <a href="/jobs?title=&city=&venue=Mobile&sia-licence=&salary-min=&salary-max=&lat=&lng=" className="ls_button"  >Explore More Jobs</a>
+        <a href="/jobs?title=&city=&venue=Mobile&sia-licence=&salary-min=&salary-max=&lat=&lng=" className="ls_button" id="explore-btn"  >Explore More Jobs</a>
       </div>
     </>
   );
