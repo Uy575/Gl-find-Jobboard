@@ -9,11 +9,9 @@
   border-radius: 0.25rem;
   margin-bottom: 3rem;
   position: sticky;
-    top: 0;
-    z-index: 1;
+  top: 0;
+  z-index: 1;
 }
-
-
 
 .filterForm > h5 {
   /* color: green; */
@@ -88,15 +86,14 @@
 
 input[type="range"] {
   width: 15rem;
-  
+
   align-self: center;
   accent-color: skyblue;
   cursor: grab;
 }
 
-input[type="checkbox"]{
-    accent-color: green;
-    
+input[type="checkbox"] {
+  accent-color: green;
 }
 
 .payRangeHeading {
@@ -105,20 +102,40 @@ input[type="checkbox"]{
   font-weight: 100;
 }
 
+@media (max-width: 767.98px) {
+  .rc-rng {
+    margin: 0;
+  }
+  .hr {
+    width: 90%;
+    align-items: center;
+    margin-top: 0.5rem;
+  }
+  .buttonDiv {
+    width: 100%;
+    display: flex;
+    padding: 1rem 1rem;
+  }
+  .backopt {
+    left: 4rem;
+    top: 0;
+  }
+  .buttonDiv > * {
+    width: 50%;
+    height: 40px;
+  }
 
-
-
-
-@media  (max-width: 320.98px) {
-
-.filterForm{
-margin: 1rem;
-width: auto;
-
+  .venue {
+    margin: 0;
+  }
 }
-} 
 
-@media (max-width: 575.98px) {} 
+@media (max-width: 320.98px) {
+  .filterForm {
+    margin: 1rem;
+    width: auto;
+  }
+}
 
-
-
+@media (max-width: 575.98px) {
+}

@@ -12,6 +12,7 @@ import { useNavigate } from "react-router";
 import RcRange from "../Rc-range-slider/RcRange";
 import RangeSlider from "../../Custom-Components/Range Slider/RangeSlider";
 import axios from "axios";
+
 import {
   setJobFilter,
   setSearchStatus,

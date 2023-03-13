@@ -120,3 +120,17 @@
   cursor: pointer;
   border-radius: 4px;
 }
+
+
+@media (max-width:767.98px){
+.jb-aside{
+margin:  0 auto;
+width: 80%;
+}
+.jb-aside-top-end{
+display: none;
+}
+.jb-aside-top-text > p{
+display: none;
+}
+}
