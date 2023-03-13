@@ -40,3 +40,14 @@
   font-size: 16.4px;
   font-family: "Roboto", sans-serif;
 }
+
+.det-formbutton-disabled > button{
+  padding: 8px 20px 6px;
+  background-color: #4e4e58;
+  color: white;
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+  border-radius: 4px;
+  opacity: 0.5;
+ border: none;
+}

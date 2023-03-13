@@ -1,4 +1,33 @@
 .getLicensedCard{
     display: flex;
     justify-content: space-between;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    margin-top: 1rem;
+    padding: 0rem 2rem;
+    border-radius: 8px;
+}
+
+.getLicensedContent{
+    align-self: center;
+    padding-left: 1rem;
+    
+}
+.getLicensedContent > p{
+    width: 20rem;
+    font-size: 1.2rem;
+}
+.getLicensedButton{
+    margin-top: 1rem;
+    /* width: 8rem; */
+    height: 3rem;
+    background-color: #242429;
+    padding: 8px 2px 20px 6px;
+    min-width: 157px;
+    border-radius: 4px;
+}
+.getLicensedAnchor{
+    /* background-color: black; */
+    color: white;
+    font-size: 1.2rem;
+   
 }

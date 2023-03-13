@@ -9,9 +9,9 @@ function GetSiaLicense() {
     
     <div className='getLicensedCard'>
       <div className='getLicensedContent'>
-            <h2>How to get an SIA Licence</h2>
+            <h2 style={{color:'green'}}>How to get an SIA Licence</h2>
             <p>It is a legal requirement to get an SIA licence to work in the private security industry. Learn how you can apply for your licence and work legally as a Door Supervisor, CCTV Operator, Security Guard or Close Protection Officer.</p>
-            <button><a href='#'>Learn more...</a></button>
+            <button className='getLicensedButton'><a className='getLicensedAnchor' href='#'>Learn more...</a></button>
       </div>
       <div className='getLicensedImage'>
         <img src={GetSiaLicenseImage}></img>

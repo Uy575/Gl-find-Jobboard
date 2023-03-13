@@ -50,7 +50,7 @@ function DetailPage() {
           />
           
           <div className="detailContent">
-            <AccordionComp/>
+            <AccordionComp />
           </div>
           <div className="detailContent">
             <hr />

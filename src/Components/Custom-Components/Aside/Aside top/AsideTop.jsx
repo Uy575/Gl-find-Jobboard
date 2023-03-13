@@ -5,6 +5,7 @@ import apple from "../../../../Assets/Job-Board-Assets/Logos/android-logo.webp";
 import google from "../../../../Assets/Job-Board-Assets/Logos/google-play-logo.webp";
 import './asidetop.css'
 import axios from "axios";
+import { sentJobLinkSchema } from "../../../../Schemas/SentJobLinkYup";
 
 
 const Post_Send_Api = `https://staging.get-licensed.co.uk/guardpass/api/public/sms/app/link`;
@@ -23,7 +24,7 @@ const AsideTop = ({classname , btnid , asidetext,btntext , formsec ,downloadh}) 
     handleSubmit,
   } = useFormik({
     initialValues: INITIAL_STATE,
-    // validationSchema: ,
+    validationSchema: sentJobLinkSchema,
     onSubmit: (values,action) => {
       sendAppLink();
       action.resetForm()
@@ -63,6 +64,9 @@ console.log(request)
             {btntext === "Send link" ? <h4>Send link</h4> : <img src={arrow} alt="" height="16px" /> }
           </button>
         </form>
+          {errors.phonenumber && touched.phonenumber? (
+          <p style={{ color: "red",fontSize:'1rem',width:'16rem',backgroundColor:'white',paddingLeft:'0.5rem'}}> {errors.phonenumber} </p>
+        ) : null}
       </div>
       <h6 className={downloadh}>Download From </h6>
 

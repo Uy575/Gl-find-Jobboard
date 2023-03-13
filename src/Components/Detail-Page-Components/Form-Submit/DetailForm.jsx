@@ -15,12 +15,12 @@ const INITIAL_STATE = {
   lastName: "",
   number: "",
   email: "",
+  check:"",
 };
 
 let message;
 
 const DetailForm = () => {
-  const [checkValue, setCheckValue] = useState();
 
   const {
     values,
@@ -36,6 +36,7 @@ const DetailForm = () => {
     onSubmit: (values, action) => {
       onSubmitHandle();
       action.resetForm();
+   
     },
   });
 
@@ -47,7 +48,7 @@ const DetailForm = () => {
         mobile_number: values.number,
         email_address: values.email,
         job_id: 443,
-        has_licence: checkValue,
+        has_licence: values.check,
       });
       message = request.data.message;
       toast.success(message);
@@ -61,11 +62,7 @@ const DetailForm = () => {
     postData();
   };
 
-  function radioCheckHandler(e) {
-    setCheckValue(e.target.value);
-  }
-
-  console.log(checkValue);
+ 
 
   return (
     <section className="detail-form-container">
@@ -118,29 +115,35 @@ const DetailForm = () => {
 
       <div className="det-form-buttons">
         <div className="det-form-radios">
-          <p>det-formbutton-submit</p>
+          <p style={{paddingLeft:'0.5rem'}}>Do you have an sia license?</p>
           <input
             type="radio"
             name="check"
             value="1"
-            onChange={radioCheckHandler}
+            onBlur={handleBlur}
+            onChange = {handleChange}
           />{" "}
           <label htmlFor="">Yes</label>
           <input
             type="radio"
             name="check"
             value="0"
-            onChange={radioCheckHandler}
+            onBlur={handleBlur}
+            onChange = {handleChange}
           />
-          <label htmlFor="">No</label>
+          <label htmlFor="">No</label> <br/>
         </div>
-        <div className="det-formbutton-submit">
-          <button type="button" onClick={handleSubmit}>
+     
+        <div className={values.check==="0"?"det-formbutton-disabled":"det-formbutton-submit"}>
+          <button type="button" onClick={ values.check === "1"?handleSubmit:''}>
             Submit
           </button>
-        </div>
+        </div> 
       </div>
-      {checkValue === "0" ? <GetSiaLicense /> : ""}
+        {errors.check && touched.check? (
+          <p style={{ color: "red" , marginLeft:'1rem' }}> {errors.check} </p>
+        ) : null}
+      {values.check === "0" ? <GetSiaLicense /> : ""}
 
       <ToastContainer />
     </section>

@@ -1,0 +1,34 @@
+.salaryRate{
+    width: 100%;
+}
+
+.hourlyRate {
+    font-size: 1.2rem;
+    border-right: 1px solid black;
+    padding-right: 3rem;
+    
+}
+
+.weeklyHours{
+    font-size: 1.2rem;
+    margin-left: 3rem;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+
+}
+
+tr{
+    border-bottom: 1px solid #ccc; 
+    font-weight: 100; 
+}
+
+th{
+    text-align: start;
+}
+
+.tableHr{
+    border: 1/2px solid #ccc ;
+    margin-top: 1rem;
+}
