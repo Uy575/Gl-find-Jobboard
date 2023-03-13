@@ -8,11 +8,45 @@
 }
 
 
+@media only screen and (max-width: 1920px){
+  
+    .jobBoardPageMainContainer{
+        justify-content: center;
+    }
+   
 
+}
+
+@media only screen and (max-width: 991.98px){
+    .jobBoardPageMainContainer{
+        max-width: 720px;
+    }
+
+    .card-body{
+        width: 360px;
+    }
+     .jb-aside{
+        width: 18rem;
+     }
+
+     .filterForm{
+        margin-left: 20rem;
+     }
+   
+    .jobBoardFormCard{
+        margin-left: 1rem;
+        width: 50rem;
+    }
+    .jobBoardFindJobButton{
+        left: 56rem;
+    }
+    .jobBoardFindJobArrow{
+        left: 55.5rem;
+    }
+}
 
 @media  (max-width: 320.98px) {
-
-    .jobBoardPageMainContainer{
+.jobBoardPageMainContainer{
 flex-direction: column;
 justify-content: center;    
     }

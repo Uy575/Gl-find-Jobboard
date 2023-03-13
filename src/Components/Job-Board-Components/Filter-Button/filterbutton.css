@@ -6,3 +6,9 @@ background-color: white;
 border-radius: 4px;
 
 }
+
+@media (max-width: 767.98px){
+    .filter-button{
+        margin-top: 12rem;
+    }
+}

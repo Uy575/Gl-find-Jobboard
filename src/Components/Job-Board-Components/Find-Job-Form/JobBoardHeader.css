@@ -1,0 +1,64 @@
+.jobBoardHeaderLogo{
+    margin: 1rem 6rem;
+}
+
+.jobBoardHeaderJobPost{
+    margin-right: 8rem;
+}
+
+
+.jobBoardHeaderLogo img{
+    height: 5rem;
+}
+
+    
+
+.jobBoardHeaderJobPost img{
+    margin-top: 1.6rem;
+    margin-bottom: -0.8rem;
+    margin-left: 0.3rem;
+}
+
+
+@media only screen and (max-width: 1920px){
+    
+    .jobBoardHeaderLogo{
+        margin-left: 23rem;
+    }
+    .jobBoardHeaderJobPost{
+        margin-right: 21.5rem;
+    }
+
+
+}
+@media only screen and (max-width: 1600px){
+    .jobBoardHeaderLogo{
+        margin-left:14rem;
+    }
+    .jobBoardHeaderJobPost{
+        margin-right: 11.5rem;
+    }
+
+
+}
+
+@media only screen and (max-width: 1445px){
+  
+    .jobBoardHeaderLogo{
+        margin-left:9rem;
+    }
+    .jobBoardHeaderJobPost{
+        margin-right: 6rem;
+    }
+
+
+}
+
+@media only screen and (max-width: 1366px){
+    .jobBoardHeaderLogo{
+        margin-left:6rem;
+    }
+    .jobBoardHeaderJobPost{
+        margin-right: 4rem;
+    }
+}

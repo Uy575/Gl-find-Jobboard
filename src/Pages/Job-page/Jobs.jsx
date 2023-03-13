@@ -8,6 +8,7 @@ import JobBoardJobs from "../../Components/Job-Board-Components/Job-Boad-Jobs/Jo
 import "./Jobs.css";
 import FilterButton from "../../Components/Job-Board-Components/Filter-Button/FilterButton";
 import { useEffect, useState } from "react";
+import '../../Components/Job-Board-Components/Find-Job-Form/JobBoardHeader.css'
 
 
 function Jobs() {
@@ -21,7 +22,8 @@ console.log(window.outerWidth)
   
   return (
     <>
-      <Header /> 
+
+      <Header  headerLogo='jobBoardHeaderLogo' headerPostJob='jobBoardHeaderJobPost'  /> 
        {/* sending css classes as props in find job form   */}
        <Form
         formFields="jobBoardFormFields"

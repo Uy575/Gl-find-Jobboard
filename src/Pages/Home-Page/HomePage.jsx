@@ -14,7 +14,7 @@ import ReactPlace from "../../Components/Custom-Components/ReactPlace/ReactPlace
 function HomePage() {
   return (
     <>
-      <Header/>
+      <Header headerLogo='header-logo' headerPostJob='header-post-job' />
     <FindJob/>
     <ThirdSection/>
     <TopJobs/> 
