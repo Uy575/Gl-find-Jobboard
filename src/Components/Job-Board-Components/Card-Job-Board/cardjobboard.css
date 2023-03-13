@@ -179,15 +179,45 @@ border-radius: 3px;
 .card-body{
 width: 100%;
 }
+.org-row{
+flex-direction: column;
+display: flex;
+align-self: baseline;
+}
+.card-ft-right{
+flex-direction: column;
+}
+.org-left {
+width: 100%;
+}
+
+.org-left > button{
+width: 100%;
+}
+
 
 }
-@media (max-width: 320.98px) {
-  .card-body {
-    width: 322px;
-    margin: 0 1rem;
-    margin-top: 1rem;
-    padding: 5px;
-  }
+@media (max-width: 360px) {
+ 
+  .card-body{
+    width: 100%;
+    }
+    .org-row{
+    flex-direction: column;
+    display: flex;
+    align-self: baseline;
+    }
+    .card-ft-right{
+    flex-direction: column;
+    }
+    .org-left {
+    width: 100%;
+    }
+    
+    .org-left > button{
+    width: 100%;
+    }
+
   .jb-card {
     border-radius: 3px;
     padding: 25px 15px 26px;
