@@ -37,19 +37,20 @@
     flex-direction: column;
 }
 
-@media (max-width: 575.98px) {
-.mainSubscriberFormContainer{
- flex-direction: column;
-}
-.subscribeFormInput{
-     width: 22rem;
- margin-left: 1rem;
-}
-.subscribeFormButton{
-    width: 22rem;
-    margin-left: 1rem;
-}
-.subscribeFormErrors{
-    margin-left: 1rem;
-}
-} 
+@media (max-width: 767.98px) {
+
+    .mainSubscriberFormContainer{
+        flex-direction: column;
+       }
+       .subscribeFormInput{
+            width: 100%;
+   
+       }
+       .subscribeFormButton{
+           width: 100%;
+  
+       }
+      
+       } 
+
+

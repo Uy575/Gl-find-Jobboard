@@ -30,9 +30,17 @@
     margin-bottom: 0rem;
 } */
 
-@media (max-width: 320.98px) {
+@media (max-width: 767.98px){
+  
+    .jobTitleHeading{
+      
+        text-align: start;
+        padding-left: 1rem;
+        padding-top: 1rem;
 
-} 
+    }
+
+}
 @media (max-width: 575.98px) {
     .suggestionDiv{
         width: 100%;

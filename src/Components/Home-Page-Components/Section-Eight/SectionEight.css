@@ -32,8 +32,8 @@
  margin-bottom: 1rem;
  font-weight: bolder;
 }
+@media (max-width: 767.98px) {
 
-@media (max-width: 575.98px) {
     .mainContainer{
         flex-direction: column;
         justify-content: center;
@@ -60,3 +60,5 @@
     margin-top: 0rem;
 }
 } 
+
+

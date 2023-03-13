@@ -25,24 +25,20 @@
   border: none;
   border-radius: 5px;
   font-weight: 700;
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.8rem;
   
 }
 
-@media (max-width: 320.98px) {
-  .thirdSectionMainContainer{
-    margin-top: 0rem;
-    padding: 0rem;
-  
-  }
-  .thirdSectionText{
-    margin-left: 0rem;
-  }
-  .headingFontSize {
-    font-size: 22px;
-    /* margin-bottom: 1rem; */
-  }
 
-} 
+
+@media (max-width: 767.98px){
+.thirdSectionMainContainer {
+  background-color: #2aa13a;
+  margin-top: 2rem;
+  padding: 3rem;
+}
+}
 @media (max-width: 575.98px) {
   .thirdSectionMainContainer{
     margin-top: 0rem;

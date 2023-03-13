@@ -15,7 +15,7 @@ color: #188333;
 .pagination >li{
 display: flex;
     justify-content: center;
-    align-items: end;
+    align-items: flex-end;
 }
 
 .active>.page-num{

@@ -13,20 +13,63 @@ body{
 h4,h5,span,button{
 font-family: "Roboto",sans-serif;
 }
-h4,h2{
+h4,h2,h3{
 color: black;
+font-family: 'Oswald', sans-serif;
 }
 
 .App{
-    font-family: 'Oswald', sans-serif;
+    /* font-family: 'Oswald', sans-serif; */
 
 }
 p{
-    font-family: 'Baloo Bhai 2', cursive;
+    font-family: 'Roboto', sans-serif;
 }
+
+
+
+h1{
+    font-family: Oswald,sans-serif;
+}
+
+@media only screen and (max-width: 1600px) {
+  
+   
+}
+
+@media only screen and (max-width: 1445px) {
+   
+}
+
+@media only screen and (max-width: 1366px) {
+	.App {
+		max-width: 1140px;
+	}
+   
+}
+
+@media (max-width: 1199.98px) {
+	.App {
+		    max-width: 960px;
+	}
+   
+} 
+@media (max-width: 991.98px) {
+	.App {
+		max-width: 720px;
+	}
+   
+} 
+@media (max-width: 767.98px) {
+	.App {
+		max-width: 540px;
+	}
+    
+} 
 
 @media (max-width: 575.98px){
     body{
         overflow-x: hidden ;
+        box-sizing: border-box;
     }
 }

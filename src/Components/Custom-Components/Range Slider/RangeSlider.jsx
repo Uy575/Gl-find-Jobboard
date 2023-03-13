@@ -27,10 +27,10 @@ const RangeSlider = () => {
   return (
     <>
       <div className="mileRangeHeading">
-        <span>Jobs within </span> <span>{distance} miles away</span>{" "}
+        <span>Jobs within </span> <span>{milesRange} miles away</span>{" "}
       </div>
       <div  style={{alignSelf:"center"}}>
-        <Slider min={9} max={250} defaultValue='30' onChange={handleChnage} disabled={city === "" ?true:false}/>
+        <Slider min={9} max={250} defaultValue={distance} onChange={handleChnage} disabled={city === "" ?true:false}/>
       </div>
     </>
   );
