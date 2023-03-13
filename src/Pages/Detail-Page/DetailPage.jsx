@@ -38,7 +38,7 @@ function DetailPage() {
     <>
       <Header />
        <span style={{marginTop:'1rem',display:'inline-block'}}>
-        <BackHome backArrowDescription="back to results" navigating="/jobs" />
+        <BackHome backArrowDescription="back to results" navigating="/jobs?title=&city=&venue=&sia-licence=&distance=30&salary-min=9&salary-max=50&lat=&lng" />
        </span>
       <div className="detail-container">
         <div className="detailCard">

@@ -41,9 +41,9 @@ function FilterJobForm() {
   let title = searchParams.get("title");
   let city = searchParams.get("city");
   let venue = searchParams.get("venue");
-  let smin = searchParams.get("salary-min");
-  let smax = searchParams.get("salary-max");
-  let distance = searchParams.get("distance");
+  let smin = Number(searchParams.get("salary-min"));
+  let smax = Number(searchParams.get("salary-max"));
+  let distance = Number(searchParams.get("distance"));
   let { lat, lng } = geoLocation;
   let venue_type = [retails, corporate, bar, events, mobiles];
   let min = Number(salary.min);
@@ -84,7 +84,8 @@ function FilterJobForm() {
       langitude: lng,
     });
     const response = request.data.data.data;
-    console.log(response);
+    console.log("usamajustnow",response);
+
     dispatch(setSearchStatus(searchFlag));
     dispatch(setJobFilter(response));
   };
