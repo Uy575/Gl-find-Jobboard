@@ -17,9 +17,10 @@ const responsive = {
     items: 3,
   },
   tablet: {
-    breakpoint: { max: 1024, min: 464 },
-    items: 1,
+    breakpoint: { max: 950, min: 750 },
+    items: 2,
   },
+  
   mobile: {
     breakpoint: { max: 464, min: 0 },
     items: 1,  
@@ -37,7 +38,7 @@ const ReactCarousals = ({ topList }) => {
       arrows={window.innerWidth <=500 ? false:true}
       swipeable={true}
       draggable={true}  transitionDuration={500}  autoPlaySpeed={1000}
-      showDots={window.innerWidth <=500 ? true:false}
+      // showDots={window.innerWidth <=500 ? true:false}
 
 containerClass="rc-container"
 

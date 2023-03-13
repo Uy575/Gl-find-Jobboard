@@ -115,7 +115,15 @@
   color: rgb(235, 232, 232);
   opacity: 0.5;
 }
-
+.dropdown{
+position: absolute;
+border: 2px solid;
+height: 100px;
+width: 120px;
+left: 49rem;
+bottom: 4.2rem;
+border-radius: 3px;
+}
 .card-footer {
   margin: 0 10px;
   padding: 20px 0;

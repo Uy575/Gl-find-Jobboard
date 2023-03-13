@@ -5,6 +5,7 @@ import orgLogo from "../../../Assets/Job-Board-Assets/Logos/gent-security.webp";
 import retailImg from "../../../Assets/Icons/icon-retail.svg";
 import "./cardjobboard.css";
 import { useNavigate } from "react-router-dom";
+import ReactShare from "../../Custom-Components/React Share/ReactShare";
 
 const CardJobBoard = ({
   classname,
@@ -16,8 +17,10 @@ const CardJobBoard = ({
   jobdetail,
 }) => {
   let [showForm, setShowForm] = useState(false);
+  let [showShare , setShowShare] = useState(false)
   const navigate = useNavigate();
   const share = `https://www.get-licensed.co.uk/jobs/_next/image?url=%2Fjobs%2Fimages%2Ficon-share.svg&w=96&q=75`;
+  console.log(showShare)
   return (
     <section>
       <div className={classname}>
@@ -41,8 +44,11 @@ const CardJobBoard = ({
             </div>
 
             <div className="share">
-              <img src={share} alt="as" />
-            </div>
+              <img src={share} alt="as"  onClick={()=>setShowShare(!showShare)} />
+           {showShare ? 
+              <div className="dropdown"></div>
+          :''}
+              </div>
           </div>
 
           {/* org text  */}
@@ -67,7 +73,8 @@ const CardJobBoard = ({
                   }
                   style={{ height: "3rem" }}
                   alt=""
-                />
+/>
+
                 <div className="org-text">
                   <h5 id="org">
                     {only === "jobpage"

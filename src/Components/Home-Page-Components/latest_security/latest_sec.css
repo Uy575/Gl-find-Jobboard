@@ -1,10 +1,13 @@
+body{
+  font-family: "Roboto",sans-serif;
+  }
 .main-heading {
   font-family: Oswald, sans-serif;
   font-weight: 700;
   font-size: 44px;
   letter-spacing: -0.84px;
   line-height: normal;
-  margin-bottom: 3rem;
+  margin:3rem 0 1rem 0;
 }
 .ls_container {
   text-align: center;
@@ -85,7 +88,63 @@ font-weight: lighter;
 
 
 
-@media  (max-width: 320.98px){
+
+@media (max-width:1198.98px) {
+ .card-li1{
+padding: .5rem;
+}
+}
+
+@media (max-width:991.98px){
+.ls_container{
+padding: 1rem;
+}
+
+.react-multi-carousel-list > ul{
+padding:  0 0.4rem;
+}
+}
+
+@media (max-width: 575.98px){
+  body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+    .react-multi-carousel-list rc-container{
+    margin: 0;
+    }
+    .ls_container {
+      padding: 0;
+      margin: 0 1rem;
+  
+  
+    }
+  
+    .ls_container > * + *{
+    padding: 1rem;
+    }
+    .main-heading{
+    font-size: 22px;
+    margin: 1rem;
+    }
+   
+   #explore-btn{
+  padding: 10px;
+  }
+  
+  
+    
+  
+  
+  .react-multi-carousel-list > ul
+  {
+  padding: 0;
+  }
+}
+
+
+@media  (max-width: 320px){
   body{
   margin: 0;
   padding: 0;
@@ -98,15 +157,18 @@ font-weight: lighter;
 
   }
 
+  .ls_container > * + *{
+  padding: 1rem;
+  }
   .main-heading{
   font-size: 22px;
-  margin: .5rem;
+  margin: 1rem;
   }
  
-  .ls_button {
-  padding: .5rem;
-  }
-
+ #explore-btn{
+padding: 4px;
+border-radius: 1px;
+}
 
 
   

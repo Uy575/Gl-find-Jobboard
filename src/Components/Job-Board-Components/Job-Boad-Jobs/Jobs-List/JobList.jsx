@@ -1,12 +1,12 @@
-import React,{useState} from 'react'
-import { useSelector } from 'react-redux'
-import PageNotFound from '../../../Custom-Components/Page not Found/PageNotFound'
-import CardJobBoard from '../../Card-Job-Board/CardJobBoard'
-import Pagination from '../../Paginate/Pagination'
-import './joblist.css'
+import React, { useState } from "react";
+import { useSelector } from "react-redux";
+import PageNotFound from "../../../Custom-Components/Page not Found/PageNotFound";
+import CardJobBoard from "../../Card-Job-Board/CardJobBoard";
+import Pagination from "../../Paginate/Pagination";
+import "./joblist.css";
 const JobList = () => {
-  const JobsState = useSelector((state) => state.JobReducer)
-  const { jobFilter, geoLocation , filterJobs ,searchStatus} = useSelector(
+  const JobsState = useSelector((state) => state.JobReducer);
+  const { jobFilter, geoLocation, filterJobs, searchStatus } = useSelector(
     (state) => state.LocationAndJobTypeReducer
   );
   const {Jobs , paginated} =JobsState
@@ -26,7 +26,8 @@ paginated.map((job)=>{
 
 })
 :
-<PageNotFound />
+ " asdsadas
+<"PageNotFound />
 
 
 }
@@ -36,4 +37,4 @@ paginated.map((job)=>{
   )
 }
 
-export default JobList
+export default JobList;
