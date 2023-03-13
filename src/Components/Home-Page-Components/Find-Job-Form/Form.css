@@ -168,6 +168,26 @@
      }
 } 
 
+@media (max-width: 1024px){
+   .homeFormCard{ 
+     
+      width: 28rem;
+    }
+    .homeFindJobButton {
+      left: 36rem;
+      width: 11rem;
+     
+    }
+    .homeFindJobArrow {
+     
+      left: 35rem;
+     
+    
+     }
+
+
+} 
+
 @media (max-width: 767.98px) {
    .homeFormCard{
       display: block;
@@ -272,3 +292,15 @@
   
    
 }  
+
+@media (max-width: 414px){
+   .homeFindJobButton{
+      width: 24rem;
+   }
+}
+
+@media (max-width: 375px){
+   .homeFindJobButton{
+      width: 21.5rem;
+   }
+}

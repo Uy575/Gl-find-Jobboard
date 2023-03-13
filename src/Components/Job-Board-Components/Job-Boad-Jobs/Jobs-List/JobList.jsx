@@ -26,8 +26,8 @@ paginated.map((job)=>{
 
 })
 :
- " asdsadas
-<"PageNotFound />
+
+<PageNotFound />
 
 
 }

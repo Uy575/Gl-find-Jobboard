@@ -37,8 +37,10 @@ function DetailPage() {
   return (
     <>
       <Header />
-      <div className="detail-container">
+       <span style={{marginTop:'1rem',display:'inline-block'}}>
         <BackHome backArrowDescription="back to results" navigating="/jobs" />
+       </span>
+      <div className="detail-container">
         <div className="detailCard">
           <CardJobBoard
             classname="det-card"

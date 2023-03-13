@@ -32,6 +32,15 @@
  margin-bottom: 1rem;
  font-weight: bolder;
 }
+
+@media (max-width: 1024px){
+
+    .sectionEightPera{
+    
+        width: 16rem;
+       
+       }
+}
 @media (max-width: 767.98px) {
 
     .mainContainer{
