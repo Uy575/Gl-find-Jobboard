@@ -1,3 +1,6 @@
+body{
+font-family: "Roboto",sans-serif;
+}
 .detail-container {
   display: flex;
   gap: 1rem;
@@ -8,7 +11,7 @@
   border-radius: 0.5rem;
 
   width: 60rem;
-  margin-left: 3rem;
+  margin-left: .5rem;
 }
 .detailContent {
   margin-top: 1rem;
@@ -92,4 +95,42 @@ margin-bottom: 1rem;
   margin-bottom: 1.5rem;
   font-weight: 500;
   line-height: 1.2;
+}
+
+
+@media (max-width:767.98px){
+.detail-container{
+flex-direction: column;
+padding: .5rem;
+}
+.detailCard{
+width: 90%;
+margin:  0 auto;
+}
+.det-card{
+/* width: 20rem; */
+}
+.detail-aside{
+  width: 91%;
+margin:  0 auto;
+}
+
+.dt-aside-top-text > h4{
+font-family: "Roboto",sans-serif;
+font-size: 20px;
+}
+.dt-aside-top-text > p{
+display: none;
+}
+
+.det-card > .jb-card > .org-col{
+text-align: center;
+}
+}
+
+@media (max-width:575.98px){
+.detail-aside {
+width: 90%;
+margin:  0 auto;
+}
 }

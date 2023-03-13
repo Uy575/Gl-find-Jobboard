@@ -3,3 +3,39 @@
     color: black;
     /* background-color: bisque; */
 }
+
+
+
+.description-div{
+padding: 2rem;
+}
+
+.description-div >div p{
+
+margin: 2rem 0;
+}
+
+
+.description-div> div:nth-child(2n+1){
+
+    font-size: 1rem;
+    line-height: 1.5;
+    font-family: "Roboto",sans-serif;
+}
+
+
+.description-div > div > ul >*{
+margin: 2rem 0;
+font-family: "Roboto",sans-serif;
+font-size: 1rem;
+line-height: 1;
+}
+
+
+
+.description-div > div > ul {
+
+list-style:url();
+padding:  0 2rem;
+list-style-type: circle;
+}

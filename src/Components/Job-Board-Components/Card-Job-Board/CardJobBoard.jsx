@@ -3,9 +3,13 @@ import remove from "../../../Assets/Detail-Page-Assets/Icons/icon-remove.svg";
 import thunder from "../../../Assets/Job-Board-Assets/Icons/thunder-icon.svg";
 import orgLogo from "../../../Assets/Job-Board-Assets/Logos/gent-security.webp";
 import retailImg from "../../../Assets/Icons/icon-retail.svg";
-import "./cardjobboard.css";
+import {CopyToClipboard} from 'react-copy-to-clipboard';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { useNavigate } from "react-router-dom";
 import ReactShare from "../../Custom-Components/React Share/ReactShare";
+import MsgTostify from '../../Custom-Components/Tostify/MsgTostify'
+import "./cardjobboard.css";
 
 const CardJobBoard = ({
   classname,
@@ -16,11 +20,13 @@ const CardJobBoard = ({
   only,
   jobdetail,
 }) => {
+  const [copyText , setCopyText] = useState('https://staging.get-licensed.co.uk/jobs/detail/2940?title=CCTV%203454&city=London,%20UK&venue=Corporate&company_name=PARAGON%20HART%20LTD&sia-license=')
   let [showForm, setShowForm] = useState(false);
   let [showShare , setShowShare] = useState(false)
   const navigate = useNavigate();
   const share = `https://www.get-licensed.co.uk/jobs/_next/image?url=%2Fjobs%2Fimages%2Ficon-share.svg&w=96&q=75`;
   console.log(showShare)
+  console.log(copyText)
   return (
     <section>
       <div className={classname}>
@@ -44,12 +50,17 @@ const CardJobBoard = ({
             </div>
 
             <div className="share">
-              <img src={share} alt="as"  onClick={()=>setShowShare(!showShare)} />
-           {showShare ? 
-              <div className="dropdown"></div>
-          :''}
+              <img src={share} alt="as"  onClick={()=>setShowShare(!showShare)} />          
+        </div>
               </div>
-          </div>
+              {showShare ? 
+                  <CopyToClipboard text={copyText}  onCopy={()=>{
+                    toast.success("Copied");
+                    
+                  }}>
+              <span className="dropdown">🔗 Copy Link  </span>
+          </CopyToClipboard>
+              :''}    
 
           {/* org text  */}
           <div className="org-col">
@@ -168,6 +179,8 @@ const CardJobBoard = ({
           </div>
         </div>
       </div>
+      <ToastContainer/>
+
     </section>
   );
 };

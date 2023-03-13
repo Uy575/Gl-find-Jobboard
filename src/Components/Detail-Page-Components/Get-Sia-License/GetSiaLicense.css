@@ -31,3 +31,38 @@
     font-size: 1.2rem;
    
 }
+
+
+
+
+@media (max-width:575.98px){
+.getLicensedCard{
+flex-direction: column;
+}
+
+.getLicensedContent {
+padding: 1rem;
+}
+
+.getLicensedContent > p{
+line-height: 1.5;
+font-family: "Roboto",sans-serif;
+}
+
+}
+
+
+@media (max-width:400px){
+    .getLicensedCard{
+        flex-direction: column;
+        }
+        
+        .getLicensedContent {
+        padding: 1rem;
+        }
+        
+        .getLicensedContent > p{
+        line-height: 1.5;
+        font-family: "Roboto",sans-serif;
+        }
+        }
