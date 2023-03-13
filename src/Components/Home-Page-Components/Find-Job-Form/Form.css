@@ -266,7 +266,7 @@
      .homeFindJobButton{
         left:9rem;
         top: 16rem;
-          width: 21.5rem;
+          width: 21rem;
         height: 4rem;
         font-size: 1.2rem;
         border-top-left-radius: 4px;
@@ -278,7 +278,7 @@
    
    
      .homeFindJobArrow {
-        left: 20rem;
+        left: 18rem;
         top: 17rem;
       
        
@@ -301,6 +301,6 @@
 
 @media (max-width: 375px){
    .homeFindJobButton{
-      width: 21.5rem;
+      width: 20.3rem;
    }
 }

@@ -133,6 +133,7 @@ background-color: #242429;
 color: white;
 border-top-left-radius: 15px;
 border-bottom-left-radius: 15px;
+position: relative;
 }
 .card-footer {
   margin: 0 10px;
@@ -211,6 +212,11 @@ width: 100%;
  
   .card-body{
     width: 100%;
+    }
+
+    .dropdown{
+margin-left: 7rem;
+top: 0rem;
     }
     .org-row{
     flex-direction: column;
