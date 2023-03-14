@@ -53,7 +53,7 @@ justify-content: center;
 }
     .filterForm{
     margin: 0;
-    width: 80%;
+    width: 100%;
     margin:  0 auto;
     }
     .rc-slider, .rc-slider-rail, .rc-slider-track {
@@ -70,7 +70,7 @@ width: 30rem;
 }
     .filterForm{
     margin: 0;
-    width: 80%;
+    width: 100%;
     margin:  0 auto;
     }
     .rc-slider, .rc-slider-rail, .rc-slider-track {
@@ -78,6 +78,12 @@ width: 15rem;
     }
 }
 
+@media (max-width:415px){
+
+    .filterForm{
+        margin-top: 3rem;
+    }
+}
 
 
 @media (max-width:360px){
@@ -85,10 +91,12 @@ width: 15rem;
     flex-direction: column;
     padding: 1rem;
 }
+
     .filterForm{
     margin: 0;
-    width: 80%;
+    width: 100%;
     margin:  0 auto;
+    margin-top: 4rem;
     }
     .rc-slider, .rc-slider-rail, .rc-slider-track {
 width: 15rem;

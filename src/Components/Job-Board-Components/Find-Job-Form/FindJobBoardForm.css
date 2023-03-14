@@ -239,7 +239,7 @@
     
     
       .jobBoardFindJobArrow {
-         left: 32rem;
+         left: 30rem;
          top: 13rem;
        
         
@@ -247,12 +247,12 @@
  
  }  
  
- @media (max-width: 414px){
+ @media (min-width: 414px){
     .jobBoardFormCard{
         margin-right: 0rem;
     }
     .jobBoardFindJobButton{
-       width: 22.5rem;
+       width:24rem;
        top: 12rem;
     }
     .jobBoardFindJobArrow {
@@ -263,16 +263,16 @@
      }
  }
  
- @media (max-width: 375px){
+ @media (min-width: 375px){
     .jobBoardFormCard{
         margin-right: 0rem;
     }
     .jobBoardFindJobButton{
-       width: 21.5rem;
+       width: 22rem;
        top: 12rem;
     }
     .jobBoardFindJobArrow {
-        left: 20rem;
+        left: 17rem;
         top: 13rem;
       
        

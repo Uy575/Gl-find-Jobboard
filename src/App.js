@@ -1,16 +1,17 @@
-import "./App.css";
 import { Routes, Route } from "react-router-dom";
+import { useSearchParams } from "react-router-dom";
+import { useSelector } from "react-redux";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import DetailPage from "./Pages/Detail-Page/DetailPage";
 import HomePage from "./Pages/Home-Page/HomePage";
 import Jobs from "./Pages/Job-page/Jobs";
-import { useSelector } from "react-redux";
-import { useSearchParams } from "react-router-dom";
 import London from "./Pages/Locations/London";
 import Leeds from "./Pages/Locations/Leeds";
 import Machester from "./Pages/Locations/Machester";
 import Bristol from "./Pages/Locations/Bristol";
 import Birmingham from "./Pages/Locations/Birmingham";
 import Cardif from "./Pages/Locations/Cardif";
+import "./App.css";
 
 function App() {
   const { jobType, location, Retail, jobFilter } = useSelector(

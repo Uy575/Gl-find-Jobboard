@@ -52,7 +52,8 @@ const ReactPlace = () => {
                 // type : 'search'
               })}
             />
-            <div className="autocomplete-dropdown-container">
+            <div className="autocomplete-dropdown-container" style={{position:"absolute"}}
+>
               {/* {loading && <div>Loading...</div>} */}
               {suggestions.map((suggestion) => {
                 return (
