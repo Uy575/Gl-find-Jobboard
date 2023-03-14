@@ -9,7 +9,7 @@ import "./location.css";
 
 const Location = () => {
   return (
-    <section >
+    <section className="section-bg">
     <div className="lct-container container">
       <h1 className="lct-heading">Security Jobs in Over 85 UK Locations</h1>
       <div className="lct-col">

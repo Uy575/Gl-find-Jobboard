@@ -3,6 +3,9 @@
   src: url(../../../Assets//Fonts/HackneyPersonalUseOnly.ttf);
 }
 
+.section-bg{
+  background-color: rgba(245, 245, 245,0.7);
+}
 .lct-container {
   text-align: center;
 }

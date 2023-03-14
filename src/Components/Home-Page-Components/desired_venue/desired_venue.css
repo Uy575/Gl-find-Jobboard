@@ -3,6 +3,13 @@
   flex-wrap: wrap;
 }
 
+.dv-container{
+  background-color: rgba(245, 245, 245,0.7);
+}
+
+    background-color: rgba(245, 245, 245,0.7);
+
+
 .dv-heading {
   font-family: Oswald, sans-serif;
   font-size: 36px;

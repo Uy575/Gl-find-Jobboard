@@ -5,7 +5,7 @@ import appleicon from "../../../Assets/Icons/apple-icn.svg";
 import androidicon from "../../../Assets/Icons/android-icn.svg";
 function SeventhSection() {
   return (
-    <section>
+    <section className='section-bg'>
     <div className='container'>
  
     <div className='SeventhSectionMainContainer'>

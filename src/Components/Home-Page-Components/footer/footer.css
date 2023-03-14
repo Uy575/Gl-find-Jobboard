@@ -25,6 +25,18 @@ ul {
   list-style: none;
 }
 
+.ul-a a{
+  font-size: 18px;
+  font-family: "Roboto",sans-serif;
+    font-weight: 200;
+    line-height: normal;
+    letter-spacing: -.27px;
+    color: #fff;
+    padding: 1px 0;
+ 
+    text-decoration: none;
+}
+
 ul > li {
   font-family: Oswald, sans-serif;
   font-size: 1.2rem;

@@ -8,10 +8,10 @@ import "./footer.css";
 const Footer = () => {
   return (
     <footer className="footer">
-      <div className="ft-container">
+      <div className="ft-container container">
         <div className="ft-row">
           <div className="ft-col1">
-            <ul className="ft-ul">
+            <ul className="ft-ul ul-a">
               <li>
                 <img src={logo} alt="" className="ft-logo" />
               </li>
@@ -37,7 +37,7 @@ const Footer = () => {
           </div>
 
           <div className="ft-col2">
-            <ul className="ft-ul">
+            <ul className="ft-ul ul-a">
               <li>
                 <strong>Security Guard Jobs</strong>
               </li>
@@ -63,7 +63,7 @@ const Footer = () => {
           </div>
 
           <div className="ft-col3">
-            <ul className="ft-ul">
+            <ul className="ft-ul ul-a">
               <li>
                 <strong>SIA Licence Jobs</strong>
               </li>
@@ -80,7 +80,7 @@ const Footer = () => {
           </div>
 
           <div className="ft-col4">
-            <ul className="ft-ul">
+            <ul className="ft-ul ul-a">
               <li>
                 <strong>By Job Type</strong>
               </li>
