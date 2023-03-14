@@ -11,6 +11,7 @@ function FindJob() {
         <span className="second-section-heading mb-2">
           Find a security job <strong>you love</strong>
         </span>
+        <div className="reverse">
         <Form
           formFields="homeFormFields"
           formCard="homeFormCard"
@@ -24,6 +25,7 @@ function FindJob() {
         <p id="fj-p">
           Over 2,000 businesses come here to hire qualified security talent!
         </p>
+        </div>
       </div>
       <div className="imagesDiv">
         <img className="playImage" id="play-img" src={play} alt="play video" />

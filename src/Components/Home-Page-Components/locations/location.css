@@ -110,7 +110,7 @@ max-width: 100%;
   letter-spacing: 0.3px;
 }
 
-@media (max-width: 320px) {
+/* @media (max-width: 320px) {
   .lct-container {
     padding: 0.5rem;
   }
@@ -165,3 +165,20 @@ padding: 0;
   }
 
 }
+
+
+ */
+
+
+ @media (max-width: 1399.98px) {
+.ibox{
+  max-width: 313px;
+} 
+.ibh > h1{
+  font-size: 4rem;
+} 
+ }
+@media (max-width: 1199.98px) {  }
+@media (max-width: 991.98px) {  }
+@media (max-width: 767.98px) {  }
+@media (max-width: 575.98px) {  }
