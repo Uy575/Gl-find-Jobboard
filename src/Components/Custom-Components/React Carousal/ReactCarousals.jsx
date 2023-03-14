@@ -35,11 +35,10 @@ const ReactCarousals = ({ topList }) => {
     
     <Carousel
       responsive={responsive}
-      arrows={window.innerWidth <=500 ? false:true}
+arrows={true}
       swipeable={true}
       draggable={true}  transitionDuration={500}  autoPlaySpeed={1000}
-      // showDots={window.innerWidth <=500 ? true:false}
-
+focusOnSelect={true}
 containerClass="rc-container"
 
     >

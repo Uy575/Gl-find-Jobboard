@@ -108,7 +108,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="end-ft-container">
-        <div className="end-ft-row">
+        <div className="end-ft-row container">
           <p>Copyright 2022 | Get Licensed Limited | Company No. 07154333</p>
           <p> Terms of service | Privacy Policy | Quality Policy</p>
         </div>

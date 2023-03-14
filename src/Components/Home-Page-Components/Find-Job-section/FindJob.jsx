@@ -6,7 +6,7 @@ import joblander from "../../../Assets/Images/lander-career.png";
 function FindJob() {
   return (
     <section>
-    <div className="main-container container d-flex">
+    <div className="main-container container d-flex ">
       <div className="content">
         <span className="second-section-heading mb-2">
           Find a security job <strong>you love</strong>

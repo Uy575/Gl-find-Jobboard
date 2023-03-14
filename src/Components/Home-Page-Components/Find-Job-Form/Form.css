@@ -15,7 +15,7 @@
 
 .homeFormCard{
     display: flex;
-    margin-right: -8rem;
+    /* margin-right: -8rem; */
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
     background-color: #fff;
     border-bottom-left-radius: px;

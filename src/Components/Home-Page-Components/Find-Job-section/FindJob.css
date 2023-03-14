@@ -3,7 +3,7 @@
     font-family: "Oswald",sans-serif;}
 
 .main-container{
-   
+position: relative;
 }
 
 #fj-h3{
@@ -13,8 +13,10 @@ font-weight: 700;
 }
 
 .imagesDiv{
-    position: relative;
+    position: absolute;
     z-index: 10;
+    right: 0;
+    /* right: 3rem; */
 }
 
 
