@@ -3,6 +3,7 @@ import cardIcon1 from "../../../Assets/Logo/event-security.webp";
 import "./latest_sec.css";
 
 const LatestSecurity = ({topProduct}) => {
+
   return (
     <div className="ls_container">
           <div className="card">
@@ -23,7 +24,7 @@ const LatestSecurity = ({topProduct}) => {
             <div className="card-li2">
               <span className="card-li2-h">
                 <sup> Paid Fortnightly </sup>
-                <span>&#163;{topProduct.salary}</span>
+                <span>&#163;{topProduct.salary_type  === 'Fixed Rate'? topProduct.salary: topProduct.salary_max}</span>
                 <sub> /Per Hour</sub>
               </span>
             </div>

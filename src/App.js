@@ -11,7 +11,11 @@ import Machester from "./Pages/Locations/Machester";
 import Bristol from "./Pages/Locations/Bristol";
 import Birmingham from "./Pages/Locations/Birmingham";
 import Cardif from "./Pages/Locations/Cardif";
+<<<<<<< Updated upstream
 import "./App.css";
+=======
+import 'bootstrap/dist/css/bootstrap.min.css';
+>>>>>>> Stashed changes
 
 function App() {
   const { jobType, location, Retail, jobFilter } = useSelector(

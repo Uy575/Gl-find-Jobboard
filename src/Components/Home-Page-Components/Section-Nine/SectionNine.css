@@ -1,8 +1,12 @@
-.sectionNineLogoContainer{
+.sectionNine{
     background-color: black;
+    width: 100%;
+}
+.sectionNineLogoContainer{
+   
     display: flex;
     justify-content: space-around;
-    padding: 3rem;
+    padding: 3rem 0rem;
 
 }
 
@@ -29,7 +33,7 @@
     }
    
     .lastItem > img{
-        height: 35px;
+        height: 40px;
     }
 
 }

@@ -2,9 +2,10 @@
 
 .rc-container {
   display: flex;
-  margin-left: 2rem;
+  /* margin-left: 2rem; */
   margin-right: 2rem;
   margin-top: 1rem;
+
 }
 
 
@@ -25,7 +26,8 @@
 .react-multi-carousel-list > ul {
   display: flex;
   align-items: baseline;
-  padding: 0 2.4rem;
+  /* padding: 0 2.4rem; */
+  gap: 1rem;
 }
 
 

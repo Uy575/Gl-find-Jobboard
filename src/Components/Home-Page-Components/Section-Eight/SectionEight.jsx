@@ -7,7 +7,11 @@ import youtube from "../../../Assets/Icons/yt-img.svg";
 import instagram from "../../../Assets/Icons/ig-img.svg";
 
 function SectionEight() {
+
   return (
+     
+     <section className="sectionEight">
+     <div className="container">
     <div className="mainContainer sectionEightBackground">
       <div>
         <h1 className="sectionEightHeading">Stay in the Know</h1>
@@ -27,6 +31,9 @@ function SectionEight() {
     
       </div>
     </div>
+    </div>
+    </section>
+
   );
 }
 

@@ -5,8 +5,10 @@ import appleicon from "../../../Assets/Icons/apple-icn.svg";
 import androidicon from "../../../Assets/Icons/android-icn.svg";
 function SeventhSection() {
   return (
+    <section>
+    <div className='container'>
+ 
     <div className='SeventhSectionMainContainer'>
-         
      <div className='imageDiv'>
        <img src={mobilemockup} alt='Mobile Mockup'/>
      </div>
@@ -25,6 +27,8 @@ function SeventhSection() {
  
 
     </div>
+    </div>
+    </section>
   )
 }
 

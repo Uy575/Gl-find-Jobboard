@@ -1,3 +1,8 @@
+.sectionEight{
+    background-color:#51d462;
+    width: 100%;
+
+}
 .sectionEightLi > li{
     display: inline;
     list-style: none;
@@ -9,7 +14,7 @@
 }
 
 .sectionEightBackground{
-    background-color:#51d462;
+
     padding-top: 3rem;
     padding-bottom: 3rem;
      margin-top: -3.5rem;

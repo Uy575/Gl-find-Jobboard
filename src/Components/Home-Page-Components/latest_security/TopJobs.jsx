@@ -19,6 +19,8 @@ function TopJobs() {
 
   return (
     <>
+      <section className="topJobsSection">
+      <div className="container">
       <div className="ls_container">
         <h1 className="main-heading">Latest Security Vacancies</h1>
       </div>
@@ -28,6 +30,8 @@ function TopJobs() {
       <div className="ls_container" style={{padding:'4rem'}}>
         <a href="/jobs?title=&city=&venue=Mobile&sia-licence=&salary-min=&salary-max=&lat=&lng=" className="ls_button" id="explore-btn"  >Explore More Jobs</a>
       </div>
+      </div>
+      </section>
     </>
   );
 }
