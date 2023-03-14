@@ -36,7 +36,7 @@ function DetailPage() {
 
   return (
     <>
-      <Header />
+      <Header headerLogo='header-logo' headerPostJob='header-post-job'  />
        <span style={{marginTop:'1rem',display:'inline-block'}}>
         <BackHome backArrowDescription="back to results" navigating="/jobs?title=&city=&venue=&sia-licence=&distance=30&salary-min=9&salary-max=50&lat=&lng" />
        </span>
