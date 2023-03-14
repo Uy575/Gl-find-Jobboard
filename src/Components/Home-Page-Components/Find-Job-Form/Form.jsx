@@ -44,12 +44,10 @@ max = max === "undefined" ? 50 : 50
           <div className={locationInputField}>
             <h4>Enter Location</h4>
             <ReactPlace />
-     
           </div>
+        <div className="find-button">
+          <button className={findJobButton} type="submit" value="Find Jobs" >Find Jobs  <img className={findJobArrow} src={arrow} alt="arrow" /></button>
         </div>
-        <div>
-          <input className={findJobButton} type="submit" value="Find Jobs" />{" "}
-          <img className={findJobArrow} src={arrow} alt="arrow" />
         </div>
       </div>
     </form>

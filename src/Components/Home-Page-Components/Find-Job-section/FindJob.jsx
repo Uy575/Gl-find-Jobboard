@@ -5,9 +5,10 @@ import "./FindJob.css";
 import joblander from "../../../Assets/Images/lander-career.png";
 function FindJob() {
   return (
-    <div className="mainContainer">
+    <section>
+    <div className="main-container container d-flex">
       <div className="content">
-        <span className="second-section-heading">
+        <span className="second-section-heading mb-2">
           Find a security job <strong>you love</strong>
         </span>
         <Form
@@ -19,16 +20,17 @@ function FindJob() {
           findJobButton="homeFindJobButton"
           findJobArrow="homeFindJobArrow"
         />
-        <h3>The UK’s #1 Security Job Board</h3>
-        <p>
+        <h3 id="fj-h3">The UK’s #1 Security Job Board</h3>
+        <p id="fj-p">
           Over 2,000 businesses come here to hire qualified security talent!
         </p>
       </div>
       <div className="imagesDiv">
-        <img className="playImage" src={play} alt="play video" />
-        <img src={joblander} alt="job lander" />
+        <img className="playImage" id="play-img" src={play} alt="play video" />
+        <img src={joblander} id='man-img' alt="job lander" />
       </div>
     </div>
+</section>
   );
 }
 

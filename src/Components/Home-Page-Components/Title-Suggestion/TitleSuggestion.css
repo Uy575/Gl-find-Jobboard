@@ -5,7 +5,6 @@
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     padding: 0.4rem;
    
-
 }
 
 .suggestion:last-child{
@@ -20,7 +19,8 @@
     margin-top:0.7rem;
     overflow-y:auto;
     max-height: 20rem;
-    width:15rem;
+    width:18rem;
+    position: absolute;
 
 }
 

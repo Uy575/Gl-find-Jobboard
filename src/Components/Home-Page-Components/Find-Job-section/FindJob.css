@@ -1,19 +1,35 @@
 .second-section-heading{
-    font-size: 2.5rem;
+    font-size: 44px;
+    font-family: "Oswald",sans-serif;}
+
+.main-container{
+   
 }
 
-.mainContainer{
-    display: flex;
-    justify-content: space-around;
-    background-color: rgba(245, 245, 245,0.7);
+#fj-h3{
+font-size: 19.2px;
+font-family: "Roboto",sans-serif;
+font-weight: 700;
 }
 
 .imagesDiv{
     position: relative;
     z-index: 10;
- 
 }
 
+
+#man-img{
+object-fit: cover;
+object-position: center;
+width: 100%;
+}
+
+
+.find-button{
+/* border: 2px solid; */
+width: 25rem;
+/* height: 100%; */
+}
 
 .playImage{
  
@@ -24,8 +40,7 @@
 
 .content{
      
-    margin-top: 4rem;
-    margin-left: 4rem;
+    margin-top: 3rem;
     
 }
 .content p:first-of-type{
@@ -42,6 +57,8 @@
   
 }
 
+
+/* 
 @media only screen and (max-width: 1600px) {
     .content{
         margin-left: 0px;
@@ -134,4 +151,4 @@
     
 
    
-} 
+}  */

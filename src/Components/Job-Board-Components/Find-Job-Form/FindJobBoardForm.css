@@ -247,28 +247,28 @@
  
  }  
  
- @media (max-width: 414px){
+ @media (min-width: 414px){
     .jobBoardFormCard{
         margin-right: 0rem;
     }
     .jobBoardFindJobButton{
-       width:86%;
-       top: 13rem;
+       width:24rem;
+       top: 12rem;
     }
     .jobBoardFindJobArrow {
-        left: 15rem;
-        top: 14rem;
+        left: 20rem;
+        top: 13rem;
       
        
      }
  }
  
- @media (max-width: 375px){
+ @media (min-width: 375px){
     .jobBoardFormCard{
         margin-right: 0rem;
     }
     .jobBoardFindJobButton{
-       width: 20rem;
+       width: 22rem;
        top: 12rem;
     }
     .jobBoardFindJobArrow {
