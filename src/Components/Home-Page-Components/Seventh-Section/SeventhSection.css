@@ -1,7 +1,15 @@
+<<<<<<< Updated upstream
 .setion-bg{
   background-color: rgba(245, 245, 245,0.7);
 
 }
+=======
+.sectionSeven{
+ background-color: rgba(245, 245, 245,0.7); 
+ width: 100%;
+}
+
+>>>>>>> Stashed changes
 .seventhSectionAppleButton{
     background-color: #3fdd54;
     opacity: 0.8;
@@ -33,7 +41,8 @@
 }
 
 .imageDiv{
-    z-index: -1;
+  
+    z-index: 1;
    
 }
 
