@@ -5,16 +5,15 @@ import "./latest_sec.css";
 const LatestSecurity = ({topProduct}) => {
 
   return (
-    <div className="ls_container">
           <div className="card">
             <div className="card-li1">
               <div className="card-li1-headings">
                 <h3>{topProduct.title}</h3>
-                <h6>{topProduct.name}</h6>
+                <h6>{`${topProduct.name.length}` > 9 ? `${topProduct.name.trim()}....` :`${topProduct.name}`}</h6>
                 <span>{topProduct.city}</span>
               </div>
               <div className="card-li1-icon">
-                <img src={cardIcon1} alt="" />
+                <img src={topProduct.logo_url} height="44px" alt="" />
               </div>
             </div>
 
@@ -37,7 +36,6 @@ const LatestSecurity = ({topProduct}) => {
               <a href={`/jobs/detail/${topProduct.id}`}>Read more</a>
             </div>
           </div>
-         </div>
      
   );
 };

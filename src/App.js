@@ -11,6 +11,8 @@ import Machester from "./Pages/Locations/Machester";
 import Bristol from "./Pages/Locations/Bristol";
 import Birmingham from "./Pages/Locations/Birmingham";
 import Cardif from "./Pages/Locations/Cardif";
+import 'react-multi-carousel/lib/styles.css';
+
 import "./App.css";
 
 function App() {
