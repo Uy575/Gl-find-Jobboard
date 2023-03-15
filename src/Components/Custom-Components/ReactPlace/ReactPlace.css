@@ -10,6 +10,27 @@
 
 }
 
+
+@media (max-width: 1280px){
+    .suggestionDivForLocation{
+        width: 28%;
+        
+      }
+
+}
+
+@media (max-width: 1080px){
+    .suggestionDivForLocation{
+        width: 30%;
+      }
+}
+
+@media (max-width: 1024px){
+.suggestionDivForLocation{
+  width: 30%;
+}
+}
+
 @media (max-width: 767.98px){
     .suggestionDivForLocation{
     width: 100%;
