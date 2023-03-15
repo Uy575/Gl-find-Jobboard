@@ -42,22 +42,22 @@ const Footer = () => {
                 <strong>Security Guard Jobs</strong>
               </li>
               <li>
-                <a href="">Security Guard Jobs in London</a>
+                <a href="https://www.get-licensed.co.uk/jobs/security-jobs-in-london-uk">Security Guard Jobs in London</a>
               </li>
               <li>
-                <a href="">Security Guard Jobs in Birmingham</a>
+                <a href="https://www.get-licensed.co.uk/jobs/security-jobs-in-birmingham-uk">Security Guard Jobs in Birmingham</a>
               </li>
               <li>
-                <a href="">Security Guard Jobs in Manchester</a>
+                <a href="https://www.get-licensed.co.uk/jobs/security-jobs-in-birmingham-uk">Security Guard Jobs in Manchester</a>
               </li>
               <li>
-                <a href="">Security Guard Jobs in Leeds</a>
+                <a href="https://www.get-licensed.co.uk/jobs/security-jobs-in-leeds-uk">Security Guard Jobs in Leeds</a>
               </li>
               <li>
-                <a href="">Security Guard Jobs in Cardiff</a>
+                <a href="https://www.get-licensed.co.uk/jobs/security-jobs-in-cardiff-uk">Security Guard Jobs in Cardiff</a>
               </li>
               <li>
-                <a href="">Security Guard Jobs in Bristol</a>
+                <a href="https://www.get-licensed.co.uk/jobs/security-jobs-in-bristol-uk">Security Guard Jobs in Bristol</a>
               </li>
             </ul>
           </div>
@@ -68,13 +68,13 @@ const Footer = () => {
                 <strong>SIA Licence Jobs</strong>
               </li>
               <li>
-                <a href="">CCTV Jobs</a>
+                <a href="https://www.get-licensed.co.uk/jobs/search?title=&city=&venue=&distance=30&sia-licence=CCTV&salary-min=9&salary-max=50&lat=&lng=&page=1">CCTV Jobs</a>
               </li>
               <li>
-                <a href="">Door Supervisor Jobs</a>
+                <a href="https://www.get-licensed.co.uk/jobs/search?title=&city=&venue=&distance=30&sia-licence=Door%20Supervisor&salary-min=9&salary-max=50&lat=&lng=&page=1">Door Supervisor Jobs</a>
               </li>
               <li>
-                <a href="">Security Guard Jobs</a>
+                <a href="https://www.get-licensed.co.uk/jobs/search?title=&city=&venue=&distance=30&sia-licence=Security%20Guard&salary-min=9&salary-max=50&lat=&lng=&page=1">Security Guard Jobs</a>
               </li>
             </ul>
           </div>
@@ -85,16 +85,16 @@ const Footer = () => {
                 <strong>By Job Type</strong>
               </li>
               <li>
-                <a href="">Event Security Jobs</a>
+                <a href="https://www.get-licensed.co.uk/jobs/search?title=&city=&venue=Event&distance=30&sia-licence=&salary-min=9&salary-max=50&lat=&lng=&page=1">Event Security Jobs</a>
               </li>
               <li>
-                <a href="">Corporate Security Officer Jobs</a>
+                <a href="https://www.get-licensed.co.uk/jobs/search?title=&city=&venue=Corporate&distance=30&sia-licence=&salary-min=9&salary-max=50&lat=&lng=&page=1">Corporate Security Officer Jobs</a>
               </li>
               <li>
-                <a href="">Retail Security Guard Jobs</a>
+                <a href="https://www.get-licensed.co.uk/jobs/search?title=&city=&venue=Retail&distance=30&sia-licence=&salary-min=9&salary-max=50&lat=&lng=&page=1">Retail Security Guard Jobs</a>
               </li>
               <li>
-                <a href="">Nightclub Security Jobs</a>
+                <a href="https://www.get-licensed.co.uk/jobs/search?title=&city=&venue=Bar/Club&distance=30&sia-licence=&salary-min=9&salary-max=50&lat=&lng=&page=1">Nightclub Security Jobs</a>
               </li>
             </ul>
           </div>

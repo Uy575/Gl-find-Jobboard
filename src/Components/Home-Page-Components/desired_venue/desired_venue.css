@@ -1,7 +1,7 @@
 .dv-row {
   display: flex;
-  flex-wrap: nowrap;
 padding: 3rem 0;
+justify-content: space-around;
 }
 
 .dv-container{
@@ -242,8 +242,59 @@ padding: 3rem 0;
 }
 
    }
-  @media (max-width: 1199.98px) {  }
-  @media (max-width: 991.98px) {  }
-  @media (max-width: 767.98px) {  }
-  @media (max-width: 575.98px) {  }
+  @media (max-width: 1199.98px) {
+  .dv-heading{
+  font-size: 1.9rem;
+  }
+  .retail-box ,.corporate-box ,.bar-box ,.event-box ,.mobile-box{
+    max-width: 7.8rem;
+  }
+  
+  }
+  @media (max-width: 991.98px) {
+    .dv-row{
+    padding-right: .5rem;
+    padding-left: .5rem;
+    }
+    .dv-heading{
+      font-size: 1.5rem;
+      }
+      .retail-box ,.corporate-box ,.bar-box ,.event-box ,.mobile-box{
+        max-width: 6rem;
+      }
+  }
+  @media (max-width: 767.98px) { 
+    .dv-row{
+      flex-direction: column;
+      justify-content: center;
+      }
+      .dv-li > ul{
+flex-direction: column;
+justify-content: center;
+      }
+      .dv-heading{
+      text-align: center;
+      font-size: 1.6rem;
+      margin: 1rem 0;
+      }
+     
+      .retail-box ,.corporate-box ,.bar-box ,.event-box ,.mobile-box{
+        max-width: 11rem;
+      }
+  }
+  @media (max-width: 575.98px) {
+  .dv-row{
+  flex-direction: column;
+  }
+  .dv-li > ul{
+  flex-wrap: wrap;
+  flex-direction: row;
+  }
+  .retail-box ,.corporate-box ,.bar-box ,.event-box ,.mobile-box{
+    max-width: 8rem;
+  }
+  .dv-heading br{
+  display: none;
+  }
+  }
   

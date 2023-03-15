@@ -356,9 +356,6 @@ right: .5rem;
 }
    }
 
-   .homeFormCard > *  {
-margin-top: 1rem;
-border-radius: 7px;   
-}
+
    @media (max-width: 575.98px) {  }
    
