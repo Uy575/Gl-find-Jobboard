@@ -5,11 +5,9 @@ import appleicon from "../../../Assets/Icons/apple-icn.svg";
 import androidicon from "../../../Assets/Icons/android-icn.svg";
 function SeventhSection() {
   return (
-<<<<<<< Updated upstream
-    <section className='section-bg'>
-=======
+
     <section className='sectionSeven'>
->>>>>>> Stashed changes
+
     <div className='container'>
     <div className='SeventhSectionMainContainer'>
      <div className='imageDiv'>

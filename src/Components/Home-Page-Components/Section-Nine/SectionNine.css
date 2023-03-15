@@ -5,7 +5,7 @@
 .sectionNineLogoContainer{
    
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     padding: 3rem 0rem;
 
 }

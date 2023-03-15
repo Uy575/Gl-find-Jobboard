@@ -3,7 +3,7 @@
 }
 
 .ft-container {
-  padding: 3rem 7rem 3rem 7rem;
+  /* padding: 3rem 7rem 3rem 7rem; */
   margin-left: auto;
   margin-right: auto;
   width: 100%rem;
@@ -63,6 +63,10 @@ ul > li:first-child {
 
 a:hover {
   text-decoration: underline;
+}
+
+ol, ul{
+  padding-left: 0rem ;
 }
 
 .ft-logo-row {

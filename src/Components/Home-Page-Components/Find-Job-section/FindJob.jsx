@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import Form from "../Find-Job-Form/Form";
 import play from "../../../Assets/Icons/play.svg";
 import "./FindJob.css";
 import joblander from "../../../Assets/Images/lander-career.png";
+
+import ReactPlayerModal from "../React-Player/ReactPlayerModal";
 function FindJob() {
+
   return (
     <section>
     <div className="main-container container d-flex">
@@ -26,7 +29,8 @@ function FindJob() {
         </p>
       </div>
       <div className="imagesDiv">
-        <img className="playImage" id="play-img" src={play} alt="play video" />
+
+        <ReactPlayerModal/>
         <img src={joblander} id='man-img' alt="job lander" />
       </div>
     </div>

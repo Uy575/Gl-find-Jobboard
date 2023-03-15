@@ -1,15 +1,9 @@
-<<<<<<< Updated upstream
-.setion-bg{
-  background-color: rgba(245, 245, 245,0.7);
 
-}
-=======
 .sectionSeven{
  background-color: rgba(245, 245, 245,0.7); 
  width: 100%;
 }
 
->>>>>>> Stashed changes
 .seventhSectionAppleButton{
     background-color: #3fdd54;
     opacity: 0.8;
@@ -78,8 +72,8 @@
 .SeventhSectionMainContainer{
 
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
+    /* align-items: center; */
     
 }
 .contentDiv p:first-of-type{
