@@ -3,7 +3,7 @@
 }
 
 .ft-container {
-  /* padding: 3rem 7rem 3rem 7rem; */
+  padding: 3rem 7rem 3rem 7rem;
   margin-left: auto;
   margin-right: auto;
   width: 100%rem;
@@ -79,6 +79,7 @@ ol, ul{
 .end-ft-container {
   background-color: #000000;
   padding: 3rem;
+  width: 100%;
 }
 
 .end-ft-row {
@@ -92,7 +93,7 @@ ol, ul{
   padding: 0rem;
   font-weight: 700;
   font-size: 1.1rem;
-  font-family: Oswald, sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 

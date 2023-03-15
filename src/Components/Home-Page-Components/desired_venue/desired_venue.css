@@ -1,6 +1,7 @@
 .dv-row {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+padding: 3rem 0;
 }
 
 .dv-container{
@@ -229,3 +230,19 @@
     width: 9rem;
   }
 } */
+
+
+@media (max-width: 1399.98px) {
+  .retail-box ,.corporate-box ,.bar-box ,.event-box ,.mobile-box{
+    max-width: 9rem;
+  }
+.dv-li > ul{
+  gap: 1.5rem;
+}
+
+   }
+  @media (max-width: 1199.98px) {  }
+  @media (max-width: 991.98px) {  }
+  @media (max-width: 767.98px) {  }
+  @media (max-width: 575.98px) {  }
+  

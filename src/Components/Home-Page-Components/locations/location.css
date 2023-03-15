@@ -8,6 +8,11 @@
 }
 .lct-container {
   text-align: center;
+  padding: 5rem 0;
+}
+
+.imagesDiv{
+padding: 1rem 0 0 0;
 }
 
 .lct-heading {
@@ -24,11 +29,12 @@
 .cardiff-img,
 .bristol-img,
 .leeds-img {
+  object-fit: cover;
+  width: 100%;
   transition: all 0.3s ease-in;
 }
 
 .lct-row {
-  padding: 2rem;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -49,6 +55,7 @@
   border-radius: 0.5rem;
   position: relative;
   overflow: hidden;
+  width: 370px;
   /* -webkit-transition: all 0.3s ease-in; */
 }
 
@@ -103,7 +110,7 @@ max-width: 100%;
   letter-spacing: 0.3px;
 }
 
-@media (max-width: 320px) {
+/* @media (max-width: 320px) {
   .lct-container {
     padding: 0.5rem;
   }
@@ -158,3 +165,20 @@ padding: 0;
   }
 
 }
+
+
+ */
+
+
+ @media (max-width: 1399.98px) {
+.ibox{
+  max-width: 313px;
+} 
+.ibh > h1{
+  font-size: 4rem;
+} 
+ }
+@media (max-width: 1199.98px) {  }
+@media (max-width: 991.98px) {  }
+@media (max-width: 767.98px) {  }
+@media (max-width: 575.98px) {  }
