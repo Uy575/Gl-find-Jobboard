@@ -8,7 +8,7 @@ import ReactPlayerModal from "../React-Player/ReactPlayerModal";
 function FindJob() {
 
   return (
-    <section>
+    <section className="findJobSection">
     <div className="main-container container d-flex ">
       <div className="content">
         <span className="second-section-heading mb-2">

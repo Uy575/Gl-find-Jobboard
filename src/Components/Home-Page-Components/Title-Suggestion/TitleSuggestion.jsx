@@ -47,11 +47,11 @@ function TitleSuggestion({formInputs}) {
       <input className={formInputs}  placeholder='e.g Security supervisor' type="search"   name="name" autoComplete="off"
       onChange={e => onChangeHandler(e.target.value)}
       value = {text}
-      onBlur = {()=>{
-        setTimeout(() => {
-            setSuggestion([]);
-          }, 500);
-      } }
+      // onBlur = {()=>{
+      //   setTimeout(() => {
+      //       setSuggestion([]);
+      //     }, 500);
+      // } }
       />
 
       <div className="suggestionDiv">

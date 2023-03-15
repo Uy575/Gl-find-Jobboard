@@ -36,7 +36,9 @@ function DetailPage() {
 
   return (
     <>
-      <Header headerLogo='header-logo' headerPostJob='header-post-job'  />
+      <Header headerLogo='header-logo' headerPostJob='header-post-job-for-detail'  />
+        <section>
+          <div className="container">
        <span style={{marginTop:'1rem',display:'inline-block'}}>
         <BackHome backArrowDescription="back to results" navigating="/jobs?title=&city=&venue=&sia-licence=&distance=30&salary-min=9&salary-max=50&lat=&lng" />
        </span>
@@ -92,6 +94,8 @@ function DetailPage() {
           <SimilarJobs similarJob={similarJob} id={id} />
         </div>
       </div>
+      </div>
+      </section>
     </>
   );
 }

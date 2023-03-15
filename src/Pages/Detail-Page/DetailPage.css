@@ -4,8 +4,9 @@ font-family: "Roboto",sans-serif;
 .detail-container {
   display: flex;
   gap: 1rem;
-  padding: 2rem;
+  /* padding: 2rem; */
 }
+
 .detailCard {
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
   border-radius: 0.5rem;
@@ -15,8 +16,7 @@ font-family: "Roboto",sans-serif;
 }
 .detailContent {
   margin-top: 1rem;
-  /* width: 30rem; */
-  /* box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; */
+
 
   margin-top: -0.09rem;
 }
@@ -25,7 +25,6 @@ padding: 1rem;
 margin-bottom: 1rem;
 }
 
-/*////////////////////////////////// style components for detail page ////////////////////////////*/
 
 /* detail card */
 .det-card {
@@ -95,6 +94,10 @@ margin-bottom: 1rem;
   margin-bottom: 1.5rem;
   font-weight: 500;
   line-height: 1.2;
+}
+
+.header-post-job-for-detail{
+  display: none;
 }
 
 

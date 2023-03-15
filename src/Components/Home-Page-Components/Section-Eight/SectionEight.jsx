@@ -13,7 +13,7 @@ function SectionEight() {
      <section className="sectionEight">
      <div className="container">
     <div className="mainContainer sectionEightBackground">
-      <div>
+      <div className="sectionEightContent">
         <h1 className="sectionEightHeading">Stay in the Know</h1>
         <span>Get the latest offers, tips and tricks!</span>
         <SubscribeForm/>

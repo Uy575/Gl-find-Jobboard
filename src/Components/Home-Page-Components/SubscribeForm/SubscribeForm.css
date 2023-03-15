@@ -60,7 +60,31 @@ font-weight:800;
  @media (max-width: 1399.98px) {
   
  }
-@media (max-width: 1199.98px) {  }
+@media (max-width: 1199.98px) {
+    .subscribeFormButton{
+        width: 12rem;
+    }
+  .subscribeFormInput{
+     width: 12rem;
+}
+     
+
+ }
 @media (max-width: 991.98px) {  }
 @media (max-width: 767.98px) {  }
-@media (max-width: 575.98px) {  }
+@media (max-width: 575.98px) { 
+
+    .mainSubscriberFormContainer{
+        flex-direction: column;
+       }
+       .subscribeFormInput{
+        width: 100%;
+
+   }
+   .subscribeFormButton{
+       width: 100%;
+
+   }
+  
+   } 
+ 

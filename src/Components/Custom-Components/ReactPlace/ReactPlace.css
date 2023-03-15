@@ -1,0 +1,19 @@
+.suggestionDivForLocation{
+
+    margin-top:0.7rem;
+    overflow-y:auto;
+    max-height: 20rem;
+    position: absolute;
+    z-index: 10;
+    width:36.8%;
+    /* left: 0; */
+
+}
+
+@media (max-width: 767.98px){
+    .suggestionDivForLocation{
+    width: 100%;
+    left: 0;
+    }
+
+}

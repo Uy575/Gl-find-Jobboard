@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useSearchParams } from "react-router-dom";
+import './ReactPlace.css'
 import PlacesAutocomplete, {
   geocodeByAddress,
   geocodeByPlaceId,
@@ -52,8 +53,8 @@ const ReactPlace = () => {
                 // type : 'search'
               })}
             />
-            <div className="autocomplete-dropdown-container" style={{position:"absolute"}}
->
+            <div className="suggestionDivForLocation" >
+
               {/* {loading && <div>Loading...</div>} */}
               {suggestions.map((suggestion) => {
                 return (

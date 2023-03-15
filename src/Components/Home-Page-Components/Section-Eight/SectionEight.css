@@ -49,14 +49,6 @@
 
 
 
-@media (max-width: 1024px){
-
-    .sectionEightPera{
-    
-        width: 16rem;
-       
-       }
-}
 @media (max-width: 767.98px) {
 
     .mainContainer{
@@ -76,6 +68,7 @@
 .sectionEightPera{
  font-size: 1.2rem;
  text-align: center;
+
 }
 .sectionEightLi *+*{
     padding-left: 5rem;

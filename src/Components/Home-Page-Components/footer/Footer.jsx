@@ -16,22 +16,22 @@ const Footer = () => {
                 <img src={logo} alt="" className="ft-logo" />
               </li>
               <li>
-                <a href="">About Us</a>
+                <a href="https://www.get-licensed.co.uk/about">About Us</a>
               </li>
               <li>
-                <a href="">SIA Licence</a>
+                <a href="https://www.get-licensed.co.uk/licence/get-sia-licence">SIA Licence</a>
               </li>
               <li>
-                <a href="">Make a Booking</a>
+                <a href="https://www.get-licensed.co.uk/trainee/search/courses">Make a Booking</a>
               </li>
               <li>
-                <a href="">Careers</a>
+                <a href="https://www.get-licensed.co.uk/careers">Careers</a>
               </li>
               <li>
-                <a href="">FAQs</a>
+                <a href="https://www.get-licensed.co.uk/faq">FAQs</a>
               </li>
               <li>
-                <a href="">Support</a>
+                <a href="https://getlicensed.freshdesk.com/support/home">Support</a>
               </li>
             </ul>
           </div>

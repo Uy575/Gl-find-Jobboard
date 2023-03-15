@@ -42,6 +42,7 @@ function SubscribeForm() {
     
 
   return (
+   
    <form onSubmit={handleSubmit}>
       <div className='mainSubscriberFormContainer'>
       <div >
