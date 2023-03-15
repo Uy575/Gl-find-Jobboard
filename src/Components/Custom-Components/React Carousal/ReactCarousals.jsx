@@ -10,7 +10,7 @@ const responsive = {
     // the naming can be any, depends on you.
     breakpoint: { max: 4000, min: 3000 },
     items: 4,
-    
+
   },
   desktop: {
     breakpoint: { max: 3000, min: 1024 },
@@ -19,11 +19,13 @@ const responsive = {
   tablet: {
     breakpoint: { max: 950, min: 750 },
     items: 2,
+
   },
   
   mobile: {
     breakpoint: { max: 464, min: 0 },
     items: 1,  
+
   },  
 };
 
@@ -40,7 +42,6 @@ arrows={true}
       draggable={true}  transitionDuration={500}  autoPlaySpeed={1000}
 focusOnSelect={true}
 containerClass="rc-container"
-
     >
       {topProducts.map((topProduct) => {
         return <LatestSecurity key={topProduct.id} topProduct={topProduct} />;

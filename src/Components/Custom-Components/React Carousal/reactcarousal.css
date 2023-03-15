@@ -5,9 +5,7 @@
   /* margin-left: 2rem; */
   margin-right: 2rem;
   margin-top: 1rem;
-
 }
-
 
 .react-multiple-carousel__arrow {
   height: 84px;
@@ -17,6 +15,10 @@
   margin: 3rem -2rem;
   /* min-height: 60px; */
   background-color: #e5e5e5;
+}
+
+.react-multiple-carousel__arrow::before {
+  color: black;
 }
 
 .react-multi-carousel-list > ul > li {
@@ -30,43 +32,58 @@
   gap: 1rem;
 }
 
-
-.react-multi-carousel-item{
+.react-multi-carousel-item {
   width: 100%;
 }
 
 @media (max-width: 320.98px) {
-  
-body{
+  body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-}
+  .rc-container {
+    width: 100%;
+    margin-left: 0.2rem;
+    margin-right: 0.2rem;
+  }
 
-
-
-.rc-container{
-width: 100%;
-margin-left: .2rem;
-margin-right: .2rem;
-
-}
-
-.react-multi-carousel-list > ul {
-    padding: 0 0rem;
-}
-  
-
-} 
-@media only screen and (min-width:320.99px) and (max-width: 575.98px){
   .react-multi-carousel-list > ul {
     padding: 0 0rem;
+  }
+}
+@media only screen and (min-width: 320.99px) and (max-width: 575.98px) {
+  .react-multi-carousel-list > ul {
+    padding: 0 0rem;
+  }
+
+  .react-multiple-carousel__arrow {
+    display: none;
+  }
 }
 
-.react-multiple-carousel__arrow{
-  display: none;
+@media (max-width: 1399.98px) {
 }
 
+@media (max-width: 1199.98px) {
+  /* .react-multi-carousel-list > ul > li > * {
+    color: black;
+    width: 19rem;
+    margin-left: 2rem;
+  height: 17rem;
+  } */
 
+  .react-multi-carousel-list > ul > li {
+    margin: 0 .5rem;
+    height: 20rem;
+  }
+}
+
+@media (max-width: 991.98px) {
+}
+
+@media (max-width: 767.98px) {
+}
+@media (max-width: 575.98px) {
 }
