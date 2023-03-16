@@ -11,7 +11,7 @@
 
 .main-container {
   position: relative;
-  text-align: center;
+ 
 }
 
 #fj-h3 {
@@ -63,86 +63,7 @@
   opacity: 0.8;
 }
 
-/* 
-@media only screen and (max-width: 1600px) {
-    .content{
-        margin-left: 0px;
-    }
-    
-}
 
-@media only screen and (max-width: 1366px) {
-    .content{
-       padding-left: 2rem;
-    }
-}
-
-@media (max-width: 1199.98px) {
-	.content{
-        padding-left: 5.5rem;
-    }
- 
-} 
-@media (max-width: 1024px) {
-    .imagesDiv img:nth-of-type(2){
-        height: 25rem;
-    }
-}
-@media (max-width: 767.98px) {
-	.imagesDiv{
-        display: none;
-    }
-    .content{
-
-        margin-top: 2rem;
-        margin-left: 0rem;
-        text-align: center;
-        padding-bottom: 17rem;
-        padding-left: 0rem;
-    }
-    .content p:first-of-type{
-        margin-top: 1rem;
-    }
-    .content > h3 {
-        margin-top: -6rem;
-    }
-    
-
-} 
-
-
-@media (max-width: 575.98px) {
-    .imagesDiv{
-        display: none;
-    }
-
-
-} 
-
-
-
-@media (max-width: 320.98px) {
-
-    .imagesDiv{
-        display: none;
-    }
-    .content{
-
-        margin-top: 2rem;
-        margin-left: 0rem;
-        text-align: center;
-        padding-bottom: 9rem;
-    }
-    .content p:first-of-type{
-        margin-top: -2rem;
-    }
-    .content > h3 {
-        margin-top: -6rem;
-    }
-    
-
-   
-}  */
 
 @media (max-width: 1399.98px) {
   .find-button {
@@ -159,7 +80,7 @@
     max-width: 70%;
   }
   .playImage {
-    top: 50%;
+    right: 21%;
   }
   .find-button {
     max-width: 11rem;
@@ -196,7 +117,9 @@
   }
 }
 @media (max-width: 767.98px) {
-
+   .main-container{
+    text-align: center;
+   }
   .imagesDiv {
     display: none;
   }

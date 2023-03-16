@@ -86,6 +86,9 @@
       .homeJobTitleInputField,.homeLocationInputField{
          width:60%;
       }
+      .homeFindJobButton{
+         width: 11rem;
+   }
 
     }
 
@@ -129,7 +132,13 @@
       .homeFormCard{
          flex-direction: column;
 box-shadow: none;
-      }
+   }
+      .homeLocationInputField{
+         
+         margin-bottom: 0.8rem;
+         margin-top: 0.8rem;
+
+     }
 .homeFindJobButton,.homeFormCard{
    border-radius: 0;
 }
