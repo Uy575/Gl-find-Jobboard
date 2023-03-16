@@ -124,8 +124,11 @@ width: 10rem;
      
     @media (max-width: 1024px){
 
-       .homeFindJobButton{
-         width: 11rem;
+      .homeFormCard {
+         width: 48rem;
+         }
+   .homeFindJobButton{
+   width: 11rem;
    }
         
     }
