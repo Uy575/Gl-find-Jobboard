@@ -99,7 +99,7 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-        <div className="hr">
+        <div className="footerHr">
           <hr />
         </div>
         <div className="ft-logo-row">

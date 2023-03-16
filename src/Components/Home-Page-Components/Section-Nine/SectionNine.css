@@ -14,9 +14,10 @@
     .sectionNineLogoContainer{
         /* flex-direction: column; */
         flex-wrap: wrap;
-        padding: 4rem;
+        padding: 0.5rem;
         padding-left:15rem;
         justify-content: center;
+        padding-top: 2.5rem;
         
 
     }
@@ -44,7 +45,7 @@
     .sectionNineLogoContainer{
    
        
-        padding-left:5rem;
+        padding-left:4rem;
 
         
 

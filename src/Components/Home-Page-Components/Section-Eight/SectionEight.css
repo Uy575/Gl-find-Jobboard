@@ -56,6 +56,11 @@
         justify-content: center;
         align-items: center;
     }
+ .sectionEightBackground{
+   
+     padding: 1rem 0;
+
+}
 .sectionEightHeading{
    font-size: 1.3rem;
    text-align: center;
@@ -72,6 +77,10 @@
 }
 .sectionEightLi *+*{
     padding-left: 5rem;
+    margin-top: 1rem;
+}
+
+.sectionEightLi img:first-child{
     margin-top: 1rem;
 }
 .sectionEightBackground{
