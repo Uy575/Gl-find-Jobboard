@@ -6,6 +6,7 @@ import TitleSuggestion from "../Title-Suggestion/TitleSuggestion";
 import ReactPlace from "../../Custom-Components/ReactPlace/ReactPlace";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import locationIcon from "../../../Assets/Icons/LocationIcon.svg"
 
 function Form({
   formFields,
@@ -42,6 +43,7 @@ max = max === "undefined" ? 50 : 50
             <TitleSuggestion formInputs={formInputs} />
           </div>
           <div className={locationInputField}>
+            {/* <span className="locationFieldIcon"> <img src={locationIcon} alt ='location icon'></img> </span> */}
             <h4>Enter Location</h4>
             <ReactPlace />
           </div>

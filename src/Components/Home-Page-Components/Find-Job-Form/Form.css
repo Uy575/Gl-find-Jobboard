@@ -44,6 +44,7 @@
  font-family: "Roboto",sans-serif;
  font-size: 16px;
  font-weight: 600;
+ 
 }
 
 .homeFindJobArrow{
@@ -52,21 +53,23 @@
 
 .homeJobTitleInputField{
 
-   padding: 1rem;
+ 
     width: 100%;
     font-family: 'Roboto',sans-serif;
     border-right: 1px solid lightgray;
-    margin : 0.4rem 0 0.4rem 2rem
+    margin : 0.4rem 0 0.4rem 2rem;
+    padding: 0.6rem 0rem;
 
 }
 
 
 .homeLocationInputField{
 
-  padding: 1rem;
+
   width: 100%;
   margin : 0.4rem 0 0.4rem 2rem;
   position: relative;
+  padding: 0.6rem 0rem;
 
 }
 .homeJobTitleInputField >h4 , .homeLocationInputField > h4{
@@ -74,6 +77,15 @@
    color: #000;
    font-size: 14px;
    font-family: "Roboto",sans-serif;
+}
+
+.locationFieldIcon{
+
+   position:absolute;
+   right:15.7rem;
+   top:1.1rem;
+   display:inline-block;
+   margin-right:0.5rem
 }
 
 
@@ -128,6 +140,7 @@
       .homeJobTitleInputField >h4{
          margin: 0;
          padding: 0;
+       
       }
       .homeFormCard{
          flex-direction: column;
@@ -138,7 +151,12 @@ box-shadow: none;
          margin-bottom: 0.8rem;
          margin-top: 0.8rem;
 
+         
+
      }
+
+
+
 .homeFindJobButton,.homeFormCard{
    border-radius: 0;
 }
@@ -161,7 +179,15 @@ right: .5rem;
  .location-search-input{
    width: 100%;
    font-size: 15px;
+   /* margin-left: 2rem; */
  }
+
+.locationFieldIcon{
+     right: 19rem;
+   
+
+
+}
 
    }
 
@@ -178,7 +204,13 @@ right: .5rem;
 
          margin-bottom: 0rem;
          text-align: start;
+         /* margin-left: 2rem; */
       }
+
+.locationFieldIcon{
+
+    right: 19rem;
+}
 
      }
    
