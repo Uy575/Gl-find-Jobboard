@@ -5,11 +5,11 @@ import "./latest_sec.css";
 const LatestSecurity = ({topProduct}) => {
 
   return (
-          <div className="card">
+          <div className="card w-100">
             <div className="card-li1">
               <div className="card-li1-headings">
                 <h3>{topProduct.title}</h3>
-                <h6>{`${topProduct.name.length}` > 9 ? `${topProduct.name.trim()}....` :`${topProduct.name}`}</h6>
+                <h6>{`${topProduct.name.length}` > 13 ? `${topProduct.name.slice(0,13)}....` :`${topProduct.name}`}</h6>
                 <span>{topProduct.city}</span>
               </div>
               <div className="card-li1-icon">

@@ -1,55 +1,42 @@
 import React, { useEffect } from "react";
-import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
-import "./reactcarousal.css";
-import LatestSecurity from "../../Home-Page-Components/../Home-Page-Components/latest_security/LatestSecurity";
+import { Swiper, SwiperSlide } from "swiper/react";
 import { useSelector } from "react-redux";
-
-const responsive = {
-  superLargeDesktop: {
-    // the naming can be any, depends on you.
-    breakpoint: { max: 4000, min: 3000 },
-    items: 4,
-    showDots: false,
-  },
-  desktop: {
-    breakpoint: { max: 3000, min: 1024 },
-    items: 3,
-    showDots: false,
-  },
-  tablet: {
-    breakpoint: { max: 950, min: 750 },
-    items: 2,
-    showDots: true,
-  },
-
-  mobile: {
-    breakpoint: { max: 464, min: 0 },
-    items: 1,
-    showDots: true,
-  },
-};
-
+import { Pagination, Navigation } from "swiper";
+import LatestSecurity from "../../Home-Page-Components/latest_security/LatestSecurity";
+import "swiper/css/navigation";
 const ReactCarousals = ({ topList }) => {
   const topProductsState = useSelector((state) => state.topProducts);
   const { topProducts } = topProductsState;
   return (
-    <Carousel
-      responsive={responsive}
-      arrows={true}
-      swipeable={true}
-      draggable={true}
-      transitionDuration={500}
-      autoPlaySpeed={1000}
-      focusOnSelect={true}
-      containerClass="rc-container"
-      removeArrowOnDeviceType={["mobile", "tablet"]}
-      showDots={responsive.showDots}
+    <Swiper
+      slidesPerView={1}
+      spaceBetween={30}
+      autoplay
+      breakpoints={{
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 40,
+        },
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 50,
+        },
+      }}
+      pagination={{
+        clickable: true,
+      }}
+      navigation={true}
+      modules={[Pagination, Navigation]}
+      className="mySwiper"
     >
       {topProducts.map((topProduct) => {
-        return <LatestSecurity key={topProduct.id} topProduct={topProduct} />;
+        return (
+          <SwiperSlide>
+            <LatestSecurity key={topProduct.id} topProduct={topProduct} />
+          </SwiperSlide>
+        );
       })}
-    </Carousel>
+    </Swiper>
   );
 };
 
