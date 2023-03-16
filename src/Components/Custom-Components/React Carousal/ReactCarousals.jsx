@@ -1,9 +1,10 @@
 import React, { useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { useSelector } from "react-redux";
-import { Pagination, Navigation } from "swiper";
+import { Pagination, Navigation ,Autoplay } from "swiper";
 import LatestSecurity from "../../Home-Page-Components/latest_security/LatestSecurity";
 import "swiper/css/navigation";
+import 'swiper/css/autoplay'
 import './reactcarousal.css'
 const ReactCarousals = ({ topList }) => {
   const topProductsState = useSelector((state) => state.topProducts);
@@ -11,10 +12,10 @@ const ReactCarousals = ({ topList }) => {
   return (
     <Swiper
       slidesPerView={1}
-      spaceBetween={30}
-      autoplay
+      spaceBetween={30}    
+      speed={800}
       breakpoints={{
-      
+        
         768: {
           slidesPerView: 2,
           spaceBetween: 40,
@@ -29,12 +30,14 @@ const ReactCarousals = ({ topList }) => {
         clickable: true,
       }}
       navigation={true}
-      modules={[Pagination, Navigation]}
+      modules={[Pagination, Navigation ,Autoplay ]}
+      autoplay={true}
       className="mySwiper"
+      
     >
       {topProducts.map((topProduct) => {
         return (
-          <SwiperSlide>
+          <SwiperSlide  key={topProduct.id}>
             <LatestSecurity key={topProduct.id} topProduct={topProduct} />
           </SwiperSlide>
         );
