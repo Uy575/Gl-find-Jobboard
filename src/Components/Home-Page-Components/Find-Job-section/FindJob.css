@@ -11,6 +11,7 @@
 
 .main-container {
   position: relative;
+  text-align: center;
 }
 
 #fj-h3 {
@@ -179,6 +180,21 @@
     left: 70%;
   }
 }
+@media (max-width: 1080px){
+  .playImage{
+
+    top: 38%;
+    right: 21%;
+  }
+}
+
+@media (max-width: 1024px){
+  .playImage{
+
+    top: 38%;
+    right: 21%;
+  }
+}
 @media (max-width: 767.98px) {
 
   .imagesDiv {
@@ -200,7 +216,7 @@
 
   .second-section-heading{
 
-    font-size: 2.2rem;
+    font-size: 2.6rem;
  
     
   }

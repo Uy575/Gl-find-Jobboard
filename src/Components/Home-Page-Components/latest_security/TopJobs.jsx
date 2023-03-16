@@ -6,6 +6,7 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import ReactCarousals from "../../Custom-Components/React Carousal/ReactCarousals";
 import './latest_sec.css'
+import LatestSecurity from "./LatestSecurity";
 
 function TopJobs() {
   const dispatch = useDispatch();
@@ -25,6 +26,7 @@ function TopJobs() {
         <h1 className="main-heading">Latest Security Vacancies</h1>
       </div>
 
+        {/* <LatestSecurity/> */}
       <ReactCarousals />
 
       <div className="ls_container" style={{padding:'4rem'}}>
