@@ -93,8 +93,19 @@
 .homeJobTitleInputField,.homeLocationInputField{
    width:90%;
 }   
-    }
-   @media (max-width: 1199.98px) { 
+
+}
+
+@media (min-width:1280px) {
+   .homeFormCard {
+      width: 48rem;
+      }
+.homeFindJobButton{
+width: 10rem;
+}
+   }
+
+@media (max-width: 1199.98px) { 
       .homeJobTitleInputField,.homeLocationInputField{
          width:60%;
       }
