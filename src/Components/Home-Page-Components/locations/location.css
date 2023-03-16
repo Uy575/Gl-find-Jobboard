@@ -92,9 +92,19 @@ padding: 1rem 0 0 0;
   color: white;
 }
 
-.img-fluid{
-height: auto;
-max-width: 100%;
+
+ a{
+text-decoration: none;
+}
+
+a:hover{
+color: inherit;
+text-decoration: none;
+
+}
+
+.ibox{
+border: none;
 }
 
 .img-box1-headings > h3,
@@ -191,9 +201,7 @@ width: 300px;
     border: 2px solid;
   
   }
-  .lct-row > * + *{
-  margin-left: .8rem;
-  } 
+  
 
   .lct-heading{
   font-size: 1.6rem;
@@ -215,11 +223,20 @@ font-size: 3rem;
   .lct-heading{
   font-size: 22px;
   }
+  .lct-row > * {
+  margin-top: .5rem;
+  }
+  .lct-heading{
+  line-height: 2rem;
+  }
   .ibox{
-    width: 19rem;
-max-width: 20rem;    
-    }
+    width: 21rem;
+max-width: 22rem;
+margin: 18px 20px 0;    
+}
   .ibh > h1{
   font-size: 3rem;
   }
+
+
 }

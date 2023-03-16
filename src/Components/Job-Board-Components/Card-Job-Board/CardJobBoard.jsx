@@ -7,6 +7,11 @@ import {CopyToClipboard} from 'react-copy-to-clipboard';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useNavigate } from "react-router-dom";
+import retailIcon from '../../../Assets/Icons/icon-retail.svg'
+import mobileIcon from '../../../Assets/Icons/icon-mobile.svg'
+import eventIcon from '../../../Assets/Icons/icon-event.svg'
+import corporateIcon from '../../../Assets/Icons/icon-corporate.svg'
+import barIcon from '../../../Assets/Icons/icon-barclub.svg'
 import ReactShare from "../../Custom-Components/React Share/ReactShare";
 import MsgTostify from '../../Custom-Components/Tostify/MsgTostify'
 import "./cardjobboard.css";
@@ -159,7 +164,7 @@ const CardJobBoard = ({
                 {only === "jobpage"
                   ? jobdata.salary_type === "Fixed Rate"? jobdata.salary : jobdata.salary_max
                   : only === "detailpage"
-                  ? jobdetail.salary
+                  ? jobdetail.salary_type === "Fixed Rate"? jobdetail.salary : jobdetail.salary_max
                   : 11}
               </strong>
               <span>/Per Hour</span>
@@ -168,8 +173,12 @@ const CardJobBoard = ({
 
           <div className="card-ft-left">
             <span>Venue type</span>
-            <img src={retailImg} alt="" className="jb-retailimg" />
-            <span>
+            {only === "jobpage"
+            ?
+            <img src={jobdata.venue_type === "Retail" ? retailIcon : jobdata.venue_type === "Corporate" ? corporateIcon :jobdata.venue_type==="Event" ? eventIcon : jobdata.venue_type === "Bar/Club" ? barIcon:''} alt="" className="jb-retailimg" />
+         :'a'
+                }
+         <span>
               {only === "jobpage"
                 ? jobdata.venue_type
                 : only === "detailpage"

@@ -18,7 +18,7 @@ const Location = () => {
           <div className="col-12 col-md-4 col">
           <a href="/jobs/security-jobs-in-london">
             <div className="img-box1 ibox">
-              <img src={london} alt="" className="london-img img-fluid" />
+              <img src={london} alt="" className="london-img " />
               <div className="img-box1-headings ibh">
                 <h1>LONDON</h1>
                 <h3>Find security jobs in London</h3>
@@ -30,7 +30,7 @@ const Location = () => {
           <div className="col-12 col-md-4 col">
           <a href="/jobs/security-jobs-in-machester">
             <div className="img-box2 ibox">
-              <img src={machester} alt="" className="machester-img img-fluid" />
+              <img src={machester} alt="" className="machester-img" />
               <div className="img-box2-headings ibh">
                 <h1>MACHESTER</h1>
                 <h3>Find security jobs in Machester</h3>
@@ -42,7 +42,7 @@ const Location = () => {
           <div className="col-12 col-md-4 col">
           <a href="/jobs/security-jobs-in-birmingham">
             <div className="img-box3 ibox">
-              <img src={birmingham} alt="" className="birmingham-img img-fluid" />
+              <img src={birmingham} alt="" className="birmingham-img " />
               <div className="img-box3-headings ibh">
                 <h1>BIRMINGHAM</h1>
                 <h3>Find security jobs in Birmingham</h3>
@@ -54,7 +54,7 @@ const Location = () => {
           <div className="col-12 col-md-4 col">
           <a href="/jobs/security-jobs-in-leeds">
             <div className="img-box4 ibox">
-              <img src={leeds} alt="" className="leeds-img img-fluid" />
+              <img src={leeds} alt="" className="leeds-img " />
               <div className="img-box4-headings ibh">
                 <h1>LEEDS</h1>
                 <h3>Find security jobs in Leeds</h3>
@@ -67,7 +67,7 @@ const Location = () => {
 
           <a href="/jobs/security-jobs-in-bristol">
             <div className="img-box5 ibox">
-              <img src={bristol} alt="" className="bristol-img img-fluid" />
+              <img src={bristol} alt="" className="bristol-img " />
               <div className="img-box5-headings ibh">
                 <h1>BRISTOL</h1>
                 <h3>Find security jobs in Bristol</h3>
@@ -80,7 +80,7 @@ const Location = () => {
 
           <a href="/jobs/security-jobs-in-cardif">
             <div className="img-box6 ibox">
-              <img src={cardiff} alt=""  className="cardiff-img img-fluid" />
+              <img src={cardiff} alt=""  className="cardiff-img " />
               <div className="img-box6-headings ibh">
                 <h1>CARDIFF</h1>
                 <h3>Find security jobs in Cardiff</h3>

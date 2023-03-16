@@ -91,7 +91,7 @@
 
 @media (max-width:1920px){
 .homeFindJobButton{
-width: 15rem;
+width: 11rem;
 }
 }
 
@@ -127,12 +127,15 @@ width: 10rem;
       .homeFindJobButton{
         width: 11rem;
   }
+  .homeFormCard{
+width: 42rem;
+}
 }
      
     @media (max-width: 1024px){
 
       .homeFormCard {
-         width: 48rem;
+         width: 42rem;
          }
    .homeFindJobButton{
    width: 11rem;
