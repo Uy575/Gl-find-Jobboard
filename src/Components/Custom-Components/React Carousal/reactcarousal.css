@@ -3,7 +3,7 @@
 .rc-container {
   display: flex;
   /* margin-left: 2rem; */
-  margin-right: 2rem;
+  /* margin-right: 2rem; */
   margin-top: 1rem;
 }
 
@@ -29,13 +29,16 @@
   display: flex;
   align-items: baseline;
   /* padding: 0 2.4rem; */
-  gap: 1rem;
+
 }
 
 .react-multi-carousel-item {
   width: 100%;
 }
 
+.react-multi-carousel-item {
+padding: 0 1rem;  
+}
 @media (max-width: 320.98px) {
   body {
     margin: 0;
@@ -76,7 +79,6 @@
 
   .react-multi-carousel-list > ul > li {
     margin: 0 .5rem;
-    height: 20rem;
   }
 }
 
@@ -86,4 +88,12 @@
 @media (max-width: 767.98px) {
 }
 @media (max-width: 575.98px) {
+  .react-multi-carousel-item {
+  width: 335px!important;
+padding: 1rem 0rem;  
+}
+.react-multi-carousel-track{
+transform: translate3d(0,0,0);
+padding-bottom: 5rem !important;
+}
 }

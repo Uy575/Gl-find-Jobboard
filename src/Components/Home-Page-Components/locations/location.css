@@ -209,9 +209,17 @@ width: 300px;
 font-size: 3rem;
 }
 }
-@media (max-width: 575.98px) {
 
+
+@media (max-width: 575.98px) {
   .lct-heading{
   font-size: 1.5rem;
+  }
+  .ibox{
+    width: 19rem;
+max-width: 20rem;    
+    }
+  .ibh > h1{
+  font-size: 3rem;
   }
 }
