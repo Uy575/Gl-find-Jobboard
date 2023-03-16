@@ -5,10 +5,7 @@
 }
 html{
     scroll-behavior: smooth;
-}
-body{
-    overflow-x: hidden;
-    
+  
 }
 
 html , body {
@@ -17,6 +14,7 @@ width: 100%;
 margin: 0;
 padding: 0;
 box-sizing: border-box;
+overflow-x: hidden;
 }
 h4,h5,span{
 font-family: "Roboto",sans-serif;

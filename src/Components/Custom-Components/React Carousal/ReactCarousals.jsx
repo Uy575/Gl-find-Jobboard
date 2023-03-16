@@ -4,6 +4,7 @@ import { useSelector } from "react-redux";
 import { Pagination, Navigation } from "swiper";
 import LatestSecurity from "../../Home-Page-Components/latest_security/LatestSecurity";
 import "swiper/css/navigation";
+import './reactcarousal.css'
 const ReactCarousals = ({ topList }) => {
   const topProductsState = useSelector((state) => state.topProducts);
   const { topProducts } = topProductsState;
@@ -13,9 +14,11 @@ const ReactCarousals = ({ topList }) => {
       spaceBetween={30}
       autoplay
       breakpoints={{
+      
         768: {
           slidesPerView: 2,
           spaceBetween: 40,
+          Navigation:false
         },
         1024: {
           slidesPerView: 3,

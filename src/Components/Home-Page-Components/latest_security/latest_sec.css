@@ -12,7 +12,7 @@
   font-size: 44px;
   letter-spacing: -0.84px;
   line-height: normal;
-   padding-top: 3rem;
+   padding: 3rem 0;
 }
 .ls_container {
   text-align: center;
@@ -239,5 +239,9 @@ padding: 0;
   .card{
   height: auto;
   }
+  
+.main-heading {
+font-size: 22px;
+}
 
 }
