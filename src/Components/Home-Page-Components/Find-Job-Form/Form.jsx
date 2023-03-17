@@ -43,7 +43,7 @@ max = max === "undefined" ? 50 : 50
             <TitleSuggestion formInputs={formInputs} />
           </div>
           <div className={locationInputField}>
-            {/* <span className="locationFieldIcon"> <img src={locationIcon} alt ='location icon'></img> </span> */}
+            <span className="locationFieldIcon"> <img src={locationIcon} alt ='location icon'></img> </span>
             <h4>Enter Location</h4>
             <ReactPlace />
           </div>
