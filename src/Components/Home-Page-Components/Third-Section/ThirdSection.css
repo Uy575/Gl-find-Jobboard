@@ -13,30 +13,33 @@
 
 .thirdSectionText {
   color: white;
-  width: 40rem;
+  /* width: 40rem; */
   /* margin-left: 1.5rem; */
+
 }
 .headingFontSize {
-  font-size: 2.5rem;
+  font-size: 44px;
   margin-bottom: 1rem;
+  font-weight: 900 ;
 }
 
 .thirdSectionText + p {
-  font-size: 1  rem;
+  font-size: 1rem;
   margin-bottom: 1rem;
+  line-height: 1.63;
+  letter-spacing: -.1px;
 }
 .thirdSectionButton {
   background-color: black;
-  width: 18rem;
-  height: 4rem;
   border: none;
   border-radius: 5px;
-  font-weight: 700;
+  font-weight: 900 !important;
   font-family: 'Roboto', sans-serif;
   font-size: 1rem;
-  padding: 0.1rem;
-  
+  padding: 11px 20px 9px;
 }
+
+  
 .thirdSectionButton > a{
  
    text-decoration: none;

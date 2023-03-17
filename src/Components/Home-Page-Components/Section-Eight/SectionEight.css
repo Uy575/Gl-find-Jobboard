@@ -5,10 +5,15 @@
     z-index: 1;
 
 }
+
 .sectionEightLi > li{
     display: inline;
     list-style: none;
    
+}
+
+.sectionEightLi > a:hover{
+    text-decoration: none;
 }
 
 .mainContainer{
@@ -18,7 +23,7 @@
 }
 
 .sectionEightLi *+*{
-    padding-left: 2rem;
+    margin-left: 2rem;
 }
 
 .sectionEightBackground{
@@ -36,7 +41,8 @@
 }
 
 .sectionEightHeading + span{
-    font-size: 1.2rem;
+    font-size: 1.375rem;
+    font-weight: bolder;
 }
 
 .sectionEightPera{
@@ -87,5 +93,6 @@
     margin-top: 0rem;
 }
 } 
+
 
 

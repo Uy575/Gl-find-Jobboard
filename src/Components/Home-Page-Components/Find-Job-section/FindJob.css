@@ -17,7 +17,7 @@
 #fj-h3 {
   font-size: 19.2px;
   font-family: "Roboto", sans-serif;
-  font-weight: 700;
+  font-weight: 900;
   margin-top: 2rem;
 }
 
@@ -45,6 +45,8 @@
   position: absolute;
   top: 38%;
   right: 35%;
+  cursor: pointer;
+  border-radius: 50% !important;
 }
 
 .content {

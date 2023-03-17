@@ -23,10 +23,10 @@ function SectionEight() {
          <p className="sectionEightPera">Don’t get left out. Join the conversation.</p>
     
         <div className="sectionEightLi">
-            <img src={twittericon} alt='twitter'/>
-            <img src={facebook} alt='facebook'/>
-            <img src={youtube} alt='youtube'/>
-            <img src={instagram} alt='instagram'/>
+          <a href="https://twitter.com/get_licensed" target='_blank'><img src={twittericon} alt='twitter'/> </a>
+          <a href="https://www.facebook.com/getlicensed" target='_blank'><img src={facebook} alt='facebook'/></a> 
+          <a href="https://www.youtube.com/c/getlicensed" target='_blank'><img src={youtube} alt='youtube'/></a>
+          <a href="https://www.instagram.com/getlicensed/?fbclid=IwAR0PBUkG9zUoZB30vVUVAcpse-Y6AYdNnuUd-J7VeWbgQlsQqa71XfYrDAg" target='_blank'><img src={instagram} alt='instagram'/></a>
         </div>
     
       </div>

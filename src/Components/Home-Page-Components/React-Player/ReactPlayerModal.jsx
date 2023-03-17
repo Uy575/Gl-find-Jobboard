@@ -15,8 +15,9 @@ function ReactPlayerModal() {
   
 
   
-  
-      <img className="playImage" id="play-img" src={play} alt="play video" onClick={handleShow} />
+   
+      <img className="playImage" src={play} alt="play video" onClick={handleShow} />
+   
  
       <Modal
         show={show}

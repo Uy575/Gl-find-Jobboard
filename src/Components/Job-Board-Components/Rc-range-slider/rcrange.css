@@ -9,6 +9,7 @@ width: 15rem;
     background-color: #3bd55a;
     margin-top: -5px;
     border: 2px solid #96dbfa;
+    opacity: 1;
 }
 .rc-slider-disabled .rc-slider-handle {
     border-color: #ccc;
