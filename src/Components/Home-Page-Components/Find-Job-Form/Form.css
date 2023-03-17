@@ -56,8 +56,8 @@
     width: 100%;
     font-family: 'Roboto',sans-serif;
     border-right: 1px solid lightgray;
-    margin: 0.5rem 0 0.5rem 2rem;
-    padding: 0.5rem 0rem 0.5rem 0rem;
+    /* margin: 0.5rem 0 0.5rem 2rem; */
+    padding: 1rem 0rem 1rem 2rem;;
     position: relative;
 
 }
@@ -66,9 +66,9 @@
 .homeLocationInputField{
 
    width: 100%;
-   margin: 0.5rem 0 0.5rem 3rem;
+   /* margin: 0.5rem 0 0.5rem 3rem; */
    position: relative;
-   padding: 0.5rem 0rem 0.5rem 0rem;
+   padding: 1rem 0rem 1rem 3.5rem;
 
 }
 .homeJobTitleInputField >h4 , .homeLocationInputField > h4{
@@ -81,12 +81,15 @@
 
 .locationFieldIcon{
 
-   position:absolute;
-   right:15.5rem;
-   top:0.8rem;
-   display:inline-block;
-   margin-right:0.5rem
+   position: absolute;
+   top: 1.3rem;
+   display: inline-block;
+   /* margin-right: 0.5rem; */
+   left: 20px;
+   
+
 }
+
 
 
 @media (max-width:1920px){
@@ -177,6 +180,7 @@ width: 100%;
          
          margin-bottom: 0.8rem;
          margin-top: 0.8rem;
+         padding-left: 3rem;
 
          
 
@@ -209,12 +213,6 @@ right: .5rem;
    /* margin-left: 2rem; */
  }
 
-.locationFieldIcon{
-     right: 19rem;
-   
-
-
-}
 
    }
 
@@ -224,6 +222,7 @@ right: .5rem;
          
           margin-bottom: 0.8rem;
           margin-top: 0.8rem;
+          padding-left: 3rem;
 
       }
 
@@ -236,8 +235,10 @@ right: .5rem;
 
 .locationFieldIcon{
 
-    right: 19rem;
-}
+    /* right: 0rem; */
+   top: 1.3rem;
+   left: 11px;;
+   }
 
      }
    
