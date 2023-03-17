@@ -1,92 +1,92 @@
 .homeFormFields{
    
-    display: flex;
-    margin-top: 1rem;
-    z-index: 100;
-    position: relative;
-    width: 100%;
+  display: flex;
+  margin-top: 1rem;
+  z-index: 100;
+  position: relative;
+  width: 100%;
 
 }
 .location-search-input{
-  position: relative;
-  width: 100%;
-  margin-top: 0.3rem;
+position: relative;
+width: 100%;
+margin-top: 0.3rem;
 }
 
 .homeFormInputs{
-     border: none;
-     outline: none;
-     width: 100%;
-     z-index: 10;
-     margin-top: 0.3rem;
-   
+   border: none;
+   outline: none;
+   width: 100%;
+   z-index: 10;
+   margin-top: 0.3rem;
+ 
 }
 
 .homeFormCard{
-    display: flex;
-    box-shadow: 0 0px 6px rgb(0 0 0 / 0.2);
-    background-color: #fff;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 8px
+  display: flex;
+  box-shadow: 0 0px 6px rgb(0 0 0 / 0.2);
+  background-color: #fff;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 8px
 
 }
 
 
 .homeFindJobButton{
-   width: 15rem;
-    height: 100%;
-    background-color: #51d462;
-    outline: none;
-    border: none;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
- font-family: "Roboto",sans-serif;
- font-size: 16px;
- font-weight: 600;
- 
+ width: 15rem;
+  height: 100%;
+  background-color: #51d462;
+  outline: none;
+  border: none;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+font-family: "Roboto",sans-serif;
+font-size: 16px;
+font-weight: 600;
+
 }
 
 .homeFindJobArrow{
-    height: 2rem;
+  height: 2rem;
 }
 
 .homeJobTitleInputField{
 
- 
-    width: 100%;
-    font-family: 'Roboto',sans-serif;
-    border-right: 1px solid lightgray;
-    /* margin: 0.5rem 0 0.5rem 2rem; */
-    padding: 1rem 0rem 1rem 2rem;;
-    position: relative;
+
+  width: 100%;
+  font-family: 'Roboto',sans-serif;
+  border-right: 1px solid lightgray;
+  /* margin: 0.5rem 0 0.5rem 2rem; */
+  padding: 1rem 1rem 1rem 2rem;;
+  position: relative;
 
 }
 
 
 .homeLocationInputField{
 
-   width: 100%;
-   /* margin: 0.5rem 0 0.5rem 3rem; */
-   position: relative;
-   padding: 1rem 0rem 1rem 3.5rem;
+ width: 100%;
+ /* margin: 0.5rem 0 0.5rem 3rem; */
+ position: relative;
+ padding: 1rem 1rem 1rem 3.5rem;
 
 }
 .homeJobTitleInputField >h4 , .homeLocationInputField > h4{
-   font-weight: 700;
-   color: #000;
-   font-size: 14px;
-   font-family: "Roboto",sans-serif;
-   margin-bottom: -0.1rem;
+ font-weight: 700;
+ color: #000;
+ font-size: 14px;
+ font-family: "Roboto",sans-serif;
+ margin-bottom: -0.1rem;
 }
 
 .locationFieldIcon{
 
-   position: absolute;
-   top: 1.3rem;
-   display: inline-block;
-   /* margin-right: 0.5rem; */
-   left: 20px;
-   
+ position: absolute;
+ top: 1.3rem;
+ display: inline-block;
+ /* margin-right: 0.5rem; */
+ left: 20px;
+ 
 
 }
 
@@ -100,104 +100,104 @@ width: 11rem;
 
 @media (max-width: 1399.98px) {
 .homeJobTitleInputField,.homeLocationInputField{
-   width:90%;
+ width:90%;
 }   
 .homeFormCard {
-   width: 47rem;
-   }
+ width: 47rem;
+ }
 }
 
 @media (max-width:1280px) {
-   .homeFormCard {
-      width: 47rem;
-      }
-      
+ .homeFormCard {
+    width: 47rem;
+    }
+    
 .homeFindJobButton{
 width: 10rem;
 }
-   }
+ }
 
 @media (max-width: 1199.98px) { 
-      .homeJobTitleInputField,.homeLocationInputField{
-         width:60%;
-      }
-      .homeFindJobButton{
-         width: 11rem;
-   }
-
+    .homeJobTitleInputField,.homeLocationInputField{
+       width:60%;
     }
+    .homeFindJobButton{
+       width: 11rem;
+ }
 
-    @media (max-width: 1080px) {
-
-      .homeFindJobButton{
-        width: 11rem;
   }
-  .homeFormCard{
+
+  @media (max-width: 1080px) {
+
+    .homeFindJobButton{
+      width: 11rem;
+}
+.homeFormCard{
 width: 42rem;
 }
 }
-     
-    @media (max-width: 1024px){
+   
+  @media (max-width: 1024px){
 
-      .homeFormCard {
-         width: 42rem;
-         }
-   .homeFindJobButton{
-   width: 11rem;
-   }
-        
+    .homeFormCard {
+       width: 42rem;
+       }
+ .homeFindJobButton{
+ width: 11rem;
+ }
+      
+  }
+
+ @media (max-width: 991.98px) { 
+    .homeJobTitleInputField ,.homeLocationInputField{
+       width: 32%;
     }
- 
-   @media (max-width: 991.98px) { 
-      .homeJobTitleInputField ,.homeLocationInputField{
-         width: 32%;
-      }
-      .homeFormCard{
-         max-width: 32rem;
-      }
-  
+    .homeFormCard{
+       max-width: 32rem;
     }
-   @media (max-width: 767.98px) {  
-      .homeJobTitleInputField,.homeLocationInputField{
-         width:100%;
-      padding: .9rem;
-      margin: 0;
-      border: 1px solid #dee2e6;
-      box-shadow: 0px 4px 14px #dee2e6;
-      border-right: none;
-      }
-      .homeJobTitleInputField >h4{
-         margin: 0;
-         padding: 0;
-       
-      }
-      .homeFormCard{
-         flex-direction: column;
+
+  }
+ @media (max-width: 767.98px) {  
+    .homeJobTitleInputField,.homeLocationInputField{
+       width:100%;
+    padding: .9rem;
+    margin: 0;
+    border: 1px solid #dee2e6;
+    box-shadow: 0px 4px 14px #dee2e6;
+    border-right: none;
+    }
+    .homeJobTitleInputField >h4{
+       margin: 0;
+       padding: 0;
+     
+    }
+    .homeFormCard{
+       flex-direction: column;
 box-shadow: none;
 width: 100%;
+ }
+    .homeLocationInputField{
+       
+       margin-bottom: 0.8rem;
+       margin-top: 0.8rem;
+       padding-left: 3rem;
+
+       
+
    }
-      .homeLocationInputField{
-         
-         margin-bottom: 0.8rem;
-         margin-top: 0.8rem;
-         padding-left: 3rem;
-
-         
-
-     }
 
 
 
 .homeFindJobButton,.homeFormCard{
-   border-radius: 0;
+ border-radius: 0;
 }
 
 .homeFindJobButton{
-   padding:.9rem;
-   align-content: center;
-   display: flex;
-   justify-content: center;
-   align-items: center;
+ padding:.9rem;
+ align-content: center;
+ display: flex;
+ justify-content: center;
+ align-items: center;
 outline: none;
 border:none;
 width: 100%;
@@ -207,38 +207,37 @@ position: absolute;
 right: .5rem;
 }
 
- .location-search-input{
-   width: 100%;
-   font-size: 15px;
-   /* margin-left: 2rem; */
+.location-search-input{
+ width: 100%;
+ font-size: 15px;
+ /* margin-left: 2rem; */
+}
+
+
  }
 
 
-   }
+ @media (max-width: 575.98px) {
+    .homeLocationInputField{
+       
+        margin-bottom: 0.8rem;
+        margin-top: 0.8rem;
+        padding-left: 3rem;
 
+    }
 
-   @media (max-width: 575.98px) {
-      .homeLocationInputField{
-         
-          margin-bottom: 0.8rem;
-          margin-top: 0.8rem;
-          padding-left: 3rem;
+    .homeLocationInputField > h4 {
 
-      }
-
-      .homeLocationInputField > h4 {
-
-         margin-bottom: 0rem;
-         text-align: start;
-         /* margin-left: 2rem; */
-      }
+       margin-bottom: 0rem;
+       text-align: start;
+       /* margin-left: 2rem; */
+    }
 
 .locationFieldIcon{
 
-    /* right: 0rem; */
-   top: 1.3rem;
-   left: 11px;;
-   }
+  /* right: 0rem; */
+ top: 1.3rem;
+ left: 11px;;
+ }
 
-     }
-   
+   }

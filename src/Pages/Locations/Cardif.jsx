@@ -14,6 +14,9 @@ const Cardif = () => {
   return (
     <>
       <Header />
+      <div className="container">
+
+      
       {/* sending css classes as props in find job form   */}
       <Form
         formFields="jobBoardFormFields"
@@ -36,6 +39,7 @@ const Cardif = () => {
           formsec="jb-form-sec"
           downloadh="jb-aside-download-h"
         />
+      </div>
       </div>
     </>
   );

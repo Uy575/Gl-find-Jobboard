@@ -15,7 +15,6 @@ const JobBoardJobs = ({ api }) => {
   let salarymin = searchParams.get("salary-min");
   let salarymax = searchParams.get("salary-max");
   let distance =  searchParams.get("distance")
-  console.log(city);
   const statusState = useSelector((state) => state.JobReducer);
   const { jobFilter, geoLocation } = useSelector(
     (state) => state.LocationAndJobTypeReducer
@@ -27,7 +26,6 @@ const JobBoardJobs = ({ api }) => {
 
   const c = api ? api : FETCH_JOBS_API;
 
-  console.log(city);
   const { STATUSES } = statusState;
   const dispatch = useDispatch();
   useEffect(() => {

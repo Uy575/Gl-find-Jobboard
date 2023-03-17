@@ -30,8 +30,6 @@ const CardJobBoard = ({
   let [showShare , setShowShare] = useState(false)
   const navigate = useNavigate();
   const share = `https://www.get-licensed.co.uk/jobs/_next/image?url=%2Fjobs%2Fimages%2Ficon-share.svg&w=96&q=75`;
-  console.log(showShare)
-  console.log(copyText)
   return (
     <section>
       <div className={classname}>
@@ -176,8 +174,11 @@ const CardJobBoard = ({
             {only === "jobpage"
             ?
             <img src={jobdata.venue_type === "Retail" ? retailIcon : jobdata.venue_type === "Corporate" ? corporateIcon :jobdata.venue_type==="Event" ? eventIcon : jobdata.venue_type === "Bar/Club" ? barIcon:''} alt="" className="jb-retailimg" />
-         :'a'
+         : only === "detailpage" ?
+          <img src={jobdetail.venue_type === "Retail" ? retailIcon : jobdetail.venue_type === "Corporate" ? corporateIcon :jobdetail.venue_type==="Event" ? eventIcon : jobdetail.venue_type === "Bar/Club" ? barIcon:''} alt="" className="jb-retailimg" />
+         :''
                 }
+
          <span>
               {only === "jobpage"
                 ? jobdata.venue_type

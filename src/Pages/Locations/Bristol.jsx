@@ -15,6 +15,8 @@ const Bristol = () => {
     <>
       <Header />
       {/* sending css classes as props in find job form   */}
+      <div className="container">
+    
       <Form
         formFields="jobBoardFormFields"
         formCard="jobBoardFormCard"
@@ -37,6 +39,7 @@ const Bristol = () => {
           downloadh="jb-aside-download-h"
         />
       </div>
+</div>
     </>
   );
 };

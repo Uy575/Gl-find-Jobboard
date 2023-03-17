@@ -42,22 +42,22 @@ const Footer = () => {
                 <strong>Security Guard Jobs</strong>
               </li>
               <li>
-                <a href="https://www.get-licensed.co.uk/jobs/security-jobs-in-london-uk">Security Guard Jobs in London</a>
+                <a href="jobs?title=Security&city=London&venue=&sia-licence=&distance=30&salary-min=9&salary-max=50&lat=&lng=">Security Guard Jobs in London</a>
               </li>
               <li>
-                <a href="https://www.get-licensed.co.uk/jobs/security-jobs-in-birmingham-uk">Security Guard Jobs in Birmingham</a>
+                <a href="jobs?title=Security&city=Birmingham&venue=&sia-licence=&distance=30&salary-min=9&salary-max=50&lat=&lng=">Security Guard Jobs in Birmingham</a>
               </li>
               <li>
-                <a href="https://www.get-licensed.co.uk/jobs/security-jobs-in-birmingham-uk">Security Guard Jobs in Manchester</a>
+                <a href="jobs?title=Security&city=Manchester&venue=&sia-licence=&distance=30&salary-min=9&salary-max=50&lat=&lng=">Security Guard Jobs in Manchester</a>
               </li>
               <li>
-                <a href="https://www.get-licensed.co.uk/jobs/security-jobs-in-leeds-uk">Security Guard Jobs in Leeds</a>
+                <a href="jobs?title=Security&city=Leeds&venue=&sia-licence=&distance=30&salary-min=9&salary-max=50&lat=&lng=">Security Guard Jobs in Leeds</a>
               </li>
               <li>
-                <a href="https://www.get-licensed.co.uk/jobs/security-jobs-in-cardiff-uk">Security Guard Jobs in Cardiff</a>
+                <a href="jobs?title=Security&city=Cardiff&venue=&sia-licence=&distance=30&salary-min=9&salary-max=50&lat=&lng=">Security Guard Jobs in Cardiff</a>
               </li>
               <li>
-                <a href="https://www.get-licensed.co.uk/jobs/security-jobs-in-bristol-uk">Security Guard Jobs in Bristol</a>
+                <a href="jobs?title=Security&city=Bristol&venue=&sia-licence=&distance=30&salary-min=9&salary-max=50&lat=&lng=">Security Guard Jobs in Bristol</a>
               </li>
             </ul>
           </div>

@@ -10,11 +10,11 @@ function Header({headerLogo,headerPostJob}) {
      <div className='container' >
      <div className='header'>
     <div className={headerLogo} >
-    <img src={headerlogo} alt='Logo'/>
+    <img src={headerlogo} className='header-logo-img' alt='Logo'/>
     </div>  
     <div className={headerPostJob}>
       <a href = "https://www.get-licensed.co.uk/employers/login">
-        <img src={briefcase} alt = 'briefcase'/></a> <br/>
+        <img src={briefcase}  alt = 'briefcase'/></a> <br/>
      <span className='header-post-job-text'> Post Job </span>
     </div>
 

@@ -17,13 +17,13 @@ const ReactCarousals = ({ topList }) => {
       breakpoints={{
         
         768: {
-          slidesPerView: 2,
+          slidesPerView: 3,
           spaceBetween: 40,
           Navigation:false
         },
         1024: {
           slidesPerView: 3,
-          spaceBetween: 50,
+          spaceBetween: 30,
         },
       }}
       pagination={{

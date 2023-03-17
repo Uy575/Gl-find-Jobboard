@@ -19,7 +19,6 @@ const RcRange = () => {
     setMax(value[1]);
   };
   
-console.log(min,max)
 useEffect(()=>{
         dispatch(setSalary({ min, max }));   
 },[min,max])

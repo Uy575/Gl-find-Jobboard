@@ -1,5 +1,5 @@
-.suggestionDivForLocation{
 
+.suggestionDivForLocation{
     margin-top:0.7rem;
     overflow-y:auto;
     max-height: 20rem;
@@ -9,6 +9,9 @@
     right: 0;
 }
 
+
+.location-search-input {
+}
 
 
 

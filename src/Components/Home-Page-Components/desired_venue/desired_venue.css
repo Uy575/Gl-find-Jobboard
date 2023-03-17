@@ -17,6 +17,7 @@ justify-content: space-around;
   font-size: 36px;
   letter-spacing: -0.3px;
   font-weight: 700;
+  align-self: center;
 }
 
 .dv-li > ul {

@@ -21,8 +21,8 @@ function Form({
   const { salary , jobType, location, jobFilter ,miles } = useSelector(
     (state) => state.LocationAndJobTypeReducer
   );
-  const handleSelect = (value) => {};
-let {min ,max} = salary;
+
+  let {min ,max} = salary;
 min = min === "undefined" ? 9 : 9;
 max = max === "undefined" ? 50 : 50
 
@@ -33,7 +33,6 @@ max = max === "undefined" ? 50 : 50
       `/jobs?title=${jobType}&city=${location}&venue=&sia-licence=&distance=${miles}&salary-min=${Number(min)}&salary-max=${max}&lat=&lng=`
       );
     };
-    console.log(min,max)
 
   return (
     <form onSubmit={handleSubmit}>

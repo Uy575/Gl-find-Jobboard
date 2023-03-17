@@ -13,7 +13,10 @@ const FETCH_JOBS_API = `https://staging.get-licensed.co.uk/guardpass/api/public/
 const Birmingham = () => {
   return (
     <>
+
     <Header /> 
+<div className="container">
+
      {/* sending css classes as props in find job form   */}
      <Form
       formFields="jobBoardFormFields"
@@ -23,7 +26,7 @@ const Birmingham = () => {
       locationInputField="jobBoardLocationInputField"
       findJobButton="jobBoardFindJobButton"
       findJobArrow="jobBoardFindJobArrow"
-    /> 
+      /> 
     <div className="jobBoardPageMainContainer">
 
      {/* {browserWidth <= `${500}px` ? <FilterButton fjob={<FilterJob />} />:<FilterJob show="true" />} */}
@@ -37,6 +40,7 @@ const Birmingham = () => {
         formsec="jb-form-sec"
         downloadh="jb-aside-download-h"
       />
+    </div>
     </div>
 </>
   )

@@ -7,6 +7,8 @@ import "react-multi-carousel/lib/styles.css";
 import ReactCarousals from "../../Custom-Components/React Carousal/ReactCarousals";
 import "./latest_sec.css";
 import LatestSecurity from "./LatestSecurity";
+import { NavLink } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 function TopJobs() {
   const dispatch = useDispatch();
@@ -33,13 +35,13 @@ function TopJobs() {
             </div>
           </div>
           <div className="ls_container" style={{ padding: "4rem" }}>
-            <a
-              href="/jobs?title=&city=&venue=Mobile&sia-licence=&salary-min=&salary-max=&lat=&lng="
+            <Link
+              to="/jobs?title=&city=&venue=Mobile&sia-licence=&salary-min=&salary-max=&lat=&lng="
               className="ls_button"
               id="explore-btn"
             >
               Explore More Jobs
-            </a>
+            </Link>
           </div>
         </div>
       </section>

@@ -9,6 +9,8 @@ import PlacesAutocomplete, {
 import { useSelector, useDispatch } from "react-redux";
 import { addLocation } from "../../../Redux/LocationAndJobTypeReducer";
 import { setGeoLocation } from "../../../Redux/LocationAndJobTypeReducer";
+import removeIcon from '../../../Assets/Icons/c-remove.svg'
+
 
 const ReactPlace = () => {
   const dispatch = useDispatch();
@@ -44,7 +46,10 @@ const ReactPlace = () => {
         }}
       >
         {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
-          <div>
+          <div style={{position:'relative' , width:'92%'}}>
+                  {Address &&
+<img src={removeIcon} alt='remove' id='rmv-ico' onClick={()=>setAddress('')} />
+   }
             <input
               style={{ outline: "none", border: "none" }}
               {...getInputProps({
@@ -63,7 +68,7 @@ const ReactPlace = () => {
                     key={suggestion.index}
                     {...getSuggestionItemProps(suggestion, {})}
                   >
-                    <span>{suggestion.description}</span>
+                    <span style={{fontWeight:'lighter' , fontSize:'0.8rem'}}>{suggestion.description}</span>
                   </div>
                 );
               })}

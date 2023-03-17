@@ -141,6 +141,12 @@ right: 2rem
   right: 2rem;
   color: white;
   text-align: center;
+  cursor: pointer;
+}
+
+.dropdown:hover{
+background-color: #4c4c4c;
+
 }
 
 .dropdown::before{

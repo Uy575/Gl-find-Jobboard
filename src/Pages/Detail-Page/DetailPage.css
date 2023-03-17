@@ -101,6 +101,29 @@ margin-bottom: 1rem;
 }
 
 
+.accordion{
+  font-weight: 700;
+  font-size: 22px;
+  font-family: "Roboto",sans-serif;
+  }
+  
+  .accordion-item{
+  border: none !important;
+  }
+
+  h2,h3,h4{
+  font-family: "Roboto",sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  }
+
+span{
+font-size: 14px;
+font-weight: 700;
+margin-left: 4px;
+
+}
+
 @media (max-width:767.98px){
 .detail-container{
 flex-direction: column;
@@ -137,3 +160,4 @@ width: 90%;
 margin:  0 auto;
 }
 }
+

@@ -22,8 +22,8 @@
 
 
 .card {
-  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
-  border-radius: 0.4rem;
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,.13);
+  border-radius: 6px;
   text-align: justify;
  
   
@@ -101,17 +101,14 @@ font-weight: lighter;
 }
 
 .ls_button {
-  padding: 1rem;
-  margin-top: 2rem;
+min-width: 226px;
+  font-size: 16px;
+  padding: 11px 20px 9px;
+  letter-spacing: -.27px;
   background-color: rgb(24, 24, 24);
-  color: white;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-  border-radius: 0.4rem;
-  cursor: pointer;
-  width: 15rem;
-  font-size: 1.1rem;
-  text-decoration: none;
+  display: inline-block;
+font-weight: 700;
+border-radius: 6px;
 }
 .ls_button:hover{
   text-decoration: none;
@@ -119,6 +116,9 @@ font-weight: lighter;
 }
 
 
+.swiper-slide{
+
+}
 /* 
 @media (max-width:1198.98px) {
  .card-li1{

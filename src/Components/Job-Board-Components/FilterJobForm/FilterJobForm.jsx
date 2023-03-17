@@ -1,18 +1,17 @@
+import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { useSearchParams } from "react-router-dom";
+import { useNavigate } from "react-router";
 import Retail from "../../../Assets/Icons/icon-retail.svg";
 import Corporate from "../../../Assets/Icons/icon-corporate.svg";
 import barClub from "../../../Assets/Icons/icon-barclub.svg";
 import Event from "../../../Assets/Icons/icon-event.svg";
-import { setMobile } from "../../../Redux/LocationAndJobTypeReducer";
-import { useSearchParams } from "react-router-dom";
-import LocationAndJobTypeReducer from "../../../Redux/LocationAndJobTypeReducer";
 import MobileIco from "../../../Assets/Icons/icon-mobile.svg";
-import { useDispatch, useSelector } from "react-redux";
-import { useNavigate } from "react-router";
-import RcRange from "../Rc-range-slider/RcRange";
+import { setMobile } from "../../../Redux/LocationAndJobTypeReducer";
+import LocationAndJobTypeReducer from "../../../Redux/LocationAndJobTypeReducer";
 import RangeSlider from "../../Custom-Components/Range Slider/RangeSlider";
-import axios from "axios";
-
+import RcRange from "../Rc-range-slider/RcRange";
 import {
   setJobFilter,
   setSearchStatus,
@@ -22,7 +21,7 @@ import "./FilterJobForm.css";
 function FilterJobForm() {
   const POST = `https://staging.get-licensed.co.uk/guardpass/api/public/search/jobs`;
 
-  const [milesRange, setMilesRange] = useState(1);
+  // const [milesRange, setMilesRange] = useState(1);
   const [retails, setRetails] = useState("");
   const [corporate, setCorporates] = useState("");
   const [bar, setBars] = useState("");
@@ -48,16 +47,14 @@ function FilterJobForm() {
   let venue_type = [retails, corporate, bar, events, mobiles];
   let min = Number(salary.min);
   let max = Number(salary.max);
-  let dis = 30;
 
   let checkedRetail = venue === "Retail" ? true : false;
-  let checkedCorporate = venue === "Coporate" ? true : false;
+  let checkedCorporate = venue === "Corporate" ? true : false;
   let checkedBar = venue === "Bar/Clubs" ? true : false;
   let checkedEvent = venue === "Event" ? true : false;
   let checkedMobile = venue === "Mobile" ? true : false;
 
-  console.log();
-  console.log(min, max);
+  
 
   const resettingForm = (e) => {
     e.preventDefault();
@@ -74,11 +71,12 @@ function FilterJobForm() {
     navigate(
       `/jobs?title=${title}&city=${city}&venue=${venue_type}&sia-licence=&distance=${miles}&salary-min=${min}&salary-max=${max}&lat=${lat}&lng=${lng}`
     );
+    console.log(venue_type)
     const request = await axios.post(POST, {
       title: `${title}`,
       location: `${city}`,
       distance: distance,
-      salary_range: [smin, smax],
+      // salary_range: [min, max],
       venue_type: venue_type,
       latitude: lat,
       langitude: lng,

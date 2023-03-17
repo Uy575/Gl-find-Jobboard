@@ -1,4 +1,6 @@
 import React from "react";
+import { NavLink } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import cardIcon1 from "../../../Assets/Logo/event-security.webp";
 import "./latest_sec.css";
 
@@ -33,7 +35,7 @@ const LatestSecurity = ({topProduct}) => {
             {/* card li 3 */}
 
             <div className="card-li3">
-              <a href={`/jobs/detail/${topProduct.id}`}>Read more</a>
+              <Link to={`/jobs/detail/${topProduct.id}`}>Read more</Link>
             </div>
           </div>
      
