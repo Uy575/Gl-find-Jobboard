@@ -58,6 +58,8 @@
     border-right: 1px solid lightgray;
     margin: 0.5rem 0 0.5rem 2rem;
     padding: 0.5rem 0rem 0.5rem 0rem;
+    position: relative;
+
 }
 
 
