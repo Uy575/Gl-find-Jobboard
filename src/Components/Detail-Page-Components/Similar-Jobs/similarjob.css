@@ -7,7 +7,7 @@
   justify-content: space-between;
   padding-top: 1rem;
   align-items: center;
-  padding-bottom: 1rem;
+  margin-top: 1rem;
 }
 
 a{
@@ -21,7 +21,7 @@ font-weight: 700;
 .sj-text > h4 {
   line-height: normal;
   letter-spacing: -0.27px;
-  font-size: 16px;
+  font-size: 22px;
   font-family: "Roboto",sans-serif;
   font-weight: 700;
 }
@@ -29,14 +29,10 @@ font-weight: 700;
   color: green;
   text-decoration: underline;
 }
-.sj-card {
-  /* padding: 29px 40px; */
-  margin-top: 1rem;
-  margin-bottom: 1.3rem;
-  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
-  cursor: pointer;
-
+.sj-container{
+margin: 0;
 }
+
 .sj-location {
   display: flex;
   gap: 1rem;
@@ -45,7 +41,7 @@ font-weight: 700;
 .sj-location > .sj-toward {
   position: absolute;
   right: 0;
-  bottom: 2rem;
+  bottom: 3rem;
 }
 
 .sj-loc-text > h4{

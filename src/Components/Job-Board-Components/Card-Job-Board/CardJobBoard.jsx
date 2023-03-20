@@ -66,6 +66,7 @@ const CardJobBoard = ({
             <CopyToClipboard
               text={copyText}
               onCopy={() => {
+                setShowShare(!showShare)
                 toast.success("Copied");
               }}
             >
