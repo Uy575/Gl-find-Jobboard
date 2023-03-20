@@ -3,17 +3,17 @@ import remove from "../../../Assets/Detail-Page-Assets/Icons/icon-remove.svg";
 import thunder from "../../../Assets/Job-Board-Assets/Icons/thunder-icon.svg";
 import orgLogo from "../../../Assets/Job-Board-Assets/Logos/gent-security.webp";
 import retailImg from "../../../Assets/Icons/icon-retail.svg";
-import {CopyToClipboard} from 'react-copy-to-clipboard';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { CopyToClipboard } from "react-copy-to-clipboard";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import { useNavigate } from "react-router-dom";
-import retailIcon from '../../../Assets/Icons/icon-retail.svg'
-import mobileIcon from '../../../Assets/Icons/icon-mobile.svg'
-import eventIcon from '../../../Assets/Icons/icon-event.svg'
-import corporateIcon from '../../../Assets/Icons/icon-corporate.svg'
-import barIcon from '../../../Assets/Icons/icon-barclub.svg'
+import retailIcon from "../../../Assets/Icons/icon-retail.svg";
+import mobileIcon from "../../../Assets/Icons/icon-mobile.svg";
+import eventIcon from "../../../Assets/Icons/icon-event.svg";
+import corporateIcon from "../../../Assets/Icons/icon-corporate.svg";
+import barIcon from "../../../Assets/Icons/icon-barclub.svg";
 import ReactShare from "../../Custom-Components/React Share/ReactShare";
-import MsgTostify from '../../Custom-Components/Tostify/MsgTostify'
+import MsgTostify from "../../Custom-Components/Tostify/MsgTostify";
 import "./cardjobboard.css";
 
 const CardJobBoard = ({
@@ -25,13 +25,15 @@ const CardJobBoard = ({
   only,
   jobdetail,
 }) => {
-  const [copyText , setCopyText] = useState('https://staging.get-licensed.co.uk/jobs/detail/2940?title=CCTV%203454&city=London,%20UK&venue=Corporate&company_name=PARAGON%20HART%20LTD&sia-license=')
+  const [copyText, setCopyText] = useState(
+    "https://staging.get-licensed.co.uk/jobs/detail/2940?title=CCTV%203454&city=London,%20UK&venue=Corporate&company_name=PARAGON%20HART%20LTD&sia-license="
+  );
   let [showForm, setShowForm] = useState(false);
-  let [showShare , setShowShare] = useState(false)
+  let [showShare, setShowShare] = useState(false);
   const navigate = useNavigate();
   const share = `https://www.get-licensed.co.uk/jobs/_next/image?url=%2Fjobs%2Fimages%2Ficon-share.svg&w=96&q=75`;
   return (
-    <section>
+    <>
       <div className={classname}>
         <div className="jb-card">
           <div className="jb-row">
@@ -53,17 +55,25 @@ const CardJobBoard = ({
             </div>
 
             <div className="share">
-              <img src={share} alt="as"  onClick={()=>setShowShare(!showShare)} />          
-        </div>
-              </div>
-              {showShare ? 
-                  <CopyToClipboard text={copyText}  onCopy={()=>{
-                    toast.success("Copied");
-                    
-                  }}>
-              <span className="dropdown">🔗 Copy Link  </span>
-          </CopyToClipboard>
-              :''}    
+              <img
+                src={share}
+                alt="as"
+                onClick={() => setShowShare(!showShare)}
+              />
+            </div>
+          </div>
+          {showShare ? (
+            <CopyToClipboard
+              text={copyText}
+              onCopy={() => {
+                toast.success("Copied");
+              }}
+            >
+              <span className="dropdown">🔗 Copy Link </span>
+            </CopyToClipboard>
+          ) : (
+            ""
+          )}
 
           {/* org text  */}
           <div className="org-col">
@@ -87,7 +97,7 @@ const CardJobBoard = ({
                   }
                   style={{ height: "3rem" }}
                   alt=""
-/>
+                />
 
                 <div className="org-text">
                   <h5 id="org">
@@ -116,7 +126,7 @@ const CardJobBoard = ({
                         setShowForm(false);
                       }}
                     >
-                      <img src={remove} alt="" />
+                      <img src={remove} alt="" style={{paddingBottom:'1rem'}}/>
                       <p> cancel</p>
                     </div>
                   </>
@@ -149,6 +159,7 @@ const CardJobBoard = ({
             {showForm && <div className="det-form">{detailForm}</div>}
           </div>
         </div>
+
         <hr className="divider" />
         <div className="card-footer">
           {/* right-split */}
@@ -160,26 +171,58 @@ const CardJobBoard = ({
               <strong>
                 &#163;
                 {only === "jobpage"
-                  ? jobdata.salary_type === "Fixed Rate"? jobdata.salary : jobdata.salary_max
+                  ? jobdata.salary_type === "Fixed Rate"
+                  ? jobdata.salary
+                  : jobdata.salary_max
                   : only === "detailpage"
-                  ? jobdetail.salary_type === "Fixed Rate"? jobdetail.salary : jobdetail.salary_max
+                  ? jobdetail.salary_type === "Fixed Rate"
+                  ? jobdetail.salary
+                  : jobdetail.salary_max
                   : 11}
               </strong>
               <span>/Per Hour</span>
             </span>{" "}
+                  <hr className="divider" />
           </div>
-
           <div className="card-ft-left">
             <span>Venue type</span>
-            {only === "jobpage"
-            ?
-            <img src={jobdata.venue_type === "Retail" ? retailIcon : jobdata.venue_type === "Corporate" ? corporateIcon :jobdata.venue_type==="Event" ? eventIcon : jobdata.venue_type === "Bar/Club" ? barIcon:''} alt="" className="jb-retailimg" />
-         : only === "detailpage" ?
-          <img src={jobdetail.venue_type === "Retail" ? retailIcon : jobdetail.venue_type === "Corporate" ? corporateIcon :jobdetail.venue_type==="Event" ? eventIcon : jobdetail.venue_type === "Bar/Club" ? barIcon:''} alt="" className="jb-retailimg" />
-         :''
+            {only === "jobpage" ? (
+              <img
+                src={
+                  jobdata.venue_type === "Retail"
+                    ? retailIcon
+                    : jobdata.venue_type === "Corporate"
+                    ? corporateIcon
+                    : jobdata.venue_type === "Event"
+                    ? eventIcon
+                    : jobdata.venue_type === "Bar/Club"
+                    ? barIcon
+                    : ""
                 }
+                alt=""
+                className="jb-retailimg"
+              />
+            ) : only === "detailpage" ? (
+              <img
+                src={
+                  jobdetail.venue_type === "Retail"
+                    ? retailIcon
+                    : jobdetail.venue_type === "Corporate"
+                    ? corporateIcon
+                    : jobdetail.venue_type === "Event"
+                    ? eventIcon
+                    : jobdetail.venue_type === "Bar/Club"
+                    ? barIcon
+                    : ""
+                }
+                alt=""
+                className="jb-retailimg"
+              />
+            ) : (
+              ""
+            )}
 
-         <span>
+            <span>
               {only === "jobpage"
                 ? jobdata.venue_type
                 : only === "detailpage"
@@ -189,9 +232,8 @@ const CardJobBoard = ({
           </div>
         </div>
       </div>
-      <ToastContainer/>
-
-    </section>
+      <ToastContainer />
+    </>
   );
 };
 

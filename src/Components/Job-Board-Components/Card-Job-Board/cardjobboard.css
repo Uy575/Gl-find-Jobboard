@@ -245,7 +245,10 @@ width: 100%;
 width: 100%;
 }
 
-
+.cancel{
+justify-content: center;
+padding-top: 2rem;
+}
 }
 @media (max-width: 575px) {
  
