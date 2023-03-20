@@ -2,20 +2,29 @@
 
     color: black;
     /* background-color: bisque; */
+    font-size: 14px;
+    padding: 0 0 10px 20px;
 }
+
 
 
 
 .description-div{
-padding: 2rem;
+padding: 1rem;
 }
 
-.description-div >div p{
-
-margin: 2rem 0;
+.description-div >div p > strong{
+font-family: "Roboto",sans-serif;
+font-size: 16px;
 }
 
-
+/* .description-div >div p:not(strong){
+    font-family: "Roboto",sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.63;
+    letter-spacing: -.1px;
+} */
 .description-div> div:nth-child(2n+1){
 
     font-size: 1rem;
@@ -25,7 +34,6 @@ margin: 2rem 0;
 
 
 .description-div > div > ul >*{
-margin: 2rem 0;
 font-family: "Roboto",sans-serif;
 font-size: 1rem;
 line-height: 1;
@@ -35,7 +43,18 @@ line-height: 1;
 
 .description-div > div > ul {
 
-list-style:url();
-padding:  0 2rem;
-list-style-type: circle;
+list-style: none;
 }
+
+.description-div > div > ul > li::before{
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #3bd509;
+   position:relative;
+   top: 13px;
+   right: 18px;
+}
+

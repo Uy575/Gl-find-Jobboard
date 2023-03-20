@@ -118,8 +118,9 @@ font-weight: 700;
   margin-top: 30px;
 }
 .divider {
-  color: rgb(235, 232, 232);
+color: #cfcfcf!important;
   opacity: 0.5;
+margin: 0 16px;
 }
 
 .share{

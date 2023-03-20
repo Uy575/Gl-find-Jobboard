@@ -55,7 +55,7 @@ a {
   color: white;
 }
 
-ul > li:first-child {
+.ft-ul> li:first-child {
   color: white;
   font-weight: 700;
 }

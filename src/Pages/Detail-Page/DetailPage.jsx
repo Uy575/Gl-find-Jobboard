@@ -54,23 +54,26 @@ function DetailPage() {
           />
           
           <div className="detailContent">
+            <hr className="divider" />     
             <AccordionComp />
+            <hr className="divider" />     
+
           </div>
           <div className="detailContent">
-            <hr />
+            <hr className="divider" />
             <ShortDetail
               heading="Requirement"
               Image={requirementIcon}
               title="Door Supervisor Licence required"
             />
-            <hr />
+            <hr className="divider"/>
             <ShortDetail
               heading="Job type"
               Image={jobTypeIcon}
               title="Part time employment"
               emptype={jobDetail.employment_type}
             />
-            <hr />
+            <hr className="divider" />
 
             <ShortDetail
               heading="Benefits"
@@ -78,7 +81,7 @@ function DetailPage() {
               title="Store discounts"
               benefits={jobDetail.job_benefits}
             />
-            <hr />
+            <hr className="divider" />
             <DetailDescription description={jobDetail.description} />
           </div>
         </div>

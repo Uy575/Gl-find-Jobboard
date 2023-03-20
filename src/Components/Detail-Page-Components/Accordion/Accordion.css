@@ -7,3 +7,7 @@
 
     filter: grayscale(1);
 }
+
+.accordion-button{
+padding: 40px 40px 19px;
+}
