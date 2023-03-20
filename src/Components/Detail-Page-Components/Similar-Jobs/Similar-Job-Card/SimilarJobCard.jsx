@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { JobDetail, SimilarJob } from "../../../../Redux/JobReducer";
 import coporate from "../../../../Assets/Icons/icon-corporate.svg";
@@ -26,7 +26,7 @@ const SimilarJobCard = ({ similar, id }) => {
 
   return (
     <section className="sj-container">
-      <NavLink to={`/jobs/detail/${similar.id}`}>
+      <Link to={`/jobs/detail/${similar.id}`} style={{textDecoration:'none'}}>
         <div className="sj-card">
           <h3>Test</h3>
 
@@ -45,7 +45,7 @@ const SimilarJobCard = ({ similar, id }) => {
             </span>
           </div>
         </div>
-      </NavLink>
+      </Link>
     </section>
   );
 };

@@ -1,7 +1,6 @@
-body{
-font-family: "Roboto",sans-serif;
+body {
+  font-family: "Roboto", sans-serif;
 }
-
 
 .detail-container {
   display: flex;
@@ -14,15 +13,13 @@ font-family: "Roboto",sans-serif;
   border-radius: 6px;
 
   width: 60rem;
-  margin-left: .5rem;
+  margin-left: 0.5rem;
 }
 .detailContent {
   margin-top: 1rem;
 
-
   margin-top: -0.09rem;
 }
-
 
 /* detail card */
 .det-card {
@@ -37,45 +34,54 @@ font-family: "Roboto",sans-serif;
 }
 
 .dt-aside-top-section {
-  background: #3bd55a url(/src/Assets/Detail-Page-Assets/Images/mobile-bg.webp)
-    no-repeat;
+  background: #3bd55a url(/src/Assets/Detail-Page-Assets/Images/mobile-bg.webp);
+  background-repeat: no-repeat;
   border-radius: 6px;
-  background-position: 100% 100%;
   background-size: cover;
-  padding: 40px 32px 83px;
+  padding: 20px 25px 20px 25px;
+  position: relative;
 }
 
 #dt-aside-top-btn {
-  border-radius: 4px;
-  width: 5rem;
   background-color: #58db73;
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-  border: none;
+  width: 120px;
+  height: 47px;
+  border-radius: 0 4px 4px 0;
   cursor: pointer;
+  background-color: #3bd55a;
+  border-color: #3bd55a;
+  font-size: 0.85rem !important;
+  font-weight: 700;
+}
+#dt-aside-top-btn:hover {
+  color: #000;
+  background-color: #58db73;
+  border-color: #4fd96b;
 }
 
+#dt-aside-top-btn:focus:active {
+  filter: brightness(100%);
+}
 .dt-aside-top-text > p {
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 1.63;
-  letter-spacing: -0.1px;
-  padding-top: 1rem;
-  text-align: left;
-  padding-bottom: 1rem;
-  width: 17rem;
+  font-size: 19.2px;
+  font-family: "Roboto", sans-serif;
+  padding: 8px 0 0;
 }
 .dt-aside-top-text > h4 {
   font-family: "Oswald", sans-serif;
   line-height: normal;
+  font-weight: 700;
   letter-spacing: -0.27px;
-  font-size: 31px;
+  font-size: 28px;
+  letter-spacing: -0.42px;
 }
 .dt-form-sec {
   display: flex;
-  background-color: white;
-  padding: 0.5rem;
-  width: 16rem;
+  background-color: #fff;
+  border-radius: 4px 0 0 4px;
+  border: 1px solid #5c5c5c;
+  border-right-width: 0;
+  align-items: center;
 }
 .dt-form-sec > input {
   width: 100%;
@@ -86,76 +92,139 @@ font-family: "Roboto",sans-serif;
 }
 
 .dt-aside-download-h {
-  font-size: 1.5rem;
-  padding-top: 2rem;
-  margin-top: 1rem;
-  margin-bottom: 1.5rem;
-  font-weight: 500;
+  font-size: 22px;
+  font-family: "Roboto", sans-serif;
+  margin: 48px 0 8px;
+  padding: 16px 0 0;
+  font-weight: 700;
   line-height: 1.2;
 }
 
-.header-post-job-for-detail{
+.header-post-job-for-detail {
   display: none;
 }
 
-
-.accordion{
+.accordion {
   font-weight: 700;
   font-size: 22px;
-  font-family: "Roboto",sans-serif;
-  }
-  
-  .accordion-item{
+  font-family: "Roboto", sans-serif;
+}
+
+.accordion-item {
   border: none !important;
-  }
+}
 
-  h2,h3,h4{
-  font-family: "Roboto",sans-serif;
+h2,
+h3,
+h4 {
+  font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-size: 22px;
-  }
-
-span{
-font-size: 14px;
-font-weight: 700;
-margin-left: 4px;
-
 }
 
-@media (max-width:767.98px){
-.detail-container{
-flex-direction: column;
-padding: .5rem;
+span {
+  font-size: 14px;
+  font-weight: 700;
+  margin-left: 4px;
 }
-.detailCard{
-width: 90%;
-margin:  0 auto;
-}
-.det-card{
-/* width: 20rem; */
-}
-.detail-aside{
-  width: 91%;
-margin:  0 auto;
-}
-
-.dt-aside-top-text > h4{
-font-family: "Roboto",sans-serif;
-font-size: 20px;
-}
-.dt-aside-top-text > p{
+.seprator{
 display: none;
 }
 
-.det-card > .jb-card > .org-col{
-text-align: center;
-}
+@media (max-width: 1399.98px) {
 }
 
-@media (max-width:575.98px){
-.detail-aside {
-width: 90%;
-margin:  0 auto;
-}
+@media (max-width: 1199.98px) {
 }
 
+@media (max-width: 991.98px) {
+}
+
+@media (max-width: 767.98px) {
+}
+
+@media (max-width: 575.98px) {
+  .detail-container {
+    flex-direction: column;
+  }
+  .detailCard {
+    width: 100%;
+    border-radius: 0;
+    padding: 0;
+    margin: 0;
+  }
+  .org-col {
+    text-align: center;
+  }
+  .org-right {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+  }
+  .org-right > img {
+    margin: 0 0 1rem 0;
+  }
+  .dropdown {
+    top: 3.5rem;
+  }
+  .card-footer {
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+  }
+  .card-ft-right {
+    width: 100%;
+    flex-direction: row;
+    display: block;
+    text-align: left;
+  }
+
+  .card-ft-left {
+    text-align: left;
+    border: none;
+    display: block;
+    padding: 0.5rem 0;
+  }
+  .seprator{
+    display: block;
+  border: .5px solid;
+  width: 100%;
+  color: #cfcfcf;
+  }
+  .accordion {
+    font-size: 18px;
+  }
+  .div3 > h3,
+  .div1 > h3,
+  .div2 > h3 {
+    font-size: 18px;
+  }
+  .card-footer {
+    padding: 0;
+  }
+  .detail-aside {
+    width: 100%;
+  }
+  .dt-aside-top-section {
+    background-image: url(https://www.get-licensed.co.uk/jobs/images/cta-dowload-big@2x.webp);
+    padding: 30px 20px 10px;
+    background-size: contain;
+    background-position: 100%, 100%;
+  }
+  .dt-aside-top-text > p {
+    display: none;
+  }
+  .dt-aside-top-text > h4 {
+    font-size: 24px;
+  }
+  .dt-aside-download-h {
+    font-size: 18px;
+  }
+.card-ft-right > sup{
+margin-left: 1rem;
+}
+.card-ft-left :nth-child(1){
+margin-left: 1rem;
+}
+}
