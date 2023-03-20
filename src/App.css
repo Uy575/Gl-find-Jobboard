@@ -43,6 +43,9 @@ h1{
     font-family: Oswald,sans-serif;
 }
 
+button{
+    border: none;
+}
 
 
 @media (max-width: 575.98px){
