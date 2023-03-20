@@ -29,12 +29,14 @@ function SalaryBreakdownTable() {
 
     
   return (
+    <>
     <div>
            <div className='salaryRate'>
             <span className='hourlyRate'>Hourly Rate £{hourlyRate}</span>
             <span className='weeklyHours'>Weekly hrs {weeklyHours}</span>
            </div>
            <hr className='tableHr'/>
+           <div style={{ overflowX :"auto"}}>
         <table>
             <thead>
 
@@ -73,7 +75,14 @@ function SalaryBreakdownTable() {
             </tr>
             </tbody>
         </table>
+        </div>
     </div>
+        <div style={{paddingTop:'1.5rem'}}>
+            <p>
+           <strong> Note: </strong> This gross wage breakdown is not accurate as it is estimated from the hourly payout indicated by the employer. Actual figures may vary.
+            </p>
+        </div>
+       </>
   )
 }
 

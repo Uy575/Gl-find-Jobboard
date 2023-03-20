@@ -3,27 +3,35 @@
     justify-content: space-between;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     margin-top: 1rem;
-    padding: 0rem 2rem;
+    padding: 0rem 1rem;
     border-radius: 8px;
 }
 
 .getLicensedContent{
     align-self: center;
-    padding-left: 1rem;
+    padding: 0rem 1rem;
+    font-family: "Roboto",sans-serif;
     
 }
 .getLicensedContent > p{
-    width: 20rem;
-    font-size: 1.2rem;
+    width: 18rem;
+    font-size: 1rem;
+    line-height: 1.7rem;
 }
 .getLicensedButton{
-    margin-top: 1rem;
-    /* width: 8rem; */
-    height: 3rem;
+
+    /* height: 3rem; */
     background-color: #242429;
-    padding: 8px 2px 20px 6px;
+    padding: 8px 20px 6px;
     min-width: 157px;
     border-radius: 4px;
+    font-weight: bold;
+
+}
+
+.getLicensedButton > a{
+    font-size: 0.95rem;
+    letter-spacing: 0.1rem;
 }
 .getLicensedAnchor{
     /* background-color: black; */

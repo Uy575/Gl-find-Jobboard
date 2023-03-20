@@ -8,7 +8,8 @@ import "./detailform.css";
 import axios from "axios";
 import GetSiaLicense from "../Get-Sia-License/GetSiaLicense";
 import { applyForJobSchema } from "../../../Schemas/ApplyForJobFormYup";
-
+import emailIcon  from "../../../Assets/Detail-Page-Assets/Icons/EmailIcon.svg";
+import ukFlag  from "../../../Assets/Job-Board-Assets/Images/uk-flag.svg";
 const POST_API = `https://staging.get-licensed.co.uk/guardpass/api/public/sms/job/link`;
 const INITIAL_STATE = {
   firstName: "",
@@ -67,6 +68,7 @@ const DetailForm = () => {
   return (
     <section className="detail-form-container">
       <div className="detailform-input">
+        <div>
         <Form.Control
           type="text"
           placeholder="First Name"
@@ -74,10 +76,15 @@ const DetailForm = () => {
           value={values.firstName}
           onBlur={handleBlur}
           onChange={handleChange}
+
         />
         {errors.firstName && touched.firstName ? (
-          <p style={{ color: "red" }}> {errors.firstName} </p>
-        ) : null}
+          <p style={{ color: "red",marginBottom:'0rem' }}> {errors.firstName} </p>
+          ) : null}
+          </div>
+
+          <div>
+
         <Form.Control
           type="text"
           placeholder="Last Name"
@@ -85,10 +92,10 @@ const DetailForm = () => {
           value={values.lastName}
           onBlur={handleBlur}
           onChange={handleChange}
-        />
-        {errors.lastName && touched.lastName ? (
-          <p style={{ color: "red" }}> {errors.lastName} </p>
-        ) : null}
+          />
+          </div>
+          <div style={{position:'relative'}}>
+          
         <Form.Control
           type="text"
           placeholder="Email Address"
@@ -96,26 +103,36 @@ const DetailForm = () => {
           value={values.email}
           onBlur={handleBlur}
           onChange={handleChange}
-        />
+          />
+         <img style={{position:'absolute',right:'1rem',top:'1rem'}} src={emailIcon} alt="Email icon" />
         {errors.email && touched.email ? (
           <p style={{ color: "red" }}> {errors.email} </p>
         ) : null}
+          </div>
+
+
+          <div style={{position:'relative'}}>
+
         <Form.Control
+           style={{paddingLeft:'4rem'}}
           type="number"
           placeholder="Phone Number"
           name="number"
           value={values.number}
           onBlur={handleBlur}
           onChange={handleChange}
-        />
+          />
+          <span style={{backgroundColor:'black',border:'0.1px solid black',position:'absolute',left:'3rem',top:'0rem',height:'3rem',opacity:'0.7'}}></span>
+            <img style={{position:'absolute',left:'1rem',top:'1rem'}} src={ukFlag} alt="Flag" />
         {errors.number && touched.number ? (
           <p style={{ color: "red" }}> {errors.number} </p>
-        ) : null}
+          ) : null}
+          </div>
       </div>
 
       <div className="det-form-buttons">
         <div className="det-form-radios">
-          <p style={{paddingLeft:'0.5rem'}}>Do you have an sia license?</p>
+          <p>Do you have an sia license?</p>
           <input
             type="radio"
             name="check"

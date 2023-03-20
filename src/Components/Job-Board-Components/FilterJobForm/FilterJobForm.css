@@ -117,8 +117,8 @@ input[type="checkbox"] {
     padding: 1rem 1rem;
   }
   .backopt {
-    left: 4rem;
-    top: 0;
+
+    display: none;
   }
   .buttonDiv > * {
     width: 50%;

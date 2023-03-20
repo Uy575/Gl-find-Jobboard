@@ -3,14 +3,14 @@
 }
 
 .hourlyRate {
-    font-size: 1.2rem;
+    font-size: 1rem;
     border-right: 1px solid black;
     padding-right: 3rem;
     
 }
 
 .weeklyHours{
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin-left: 3rem;
 }
 table {
@@ -31,4 +31,17 @@ th{
 .tableHr{
     border: 1/2px solid #ccc ;
     margin-top: 1rem;
+}
+
+
+@media (max-width:414px) {
+    .hourlyRate{
+        padding-right: 1rem;
+    }
+    .weeklyHours{
+        margin-left: 1rem;
+    }
+    table{
+        width: 21rem;
+    }
 }

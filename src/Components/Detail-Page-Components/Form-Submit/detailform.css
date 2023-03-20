@@ -4,12 +4,32 @@
   gap: 1rem;
   margin: 0 auto;
   padding: 2rem 0;
+  
 }
 
-.detailform-input > input {
-  height: 4rem;
-  width: 26rem;
-  padding: 1rem;
+.detailform-input > div {
+  flex: 0 0 calc(50% - 0.5rem);
+  /* flex: 0 0 100%; */
+  border-radius: 4px;
+}
+
+.form-control {
+  /* border-radius: 0px; */
+  border: 1px solid black;
+  height: 3rem;
+  padding: 10px 15px;
+  font-size: 0.8rem;
+}
+
+.form-control[type="number"]::-webkit-outer-spin-button,
+.form-control[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.form-control:focus{
+ box-shadow: 0 0 0 2px rgba(59,213,90,.55);;
+  border: none;
 }
 
 .det-form-buttons {
@@ -39,6 +59,7 @@
 .det-form-radios > p {
   font-size: 16.4px;
   font-family: "Roboto", sans-serif;
+  margin-bottom: 0rem;
 }
 
 .det-formbutton-disabled > button{
@@ -73,6 +94,30 @@ width: 22rem;
     .detailform-input > input{
     width: 13rem;
     }
+  
     
     }
-    
+  
+  @media (max-width:767.98px) {
+    .detailform-input > div{
+      flex: 0 0 100%;
+    }
+    .detailform-input{
+     padding-top: 0rem; 
+    }
+
+    .det-form-buttons{
+      flex-direction: column;
+    }
+    .det-formbutton-submit > button{
+      width: 100%;
+      margin-top: 1rem;
+    }
+  }
+
+  /* @media (max-width:575.98px) {
+
+    .detailform-input > div{
+      flex: 0 0 100%;
+    }
+  } */
