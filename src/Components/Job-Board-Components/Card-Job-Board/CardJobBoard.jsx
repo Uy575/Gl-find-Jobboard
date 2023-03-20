@@ -127,7 +127,7 @@ const CardJobBoard = ({
                       }}
                     >
                       <img src={remove} alt="" style={{paddingBottom:'1rem'}}/>
-                      <p> cancel</p>
+                      <p><strong> Cancel </strong></p>
                     </div>
                   </>
                 ) : only === "detailpage" ? (
