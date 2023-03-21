@@ -1,5 +1,4 @@
 .jb-aside {
-  width: 19rem;
   margin-right: 3rem;
   float: right;
   margin-top: 3rem;
@@ -12,7 +11,7 @@
   background-size: 180px;
   border-radius: 6px;
   background-position: 100% 100%;
-  padding: 26px 14px;
+  padding: 26px 9px;
 
 }
 
@@ -21,6 +20,7 @@
   line-height: normal;
   letter-spacing: -0.27px;
   font-size: 22px;
+  font-weight: 700;
 }
 
 .jb-aside-top-text > p {
@@ -28,10 +28,13 @@
   font-size: 16px;
   line-height: 1.63;
   letter-spacing: -0.1px;
-  padding-top: 1rem;
+  padding-top: .5rem;
   padding-bottom: 1rem;
 }
 
+.jb-aside-top-text > p :nth-child(1),.jb-aside-top-text > p :nth-child(2){
+display: none;
+}
 .jb-aside-top-end {
   margin-top: 1rem;
 }
@@ -77,10 +80,15 @@
   margin-bottom: 0.5rem;
   font-weight: 500;
   line-height: 1.2;
+  font-weight: 700;
 }
 
 .google {
   margin-top: 2rem;
+}
+
+.google img , .apple img{
+width: 100px;
 }
 
 .jb-aside-bottom-section {
@@ -88,8 +96,7 @@
     no-repeat;
   background-size: 180px;
   background-position: 100% 0;
-  padding: 20px 15px 25px;
-  margin-top: 2rem;
+  padding: 20px 9px 25px;
   border-radius: 5px;
 }
 

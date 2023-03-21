@@ -26,7 +26,7 @@ const LatestSecurity = ({topProduct}) => {
             <div className="card-li2">
               <span className="card-li2-h">
                 <sup> Paid Fortnightly </sup>
-               {topProduct.salary_type  === 'Fixed Rate'? <span> &#163;{topProduct.salary}</span> : <span> &#163;{topProduct.salary_min}-&#163;{topProduct.salary_max}</span>
+               {topProduct.salary_type  === 'Fixed Rate'? <span> &#163; {topProduct.salary}</span> : <span> &#163;{Math.round(topProduct.salary_min)} - &#163;{Math.round(topProduct.salary_max)}</span>
                 }
                 <sub> /Per Hour</sub>
               </span>

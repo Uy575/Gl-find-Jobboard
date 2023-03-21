@@ -24,6 +24,9 @@ const CardJobBoard = ({
   jobdata,
   only,
   jobdetail,
+  cardfooter,
+  orgcol,
+  orgright
 }) => {
   const [copyText, setCopyText] = useState(
     "https://staging.get-licensed.co.uk/jobs/detail/2940?title=CCTV%203454&city=London,%20UK&venue=Corporate&company_name=PARAGON%20HART%20LTD&sia-license="
@@ -77,7 +80,7 @@ const CardJobBoard = ({
           )}
 
           {/* org text  */}
-          <div className="org-col">
+          <div className={orgcol}>
             <h4 id="post">
               {only === "jobpage"
                 ? jobdata.title
@@ -87,7 +90,7 @@ const CardJobBoard = ({
             </h4>
             <div className="org-row">
               {/* org-right-split */}
-              <div className="org-right">
+              <div className={orgright}>
                 <img
                   src={
                     only === "jobpage"
@@ -162,29 +165,30 @@ const CardJobBoard = ({
         </div>
 
         <hr className="divider" />
-        <div className="card-footer">
+        <div className={cardfooter}>
           {/* right-split */}
           <div className="card-ft-right">
-            <sup>
               <span>Paid Weekly</span>
-            </sup>
             <span>
-              <strong>
-                &#163;
+              <strong>                
                 {only === "jobpage"
                   ? jobdata.salary_type === "Fixed Rate"
                   ? jobdata.salary
-                  : jobdata.salary_max
+                  :<h6 className="salary">&#163;{Math.round(jobdata.salary_min)} - &#163;{Math.round(jobdata.salary_max)}</h6>
                   : only === "detailpage"
                   ? jobdetail.salary_type === "Fixed Rate"
                   ? jobdetail.salary
-                  : jobdetail.salary_max
+                  :   <>
+                <h6 className="salary">&#163;{Math.round(jobdetail.salary_min)} - &#163;{Math.round(jobdetail.salary_max)}</h6>
+                </>
                   : 11}
               </strong>
               <span>/Per Hour</span>
             </span>{" "}
-                  <hr className="divider" />
+                  {/* <hr className="divider" /> */}
           </div>
+          <hr className="seprator" />
+
           <div className="card-ft-left">
             <span>Venue type</span>
             {only === "jobpage" ? (

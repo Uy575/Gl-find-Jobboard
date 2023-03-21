@@ -1,8 +1,11 @@
 .jb-aside {
-  width: 22rem;
   margin-right: 3rem;
   float: right;
   margin-top: 3rem;
+  position: sticky !important;
+  top: 0;
+  height: fit-content;
+  z-index: 1;
 }
 
 .jb-aside-top-section {
@@ -12,9 +15,6 @@
   border-radius: 6px;
   background-position: 100% 100%;
   padding: 26px 14px;
-  position: sticky;
-  z-index: 1;
-  top: 0;
 
 }
 
@@ -39,8 +39,12 @@
 }
 .jb-form-sec {
   display: flex;
-  background-color: white;
-  padding: 0.5rem;
+    background-color: #fff;
+    border-radius: 4px 0 0 4px;
+    border: 1px solid #5c5c5c;
+    border-right-width: 0;
+    align-items: center;
+    padding: 0 .5rem;
 }
 
 .jb-form-sec > input {

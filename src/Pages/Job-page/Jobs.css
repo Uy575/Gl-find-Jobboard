@@ -8,97 +8,21 @@
 }
 
 
-@media only screen and (max-width: 1920px){
-  
-    .jobBoardPageMainContainer{
-        justify-content: center;
-    }
-   
 
-}
 
-/* @media only screen and (max-width: 991.98px){
-    .jobBoardPageMainContainer{
-        max-width: 720px;
-    }
 
-    .card-body{
-        width: 360px;
-    }
-     .jb-aside{
-        width: 18rem;
-     }
+@media(max-width:767.98px){
 
-     .filterForm{
-        margin-left: 20rem;
-     }
-   
-    .jobBoardFormCard{
-        margin-left: 1rem;
-        width: 50rem;
-    }
-   
-} */
-
-@media  (max-width: 320.98px) {
-.jobBoardPageMainContainer{
-flex-direction: column;
-justify-content: center;    
-    }
-}
-    @media (max-width:767.98px){
     .jobBoardPageMainContainer{
     flex-direction: column;
-    padding: 1rem;
-}
-    .filterForm{
-    margin: 0;
-    width: 100%;
-    margin:  0 auto;
-    }
-    .rc-slider, .rc-slider-rail, .rc-slider-track {
-width: 30rem;
     }
 }
 
 
+@media(max-width:575.98px){
 
-@media (max-width:575.98px){
     .jobBoardPageMainContainer{
     flex-direction: column;
-    padding: 1rem;
-}
-    .filterForm{
-    margin: 0;
-    width: 100%;
-    margin:  0 auto;
-    }
-    .rc-slider, .rc-slider-rail, .rc-slider-track {
-width: 15rem;
     }
 }
 
-@media (max-width:415px){
-
-    .filterForm{
-        margin-top: 3rem;
-    }
-}
-
-
-@media (max-width:360px){
-    .jobBoardPageMainContainer{
-    flex-direction: column;
-    padding: 1rem;
-}
-
-    .filterForm{
-    margin: 0;
-    width: 100%;
-    margin:  0 auto;
-    margin-top: 4rem;
-    }
-    .rc-slider, .rc-slider-rail, .rc-slider-track {
-width: 15rem;
-    }
-}

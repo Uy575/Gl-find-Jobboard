@@ -51,6 +51,9 @@ function DetailPage() {
             showform="true"
             only="detailpage"
             jobdetail={jobDetail}
+            cardfooter ="dt-card-footer"
+            orgright = "dt-org-right"
+            orgcol = 'dt-org-col'
           />
           
           <div className="detailContent">
@@ -79,7 +82,7 @@ function DetailPage() {
               heading="Benefits"
               Image={storeDiscountsIcon}
               title="Store discounts"
-              benefits={jobDetail.job_benefits}
+              benefits={jobDetail}
             />
             <hr className="divider" />
             <DetailDescription description={jobDetail.description} />

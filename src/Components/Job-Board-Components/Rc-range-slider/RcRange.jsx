@@ -40,7 +40,7 @@ useEffect(()=>{
 
         <div className="priceRangeDiv">
           
-          <span> &pound;{min} </span> <span> &pound;{max} </span>
+          <span> &pound; {min.toFixed(2)} </span> <span> &pound; {max.toFixed(2)} </span>
           
         </div>
       </div>

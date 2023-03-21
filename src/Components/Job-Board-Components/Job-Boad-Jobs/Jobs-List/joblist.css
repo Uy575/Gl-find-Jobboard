@@ -1,12 +1,24 @@
 .joblist{
-width: fit-content;
+/* width: fit-content; */
+position: relative;
 }
 
 
 
-@media (max-width:767.98px){
-.joblist{
-    margin: 0 auto;
-
-}
-}
+.jb-card-footer {
+    margin: 0 10px;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .jb-org-col {
+    margin: 1rem 0;
+    text-align: left;
+  }
+  .jb-org-right {
+    display: flex;
+    background-color: ;
+    /* justify-content: center; */
+    align-items: center;
+  }

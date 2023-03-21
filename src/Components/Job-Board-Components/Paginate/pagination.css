@@ -4,12 +4,31 @@ color: black;
 display: flex;
 justify-content: center;
 text-align: center;
+width: 100%;
+margin-top: 16px;
+}
+
+
+.pagination > * + *{
+padding: 0;
+margin: 0;
+}
+
+.pagination  li {
+  flex: 1 1;
+    border: 1px solid #dee2e6;
+    border-radius: 2px;
+height: auto;
 }
 .pagination >li >a {
-color: black;
-padding: .2rem  .6rem;
-border: 2px solid gray;
-color: #188333;
+color: rgb(76, 179, 76);
+padding: .5rem  .6rem;
+font-family: "Roboto",sans-serif;
+font-size: 14px;
+font-weight: bold;
+text-decoration: none;
+width: 100%;
+height: 100%;
 }
 
 .pagination >li{
@@ -20,6 +39,6 @@ display: flex;
 
 .active>.page-num{
 color: white;
-background-color: rgb(87, 208, 87);
+background-color: #188c33;
 }
 

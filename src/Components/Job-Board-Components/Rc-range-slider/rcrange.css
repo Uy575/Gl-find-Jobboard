@@ -1,6 +1,7 @@
 .rc-slider,.rc-slider-rail,.rc-slider-track{
 height: 1.5rem;
-width: 15rem;
+width: 17rem;
+padding: 0;
 }
 .rc-slider-handle{
     height: 32px;
@@ -8,7 +9,6 @@ width: 15rem;
     border: 4px solid white;
     background-color: #3bd55a;
     margin-top: -5px;
-    border: 2px solid #96dbfa;
     opacity: 1;
 }
 .rc-slider-disabled .rc-slider-handle {
@@ -38,19 +38,25 @@ width: 15rem;
 }
 .rc-rng{
 align-self: center;
-margin-bottom: 1rem;
 }
 
+.rc-slider , .rc-slider-step{
+height: 24px;
+}
 
-.rc-slider .rc-slider-track {
+.rc-slider-track {
     background-color: #242429;
-    height: 24px;
 }
 .priceRangeDiv{
 margin-top: 1rem;
 }
 
-.rc-slider-disabled .rc-slider-handle {
+.rc-slider-disabled .rc-slider-handle  {
+    border-color: #ccc;
+    box-shadow: none;
+    background-color: #fff;
+    cursor: not-allowed;
+    border: 4px solid #ccc;
 }
 .rc-slider-handle{
 margin-top: -6px;

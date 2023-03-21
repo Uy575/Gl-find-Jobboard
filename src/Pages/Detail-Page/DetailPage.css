@@ -5,7 +5,7 @@ body {
 .detail-container {
   display: flex;
   gap: 1rem;
-margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 .detailCard {
@@ -33,6 +33,10 @@ margin-bottom: 1rem;
   width: 38rem;
 }
 
+.dt-org-right{
+display: flex;
+align-items: center;
+}
 .dt-aside-top-section {
   background: #3bd55a url(/src/Assets/Detail-Page-Assets/Images/mobile-bg.webp);
   background-repeat: no-repeat;
@@ -122,15 +126,21 @@ h4 {
   font-size: 22px;
 }
 
-span {
-  font-size: 14px;
-  font-weight: 700;
-  margin-left: 4px;
-}
-.seprator{
-display: none;
+.seprator {
+  display: none;
 }
 
+.dt-card-footer {
+  margin: 0 10px;
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dt-org-col{
+margin: 1rem 0 0 0;
+}
 @media (max-width: 1399.98px) {
 }
 
@@ -153,14 +163,12 @@ display: none;
     padding: 0;
     margin: 0;
   }
-  .org-col {
+  .dt-org-col {
+    margin: 1rem 0;
     text-align: center;
   }
-  .org-right {
-    display: flex;
+  .dt-org-right {
     flex-direction: column;
-    /* justify-content: center; */
-    align-items: center;
   }
   .org-right > img {
     margin: 0 0 1rem 0;
@@ -168,7 +176,7 @@ display: none;
   .dropdown {
     top: 3.5rem;
   }
-  .card-footer {
+  .dt-card-footer {
     flex-direction: column;
     align-items: start;
     justify-content: start;
@@ -181,16 +189,18 @@ display: none;
   }
 
   .card-ft-left {
+    width: 100%;
     text-align: left;
     border: none;
     display: block;
     padding: 0.5rem 0;
   }
-  .seprator{
+  .seprator {
     display: block;
-  border: .5px solid;
-  width: 100%;
-  color: #cfcfcf;
+    border: 0.5px solid;
+    width: -webkit-fill-available;
+    color: #cfcfcf;
+    margin: 0 16px;
   }
   .accordion {
     font-size: 18px;
@@ -200,7 +210,7 @@ display: none;
   .div2 > h3 {
     font-size: 18px;
   }
-  .card-footer {
+  .dt-card-footer {
     padding: 0;
   }
   .detail-aside {
@@ -221,10 +231,21 @@ display: none;
   .dt-aside-download-h {
     font-size: 18px;
   }
-.card-ft-right > sup{
-margin-left: 1rem;
-}
-.card-ft-left :nth-child(1){
-margin-left: 1rem;
-}
+  .card-ft-right > sup {
+    margin-left: 1rem;
+  }
+  .share {
+    right: 1rem;
+  }
+  #post {
+    font-size: 19px;
+  }
+
+  .card-ft-left :nth-child(1),
+  .card-ft-right:nth-child(1) {
+    margin-left: 1.5rem;
+  }
+  .accordion-button {
+    padding: 39px 27px 19px !important;
+  }
 }

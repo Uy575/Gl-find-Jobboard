@@ -22,9 +22,10 @@ console.log(window.outerWidth)
   
   return (
     <>
-
-      <Header  headerLogo='jobBoardHeaderLogo' headerPostJob='jobBoardHeaderJobPost'  /> 
+      <Header    /> 
        {/* sending css classes as props in find job form   */}
+       <section>
+<div className="container">
        <Form
         formFields="jobBoardFormFields"
         formCard="jobBoardFormCard"
@@ -48,7 +49,8 @@ console.log(window.outerWidth)
           downloadh="jb-aside-download-h"
         />
       </div>
-
+</div>
+</section>
     </>
 )
 }

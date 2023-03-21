@@ -40,11 +40,11 @@ export default function Pagination() {
   return (
     <ReactPaginate
       breakLabel="..."
-      nextLabel="next >"
+      nextLabel="Next >>"
       onPageChange={handlePageClick}
       pageRangeDisplayed={5}
       pageCount={pageCount}
-      previousLabel="< previous"
+      previousLabel="<< Previous"
       renderOnZeroPageCount={null}
       containerClassName="pagination"
       pageLinkClassName="page-num"

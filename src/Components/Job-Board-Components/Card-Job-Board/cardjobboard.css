@@ -8,6 +8,7 @@
   padding: 10px;
   border-radius: 5px;
   margin-top: 3rem;
+  flex: none;
 }
 .jb-card {
   border-radius: 3px;
@@ -49,6 +50,7 @@ font-weight: 700;
 
 .org-row {
   display: flex;
+  margin: 2rem 0 0;
   justify-content: space-between;
   align-items: center;
 }
@@ -115,7 +117,6 @@ font-weight: 700;
   cursor: pointer;
   font-size: 1rem;
   font-weight: 700;
-  margin-top: 30px;
 }
 .divider {
 color: #cfcfcf!important;
@@ -164,13 +165,6 @@ background-color: #4c4c4c;
 }
 
 
-.card-footer {
-  margin: 0 10px;
-  padding: 20px 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
 .card-ft-right,
 .card-ft-left {
@@ -195,11 +189,14 @@ background-color: #4c4c4c;
   font-family: "Roboto", sans-serif;
 }
 
-.card-ft-right :nth-child(1) {
+.card-ft-right > span{
+font-weight: 300 !important;
+}
+.card-ft-right .salary {
   letter-spacing: 1px;
-  font-size: 14px;
-  line-height: normal;
-  font-weight: 300;
+  font-size: 1.5rem !important;
+ font-weight: 700;
+ display: inline-block;
 }
 
 .card-ft-right :nth-child(2) > strong {
@@ -328,6 +325,7 @@ top: 0rem;
 
   #jb-button {
     width: 100%;
+  margin: 1rem 0 0 0;
   }
   .card-ft-right {
     flex-direction: column;
@@ -336,10 +334,13 @@ top: 0rem;
     line-height: 2rem;
     flex-direction: column;
   }
-  .card-footer {
+  .dt-card-footer { 
+    flex-direction: column;
 padding: .1rem;
 margin: 0 0;
   }
+
+  /* dt card footr */
 
 
   .jb-aside{
