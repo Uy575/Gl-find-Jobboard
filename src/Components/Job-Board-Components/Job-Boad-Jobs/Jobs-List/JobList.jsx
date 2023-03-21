@@ -9,31 +9,42 @@ const JobList = () => {
   const { jobFilter, geoLocation, filterJobs, searchStatus } = useSelector(
     (state) => state.LocationAndJobTypeReducer
   );
-  const {Jobs , paginated} =JobsState
-// console.log(Jobs.length)
-return (
-<>
-
-<div className="joblist" style={{display:"flex" , flexDirection:'column'}}>
-  <span style={{position:"absolute" , top:"1rem" , fontWeight:"bold"}} > Jobs {Jobs.length}</span>
-{
-paginated.length > 0 ?
-paginated.map((job)=>{
+  const { Jobs, paginated } = JobsState;
+  // console.log(Jobs.length)
   return (
-      <CardJobBoard buttonTitle="View Job Details" classname="card-body" showform='false' key={job.id} jobdata={job} paginated={paginated} only="jobpage" cardfooter='jb-card-footer' orgcol='jb-org-col' orgright='jb-org-right'/> 
-
-)
-
-})
-:
-<PageNotFound />
-
-
-}
-<Pagination />
-</div>
-</>
-  )
-}
+    <>
+      <div
+        className="joblist"
+        style={{ display: "flex", flexDirection: "column" }}
+      >
+        <span style={{ position: "absolute", top: "1rem", fontWeight: "bold" }}>
+          {" "}
+          Jobs {Jobs.length}
+        </span>
+        {paginated.length > 0 ? (
+          paginated.map((job) => {
+            return (
+              <CardJobBoard
+                buttonTitle="View Job Details"
+                classname="card-body"
+                showform="false"
+                key={job.id}
+                jobdata={job}
+                paginated={paginated}
+                only="jobpage"
+                cardfooter="jb-card-footer"
+                orgcol="jb-org-col"
+                orgright="jb-org-right"
+              />
+            );
+          })
+        ) : (
+          <PageNotFound />
+        )}
+        <Pagination />
+      </div>
+    </>
+  );
+};
 
 export default JobList;
